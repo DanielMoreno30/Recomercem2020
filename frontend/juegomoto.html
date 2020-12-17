@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JUEGO 3</title>
+    <title>Juego 3 - Recomerçem</title>
     <link rel="stylesheet" href="../style/bootstrap.min.css">
     <link rel="stylesheet" href="../style/juegomoto.css">
     <link rel="stylesheet" href="../style/recomercem.css">
@@ -11,56 +11,67 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#" id = "textTituloNav">
-            <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
-            Recomerçem
-          </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+    <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#" id = "textTituloNav">
+      <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
+      Recomerçem
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
+      <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Nuestra selección
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Bar 1</a>
+            <a class="dropdown-item" href="#">Bar 2</a>
+            <a class="dropdown-item" href="#">Bar 3</a>
+            <a class="dropdown-item" href="#">Bar 4</a>
+          </div>
+        </li> -->
 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Nuestra selección
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Bar 1</a>
-                  <a class="dropdown-item" href="#">Bar 2</a>
-                  <a class="dropdown-item" href="#">Bar 3</a>
-                  <a class="dropdown-item" href="#">Bar 4</a>
-                </div>
-              </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../frontend/baresRes.html">Nuestra selección</a>
+      </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">Juegos</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Admin</a>
-            </li>
-          </ul>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Juegos</a>
+      </li>
 
-          <div>
-            <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
-            <div class="btn-group dropleft ml-3">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                  Cuenta
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Iniciar sesión</a>
-                    <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
-                    <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
-                </div>
-              </div>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Admin</a>
+      </li>
+    </ul>
+
+    <div>
+      <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
+      <div class="btn-group dropleft ml-3">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            Cuenta
+          </button>
+          <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Iniciar sesión</a>
+              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
+              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
+          </div>
         </div>
-      </nav>
+  </div>
+</nav>
+<!-- -----------------------------------------BODY----------------------------------------------------------------------- -->   
     
       <audio id="fondo" src="../sounds/fondo.mp3"></audio>
       <audio id="choque" src="../sounds/choque.mp3"></audio>
@@ -79,7 +90,7 @@
           </div>
   
           <div id="titulo">
-              <h3 id="textTitulo">¡ESQUIVALOS!</h3>
+              <h3 id="textTitulo">¡ESQUÍVALOS!</h3>
           </div>
   
           <div id="crono">
@@ -90,7 +101,7 @@
           <div id="desc">
               <h3 id="tituloInstr">INSTRUCCIONES</h3>
               <p id="textInstr">Esquiva los coches moviendo el ratón para poder llevar la comida a su destino.<br>
-                  Aguanta el 120 segundos para conseguir la máxima puntuación.
+                  Aguanta 120 segundos para conseguir la máxima puntuación.
                   Posicionate por el medio de la carretera para ver los coches que entran en pantalla.<br>
                   ¡Piensa más rápido que los coches!
               </p>
