@@ -462,6 +462,7 @@ color: aliceblue;
 
 #tituloInstr{
     margin-left: 15px;
+    color: black;
 }
 #textInstr{
     margin-left: 15px;
@@ -489,13 +490,16 @@ color: aliceblue;
 }
 #tituloVidas{
     padding-left: 80px; 
+    color: black;
        
 }
 #tituloTiempo{
     margin-left: 70px;
+    color: black;
 }
 #textTitulo{
     margin-left: 30px;
+    color: black;
 }
 #textCrono{
     margin-left: 100px;
@@ -507,7 +511,7 @@ color: aliceblue;
     position: absolute;
     width: 290px;
     height: 80px;
-    border: black 2px solid; 
+    border: #f8df7d 2px solid; 
     top: 30px;
     left: 610px;
     background-color: #adb5bd; 
@@ -518,7 +522,7 @@ color: aliceblue;
     position: absolute;
     width: 290px;
     height: 100px;
-    border: black 2px solid; 
+    border: #f8df7d 2px solid; 
     top: 130px;
     left: 610px;
     background-color: #adb5bd; 
@@ -529,7 +533,7 @@ color: aliceblue;
     position: absolute;
     width: 290px;
     height: 300px;
-    border: black 2px solid; 
+    border: #f8df7d 2px solid; 
     top: 260px;
     left: 610px;
     background-color: #adb5bd; 
@@ -541,7 +545,7 @@ color: aliceblue;
     position: absolute;
     width: 290px;
     height: 130px;
-    border: black 2px solid;
+    border: #f8df7d 2px solid;
     top: 600px;
     left: 610px;
     background-color: #adb5bd; 
@@ -555,16 +559,17 @@ color: aliceblue;
     visibility: hidden;
     top: 780px;
     left: 610px;
+    background-color: black;
 }
 
 #juego{
-    background-color: #907fb8; 
+    background-color: #a50000; 
     width: 920px; 
     height: 910px; 
     position: absolute; 
     top: -50px; 
     left: 250px;  
-    border: black 5px solid;  
+    border: #f8df7d 5px solid;  
     border-radius: 5px;
     z-index: 1;
     transform: scale(0.7);
@@ -581,7 +586,7 @@ color: aliceblue;
     position: absolute; 
     background-size: contain;
     cursor: default;
-    border-right: black 5px solid; ;
+    border-right: #f8df7d 5px solid; ;
     overflow: hidden;
     top: 0px;
     left: 0px;
