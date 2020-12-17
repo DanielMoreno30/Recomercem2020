@@ -1,38 +1,62 @@
 #textTituloNav{
-color: #e43b3e;
-}
+    color: #e43b3e;
+    }
+    
+    #footerLinks{
+    margin-bottom: 15px;
+    }
+    
+    /*--------------------------------------Pantalla Juegos--------------------------------------------------------*/
+    #juego1
+    {
+        float: left;
+        margin-top: 50px;
+        margin-left: 60px;
+    
+    }
+    
+    #juego2
+    {
+        float:left;
+        margin-top: 50px;
+        margin-left: 80px;
+    }
+    
+    #juego3
+    {
+        float: left;
+        margin-top: 50px;
+        margin-left: 60px;
+    }
+    
+    #juego4
+    {
+        float: left;
+        margin-top: 50px;
+        margin-left: 80px;
+    }
+    
+   
+    
+    /*----------------------------------------------------------------------------------------------------------*/
 
-#footerLinks{
-margin-bottom: 15px;
-}
-
-/*--------------------------------------Pantalla Juegos--------------------------------------------------------*/
-#juego1
-{
-    float: left;
-    margin-top: 50px;
-    margin-left: 60px;
-
-}
-
-#juego2
-{
-    float:left;
-    margin-top: 50px;
-    margin-left: 80px;
-}
-
-#juego3
-{
-    float: left;
-    margin-top: 50px;
-    margin-left: 60px;
-}
-
-#juego4
-{
-    float: left;
-    margin-top: 50px;
-    margin-left: 80px;
-}
-/*----------------------------------------------------------------------------------------------------------*/
+    #divsHome{
+        width: 600px;
+        height: 250px;
+    }
+    
+    #img1{
+        width: 300px;
+        height: 150px;
+        margin-bottom: 50px;
+        
+    }
+    #img2{
+        width: 300px;
+        height: 150px;
+        margin-bottom: 50px;
+    }
+    #bracafelogo{
+        width: 800px;
+        height: 300px;
+    }
