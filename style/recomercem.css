@@ -57,6 +57,32 @@
         margin-bottom: 50px;
     }
     #bracafelogo{
-        width: 800px;
-        height: 300px;
+        width: 700px;
+        height: 200px;
+        position: relative;
+        top: 0px;
+        left: 25%;
+    }
+
+    #cardsBracafe{
+        position: relative;
+        width: 100%;
+        height: 25px;    
+    }
+    .botonesVisitar{
+        background-color: #e43b3e;
+    }
+    .imgCardsBracafe{
+        width: 100%;
+        height: 100%;
+    }
+    #imgQR{
+        width: 75%;
+        height: 75%;
+        margin-left: 100px;
+    }
+    #imgMaps{
+        width: 80%;
+        height: 90%; 
+        margin-left: 100px;
     }
