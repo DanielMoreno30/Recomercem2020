@@ -6,44 +6,9 @@
     margin-bottom: 15px;
     }
     
-    /*--------------------------------------Pantalla Juegos--------------------------------------------------------*/
-    #juego1
-    {
-        float: left;
-        margin-top: 50px;
-        margin-left: 60px;
-    
-    }
-    
-    #juego2
-    {
-        float:left;
-        margin-top: 50px;
-        margin-left: 80px;
-    }
-    
-    #juego3
-    {
-        float: left;
-        margin-top: 50px;
-        margin-left: 60px;
-    }
-    
-    #juego4
-    {
-        float: left;
-        margin-top: 50px;
-        margin-left: 80px;
-    }
-    
    
-    
-    /*----------------------------------------------------------------------------------------------------------*/
 
-<<<<<<< HEAD
-#footerLinks{
-margin-bottom: 15px;
-}
+
 
 /*--------------------------------------Pantalla Juegos--------------------------------------------------------*/
 #juego1
@@ -76,8 +41,7 @@ margin-bottom: 15px;
     margin-bottom: 50px;
    
 }
-/*----------------------------------------------------------------------------------------------------------*/
-=======
+
     #divsHome{
         width: 600px;
         height: 250px;
@@ -98,4 +62,11 @@ margin-bottom: 15px;
         width: 800px;
         height: 300px;
     }
->>>>>>> master
+
+        
+
+    .card-img-top {
+        width: 100%;
+        height: 15vw;
+        object-fit: cover;
+    }
