@@ -11,6 +11,7 @@ var fallos = 0
 var tiempo
 var intervalo
 var conjunto_recetas 
+var intervalId = null
 ///////////////////////////////////////////////////////////////////
 function pushear(ob1, ob2, ob3, ob4, ob5, ob6){
     ob1.urlimg = "hamburguesa.png"
@@ -80,14 +81,16 @@ function pushear(ob1, ob2, ob3, ob4, ob5, ob6){
         tiempo = 0
         var crono = document.getElementById("crono")
 
-        setInterval(function(){
+       intervalId = setInterval(function(){
             crono.innerHTML = tiempo++ +" : Segundos"
         },1000)
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////
     function sumarPuntos(){
+      
         puntos = puntos + 1
         document.getElementById("puntuacion").innerHTML =(puntos)
+        
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
     function sumarFallos(){
@@ -99,7 +102,6 @@ function pushear(ob1, ob2, ob3, ob4, ob5, ob6){
          var updated = []
         array.forEach(element => {
             updated.push(element)
-            console.log(updated)
         });
         
         return updated
@@ -111,7 +113,7 @@ function pushear(ob1, ob2, ob3, ob4, ob5, ob6){
         });
     }
 ///////////////////////////////////////////////////////////////////////////////////////////////
-    function check_Ingrediente(idIngrediente, array){
+    function check_Ingrediente(idIngrediente, array,puntos){
         var boolean = false
         array.forEach(function(item,index) {
             if(item == idIngrediente){
@@ -119,27 +121,33 @@ function pushear(ob1, ob2, ob3, ob4, ob5, ob6){
                 boolean = true
                 array.splice(index,1)
                 document.getElementById(idIngrediente).style.backgroundColor = "green";
-                    if(chekPoint == 0){
-                        sumarPuntos()
-                        mostrarRes()
-                        setTimeout(function(){ Reload()
-                                            BotonesBlancos(productos)}, 5000);
-                }
-
             }
         });
+        if(chekPoint == 0){
+            sumarPuntos()
+            mostrarRes()
+            if(puntos == 1){
+                console.log("hola")
+               document.getElementById('ganar').style.display = "";
+               clearInterval(intervalId)
+            }else{
+                console.log("porqueentras qui")
+            setTimeout(function(){ Reload()
+                                BotonesBlancos(productos)}, 3000);
+            }
+        }
         if(boolean == false){
             document.getElementById(idIngrediente).style.backgroundColor = "red";
             sumarFallos()
         }
     }   
 
-///////////////////alert(conjunto_recetas[numRamdom].ingredientes[numRamdom][0])
+alert("Hola, esto es un pequeño tutorial para que sepas que hacer en el juego. \n El objetivo es alcanzar hacer 5 recetas escogiendo los ingredientes correctos. \n Buena suerte ")
 
 pushear(receta1, receta2, receta3, receta4, receta5, receta6)
 var numRamdom = AsignarNumRamdom()
 var uptadedArr = pasarArray(conjunto_recetas[numRamdom].ingredientes[numRamdom])
 var chekPoint = create_Checkpoint(conjunto_recetas[numRamdom].ingredientes[numRamdom])
 
-iniciarContador()
 mostrarReceta(conjunto_recetas[numRamdom])
+iniciarContador()

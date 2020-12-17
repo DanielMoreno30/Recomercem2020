@@ -37,3 +37,16 @@ body {
     height: 80%;
     transform: scale(0.8);
   }
+#ganar{
+    position: absolute;
+    bottom: 200px;
+    right: 700px;
+    margin-left: 700px;
+}
+@keyframes ggeasy{
+    from{
+        transform-scale:scale(1.0)
+    }to{
+        transform-scale:scale(1.4);
+    }
+}
