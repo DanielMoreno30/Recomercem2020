@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RECOMERÇEM</title>
-    <link rel="stylesheet" href="./style/bootstrap.min.css">
-    <link rel="stylesheet" href="./style/recomercem.css">
-    <link  rel="icon"   href="./img/iconobirra.png" type="image/png" />
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/juegos.css">
+    <link  rel="icon"   href="../img/iconobirra.png" type="image/png" />
 </head>
 <body>
 <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#" id="textTituloNav">
-            <img src="./img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
+            <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
             Recomerçem
           </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +47,7 @@
           </ul>
 
           <div>
-            <img src="./img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
+            <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
             <div class="btn-group dropleft ml-3">
                 <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                   Cuenta
@@ -64,43 +64,62 @@
 <!---------------------------------------------BODY---------------------------------------------------------------------------->
 
 
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
         <div id="juego1" class="card" style="width: 35rem;">
-            <img class="card-img-top" src="./img/juego1.PNG" alt="Card image cap">
+            <img class="card-img-top" src="../img/juego1.PNG" alt="Card image cap" >
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">Para poder preparar los pedidos primero tendras que pasar por el super para recoger los ingredientes.</p>
+              <a href="./juegosuper.html" class="btn btn-primary">Jugar</a>
             </div>
           </div>
+    </div>
+    <div class="col-md-6">
         <div id="juego2" class="card" style="width: 35rem;">
-            <img class="card-img-top" src="./img/juego1.PNG" alt="Card image cap">
+            <img class="card-img-top" src="../img/juego3.PNG" alt="Card image cap" >
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">Ahora que ya has recogido los ingredientes, tendras que preparar los platos en funcion de cada pedido.</p>
+              <a href="./JuegoCKMama.html" class="btn btn-primary">Jugar</a>
             </div>
         </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
         <div id="juego3" class="card" style="width: 35rem">
-            <img class="card-img-top" src="./img/juego1.PNG" alt="Card image cap">
+            <img class="card-img-top" src="../img/juego2.PNG" alt="Card image cap" >
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">Los pedidos ya estan listos y ahora tendras que repartilor, pero cuidado con los coches!   .</p>
+              <a href="./juegomoto.html" class="btn btn-primary">Jugar</a>
             </div>
         </div>
+    </div>
+    <div class="col-md-6">  
         <div id="juego4" class="card" style="width: 35rem;">
-            <img class="card-img-top" src="./img/juego1.PNG" alt="Card image cap">
+            <img class="card-img-top" src="../img/juego1.PNG" alt="Card image cap">
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text">Ahora que has llegado al destino reparte los pedidos al domicilio correspondiente.</p>
+              <a href="#" class="btn btn-primary">Jugar</a>
             </div>
         </div>
+    </div>    
+  </div>
+</div>
+
     
 
 <!-- -----------------------------------------FOOTER----------------------------------------------------------------------- -->
-      <div class="card fixed-bottom">
-          
-        <div class="card-body text-center">
-            <div id="footerLinks">
-                <a href="https://github.com/MrFron/Recomercem.git" class="badge badge-primary">GitHub</a>
-                <a href="#" class="badge badge-primary">About</a>
-            </div>
-          <p class="card-text">Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-        </div>
+<footer class="bg-dark text-center text-lg-start">
+  <div class="text-center p-3" >
+      <div id="footerLinks">
+          <a href="https://github.com/MrFron/Recomercem.git" class="badge badge-primary">GitHub</a>
+          <a href="#" class="badge badge-primary">About</a>
       </div>
+      <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
+    <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+</footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
