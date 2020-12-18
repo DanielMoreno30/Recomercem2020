@@ -130,10 +130,10 @@
             var x = e.clientX;
             var y = e.clientY;
 
-            x = x - 85;
-            y = y - 85;
+            x = x - 50;
+            y = y + 20;
 
-            if (x<1100 && x>100 && y>40 && y<760) {
+            if (x<1100 && x>100 && y>90 && y<610) {
                 carro.style.left = x + "px";
                 carro.style.top = y + "px";
             }
