@@ -126,8 +126,7 @@ function pushear(ob1, ob2, ob3, ob4, ob5, ob6){
         if(chekPoint == 0){
             sumarPuntos()
             mostrarRes()
-            if(puntos == 1){
-                console.log("hola")
+            if(puntos == 4){
                document.getElementById('ganar').style.display = "";
                clearInterval(intervalId)
             }else{
