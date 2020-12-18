@@ -604,7 +604,7 @@ function movimientoMoto(){
             var y = e.clientY;
 
             x = (x - 150 - 285) / 0.7;
-            y = (y - 150) / 0.7;
+            y = (y - 50) / 0.7;
             
 
             if (x<495 && x>-50 && y>-5 && y<750) {
