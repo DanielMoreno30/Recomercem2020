@@ -39,8 +39,11 @@
 
     function cambiarImagen1()
         {
+           
+            
             if(imatges.length > 0)
             {
+                
                 var rand = Math.floor(Math.random()*imatges.length);
                 var img1 = "../img/"+imatges[rand] ;
             
