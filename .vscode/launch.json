@@ -5,25 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Launch Chrome",
+            "type": "chrome",
             "request": "launch",
-            "type": "pwa-chrome",
-            "url": "http://localhost:80/Recomercem/frontend/barlobo.html",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080/Recomercem/index.php",
             "webRoot": "${workspaceFolder}"
-        },
-        {
-            "name": "Listen for XDebug",
-            "type": "php",
-            "request": "launch",
-            "port": 9000
-        },
-        {
-            "name": "Launch currently open script",
-            "type": "php",
-            "request": "launch",
-            "program": "${file}",
-            "cwd": "${fileDirname}",
-            "port": 9000
         }
     ]
 }

@@ -106,7 +106,7 @@ h3{
 
 .cuadrado.moviendo1
 {
-  animation-duration: 4.3s;
+  animation-duration: 2.7s;
   animation-name: moviendo1;
   animation-iteration-count: infinite;
   animation-direction:normal;
@@ -124,7 +124,7 @@ h3{
 }
 .cuadrado.moviendo2
 {
-  animation-duration: 4.2s;
+  animation-duration: 2.7s;
   animation-name: moviendo2;
   animation-iteration-count: infinite;
   animation-direction:normal;
@@ -133,7 +133,7 @@ h3{
 }
 @keyframes moviendo2 {
     from {
-      top: -850px;
+      top: -1650px;
       
     }
     to {
@@ -142,7 +142,7 @@ h3{
 }
 
 .cuadrado.moviendo3{
-  animation-duration: 4s;
+  animation-duration: 2.9s;
   animation-name: moviendo3;
   animation-iteration-count: infinite;
   animation-direction:normal;
@@ -151,14 +151,14 @@ h3{
 }
 @keyframes moviendo3 {
     from {
-      top: -900px;
+      top: -1550px;
     }
     to {
       top: 850px;
 	}
 }
 .cuadrado.moviendo4{
-  animation-duration: 4.4s;
+  animation-duration: 2.8s;
   animation-name: moviendo4;
   animation-iteration-count: infinite;
   animation-direction:normal;
@@ -167,7 +167,7 @@ h3{
 }
 @keyframes moviendo4 {
     from {
-      top: -650px;
+      top: -1550px;
     }
     to {
       top: 850px;
@@ -322,15 +322,6 @@ padding: 10px;
 
 }
 #perder
-{
-  font-family: fornite;
-  font-size: 30px;
-  color: yellow;
-  margin-left: 40px;
-  
-
-}
-#ganar
 {
   font-family: fornite;
   font-size: 30px;
