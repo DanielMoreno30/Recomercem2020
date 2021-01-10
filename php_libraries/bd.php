@@ -29,7 +29,16 @@ function selectAllOfertas(){
     $conexion = closeBd();
     return $resultado;
 }
-
+function selectOfertasRestaurante()
+{
+    $conexion = openBd();
+    $sentenciaText = "select ofertas_restaurante.id_restaurante, ofertas.id_oferta,ofertas.nombre,ofertas.puntos,ofertas.codigo from ofertas, ofertas_restaurante where ofertas.id_oferta = ofertas_restaurante.id_oferta";
+    $sentencia = $conexion->prepare($sentenciaText);
+    $sentencia->execute();
+    $resultado = $sentencia->fetchAll();
+    $conexion = closeBd();
+    return $resultado;
+}
 
 function selectOfertaByRestaurante($id){
 
@@ -66,5 +75,54 @@ function insertUsuario($nombre, $mail, $contr){
     $conexion = closeBd();
 
 
+}
+function insertOferta($id_restaurante,$id_oferta,$nombre,$puntos,$codigo)
+{
+
+    $conexion = openBd();
+
+    $sentenciaText = "insert into ofertas_restaurante(id_oferta,id_restaurante) values(:id_oferta,:id_restaurante)";
+    $sentencia = $conexion->prepare($sentenciaText);
+    $sentencia->bindParam(':id_restaurante', $id_restaurante);
+    $sentencia->bindParam(':id_oferta', $id_oferta);
+    $sentencia->execute();
+
+    $conexion = closeBd();
+
+    $conexion = openBd();
+
+    $sentenciaText = "insert into ofertas(id_oferta,nombre,puntos,codigo) values(:id_oferta,:nombre,:puntos,:codigo)";
+    $sentencia = $conexion->prepare($sentenciaText);
+    $sentencia->bindParam(':id_oferta', $id_oferta);
+    $sentencia->bindParam(':nombre', $nombre);
+    $sentencia->bindParam(':puntos', $puntos);
+    $sentencia->bindParam(':codigo', $codigo);
+    
+    $sentencia->execute();
+
+    $conexion = closeBd();
+}
+function deleteOferta($id_oferta,$id_restaurante)
+{
+    $conexion = openBd();
+
+    $sentenciaText = "delete from ofertas where id_oferta = :id_oferta";
+    $sentencia = $conexion->prepare($sentenciaText);
+    $sentencia->bindParam(':id_oferta', $id_oferta);
+
+    $sentencia->execute();
+
+    $conexion = closeBd();
+    $conexion = openBd();
+
+
+    $sentenciaText = "delete from ofertas_restaurante where id_oferta = :id_oferta AND id_restaurante = :id_restaurante";
+    $sentencia = $conexion->prepare($sentenciaText);
+    $sentencia->bindParam(':id_oferta', $id_oferta);
+    $sentencia->bindParam(':id_restaurante', $id_restaurante);
+
+    $sentencia->execute();
+
+    $conexion = closeBd();
 }
 ?>
