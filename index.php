@@ -67,6 +67,7 @@
             Cuenta
           </button>
           <div class="dropdown-menu">
+              <a class="dropdown-item" href="./frontend/CreateAcount.php">Crear Cuenta</a>
               <a class="dropdown-item" href="#">Iniciar sesión</a>
               <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
               <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
