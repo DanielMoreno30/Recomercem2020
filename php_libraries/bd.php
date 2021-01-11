@@ -4,7 +4,7 @@ function openBd(){
     
     $servername = "localhost";
     $username = "root";
-    $password = "";
+    $password = "mysql";
 
     
     $conexion = new PDO("mysql:host=$servername;dbname=recomercem", $username, $password);
@@ -49,11 +49,6 @@ function selectOfertaByRestaurante($id){
     $sentencia->execute();
     $ofertas = $sentencia->fetchAll();
     $conexion = closeBd();
-
-  
-
-    
-
 
     return $ofertas;
 }
@@ -106,9 +101,8 @@ function deleteOferta($id_oferta,$id_restaurante)
 {
     $conexion = openBd();
 
-    $sentenciaText = "delete from ofertas where id_oferta = :id_oferta";
+    $sentenciaText = "delete from ofertas where id_oferta = $id_oferta";
     $sentencia = $conexion->prepare($sentenciaText);
-    $sentencia->bindParam(':id_oferta', $id_oferta);
 
     $sentencia->execute();
 
@@ -116,13 +110,11 @@ function deleteOferta($id_oferta,$id_restaurante)
     $conexion = openBd();
 
 
-    $sentenciaText = "delete from ofertas_restaurante where id_oferta = :id_oferta AND id_restaurante = :id_restaurante";
+    $sentenciaText = "delete from ofertas_restaurante where id_oferta = $id_oferta AND id_restaurante = $id_restaurante";
     $sentencia = $conexion->prepare($sentenciaText);
-    $sentencia->bindParam(':id_oferta', $id_oferta);
-    $sentencia->bindParam(':id_restaurante', $id_restaurante);
 
     $sentencia->execute();
-
     $conexion = closeBd();
+
 }
 ?>
