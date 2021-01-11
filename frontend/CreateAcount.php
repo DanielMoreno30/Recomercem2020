@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juego 3 - Recomerçem</title>
+    <title>Home - Recomerçem</title>
+    <style>
+      body{
+     font-family: "Arial"; 
+     }
+     
+     </style>
     <link rel="stylesheet" href="../style/bootstrap.min.css">
-    <link rel="stylesheet" href="../style/juegomoto.css">
     <link rel="stylesheet" href="../style/recomercem.css">
+    <link rel="stylesheet" href="../style/cssLogIn.css">
     <link  rel="icon"   href="../img/iconobirra.png" type="image/png" />
 </head>
 <body>
-
 <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
@@ -73,109 +78,73 @@
   </div>
 </nav>
 <!-- -----------------------------------------BODY----------------------------------------------------------------------- -->   
-    
-      <audio id="fondo" src="../sounds/fondo.mp3"></audio>
-      <audio id="choque" src="../sounds/choque.mp3"></audio>
-      <audio id="sinvidas" src="../sounds/sinvidas.mp3"></audio>
-
-      <div id="contenedorJuego">
-        <div id="juego" class="container"> 
-          <div id="botonStart" onclick="comenzar()"></div>
-          <div id="gameover">
-              <p id="textPuntos">
-              </p>
-          </div>
-          <div id="win">
-              <p id="textPuntosWin">
-              </p>
-          </div>
-  
-          <div id="titulo">
-              <h3 id="textTitulo">¡ESQUÍVALOS!</h3>
-          </div>
-  
-          <div id="crono">
-              <h3 id="tituloTiempo">TIEMPO</h3>
-              <p id="textCrono">0.00</p>
-          </div>
-  
-          <div id="desc">
-              <h3 id="tituloInstr">INSTRUCCIONES</h3>
-              <p id="textInstr">Esquiva los coches moviendo el ratón para poder llevar la comida a su destino.<br>
-                  Aguanta 120 segundos para conseguir la máxima puntuación.
-                  Posicionate por el medio de la carretera para ver los coches que entran en pantalla.<br>
-                  ¡Piensa más rápido que los coches!
-              </p>
-          </div> 
-  
-          <div id="vidas">
-              <h3 id="tituloVidas">VIDAS</h3>
-              <div id="contenedorVidas">
-                  <img id="vida1" src="../img/corazon.png">
-                  <img id="vida2" src="../img/corazon.png">
-                  <img id="vida3" src="../img/corazon.png">
-                  <img id="vida4" src="../img/corazon.png">
-              </div>
-              
-          </div>
-          <button id="volverajugar" type="button" class="btn btn-primary" onclick="volverAjugar()">VOLVER A JUGAR</button>
-          
-          <div id="carretera">
-              <div id="linea1"></div>
-              <div id="linea2"></div>
-              <div id="linea3"></div>
-              <div id="linea4"></div>
-              <div id="moto"></div>
-              <!-- ARRIBA -->
-              <div id="coche1">
-                  <img id="imgCoche1" src="../img/coche1.png">
-              </div>
-              <!-- ABAJO -->
-              <div id="coche2">
-                  <img id="imgCoche2" src="../img/coche2.png">
-              </div>
-              <!-- ABAJO -->
-              <div id="coche3">
-                  <img id="imgCoche3" src="../img/coche3.png">
-              </div>
-              <!-- ARRIBA -->
-              <div id="coche4">
-                  <img id="imgCoche4" src="../img/coche4.png"> 
-              </div>
-              <!-- ABAJO -->
-              <div id="cocheMedio1">
-                  <img id="imgcocheMedio1" src="../img/coche2.png">
-              </div>
-              <!-- ARRIBA -->
-              <div id="cocheMedio2">
-                  <img id="imgcocheMedio2" src="../img/coche4.png">
-              </div>
-              
-              
-          </div>
+<div class="container">
+    <div class="col ggeasy">
+<form action="../php_controllers/recomercemController.php" method="POST">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Correo Electronico</label>
+      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Nombre</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Contraseña</label>
+        <input type="password" class="form-control" id="contr" name="contr" placeholder="Contraseña">
       </div>
-
+      <div class="form-group">
+        <label for="exampleInputPassword1"> Confirmar Contraseña</label>
+        <input type="password" class="form-control" id="confirm_contr" name="confirm_contr" placeholder="Confirmar contraseña">
       </div>
-      
+    <!-- <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div> -->
+    <button type="submit" class="btn btn-secondary" onclick="validar()" name="crearCuenta">Crear</button>
+
+    <script>
+
+      function validar(){
+        var nom = document.getElementById("nombre").value;
+        var mail = document.getElementById("email").value;
+        var cont = document.getElementById("contr").value;
+        var confi = document.getElementById("confirm_contr").value;
+
+        if(nom.length==0 || mail.length==0 || cont.length==0 || confi.length==0)
+        {
+          alert("Porfavor rellene todos los campos.");
+        }
+        if(cont !== confi){
+          alert("Las contraseñas no son iguales.");
+        }
+
+        if (nom.length!==0 || mail.length!==0 || cont.length!==0 || confi.length!==0 && cont !== confi) {
+          alert("Cuenta creada correctamente.");
+        }
+
+      }
     
-    
-    <footer class="bg-dark text-center text-lg-start">
-        <div class="text-center p-3" >
-            <div id="footerLinks">
-                <a href="https://github.com/MrFron/Recomercem.git" class="badge badge-primary">GitHub</a>
-                <a href="#" class="badge badge-primary">About</a>
-            </div>
-            <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-          
+    </script>
+
+  </form>
+  </div>
+  </div>
+
+<!-- -----------------------------------------FOOTER----------------------------------------------------------------------- -->
+  <footer class="bg-dark text-center text-lg-start">
+    <div class="text-center p-3" >
+        <div id="footerLinks">
+            <a href="https://github.com/MrFron/Recomercem.git" class="badge badge-primary">GitHub</a>
+            <a href="#" class="badge badge-primary">About</a>
         </div>
-    </footer>
-    
+        <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
+      
+    </div>
+</footer>
 
-    
-    
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-<script src="../js/juegomoto.js"></script>
 </html>

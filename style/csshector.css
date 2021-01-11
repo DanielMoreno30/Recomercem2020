@@ -116,7 +116,7 @@ h3{
 @keyframes moviendo1 
 {
     from {
-      top: -900px;
+      top: -500px;
     }
     to {
       top: 850px;
@@ -124,7 +124,7 @@ h3{
 }
 .cuadrado.moviendo2
 {
-  animation-duration: 2.7s;
+  animation-duration: 2.5s;
   animation-name: moviendo2;
   animation-iteration-count: infinite;
   animation-direction:normal;
@@ -133,7 +133,7 @@ h3{
 }
 @keyframes moviendo2 {
     from {
-      top: -1650px;
+      top: -400px;
       
     }
     to {
@@ -151,7 +151,7 @@ h3{
 }
 @keyframes moviendo3 {
     from {
-      top: -1550px;
+      top: -300px;
     }
     to {
       top: 850px;
@@ -167,7 +167,7 @@ h3{
 }
 @keyframes moviendo4 {
     from {
-      top: -1550px;
+      top: -450px;
     }
     to {
       top: 850px;
