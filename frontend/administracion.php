@@ -77,8 +77,11 @@
         </div>
   </div>
 </nav>
-<form action="../php_controllers/ofertaController.php" method="POST">
+
   <div class="container" style="margin-top: 10px; margin-bottom: 35px;" >
+
+    <?php require_once('../php_partials/mensajes.php'); ?>
+
       <div class="row">
         <div style="margin-bottom: 20px;">
           <button type="button" class="btn btn-warning" onclick="location.href='./oferta.php'">Añadir Oferta</button>
@@ -95,18 +98,24 @@
 
                   <?php foreach ($ofertas as $oferta) { ?>
                     <tr>
-                      <td id="id_restaurante"><?php echo $oferta['id_restaurante'];?></td>
-                      <td id="id_oferta"><?php echo $oferta['id_oferta']; ?></td>
+                      <td><?php echo $oferta['id_restaurante'];?></td>
+                      <td><?php echo $oferta['id_oferta']; ?></td>
                       <td><?php echo $oferta['nombre']; ?></td>
                       <td><?php echo $oferta['puntos']; ?></td>
                       <td><?php echo $oferta['codigo']; ?></td>
-                      <td><button type="submit" class="btn btn-warning" name="delete">Borrar</button></td>
+                      <td>
+                        <form action="../php_controllers/ofertaController.php" method="POST">
+                          <button type="submit" class="btn btn-warning" name="delete">Borrar</button>
+                          <input type="hidden" id="id_restaurante" name="id_restaurante" value=<?php echo $oferta['id_restaurante'];?>>
+                          <input type="hidden" id="id_oferta" name="id_oferta" value=<?php echo $oferta['id_oferta'];?>>
+                        </form>
+                      </td>
                     </tr>
                 <?php  } ?>
               </table>
             </div>
         </div>
-    </form>
+    
 <!-- -----------------------------------------FOOTER----------------------------------------------------------------------- -->
   <!-- Illya-->
   <footer class="bg-dark text-center text-lg-start">

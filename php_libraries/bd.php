@@ -1,5 +1,49 @@
 <?php
 
+session_start();
+
+function errorMessage($e)
+{
+    if (!empty($e->errorInfo[1])) 
+    {
+        switch ($e->errorInfo[1]) {
+            case 1062:
+                $mensaje = 'Registro duplicado';
+                break;
+            case 1451:
+                $mensaje = 'Registro con elementos relacionados';
+                break;
+            
+            default:
+                $mensaje = $e->errorInfo[1].' - '.$e->errorInfo[2];
+                break;
+        }
+    }
+    else
+    {
+        switch ($e->getCode()) {
+            case 1044:
+                $mensaje = 'Usuario y/o password incorrecto';
+                break;
+            case 1049:
+                $mensaje = 'Base de datos desconocida';
+                break;
+            case 2002:
+                $mensaje = 'No se encuentra el servidor';
+                break;
+            default:
+                $mensaje = $e->getCode().' - '. $e->getMessage();
+                break;
+        }
+    }
+
+    return $mensaje;
+
+}
+
+
+
+
 function openBd(){
     
     $servername = "localhost";
@@ -7,7 +51,7 @@ function openBd(){
     $password = "";
 
     
-    $conexion = new PDO("mysql:host=$servername;dbname=recomercem", $username, $password);
+    $conexion = new PDO("mysql:host=$servername;dbname=recomencem", $username, $password);
     // set the PDO error mode to exception
     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $conexion->exec("set names utf8");
@@ -50,11 +94,6 @@ function selectOfertaByRestaurante($id){
     $ofertas = $sentencia->fetchAll();
     $conexion = closeBd();
 
-  
-
-    
-
-
     return $ofertas;
 }
 
@@ -78,51 +117,61 @@ function insertUsuario($nombre, $mail, $contr){
 }
 function insertOferta($id_restaurante,$id_oferta,$nombre,$puntos,$codigo)
 {
+    try
+    {
 
-    $conexion = openBd();
+        $conexion = openBd();
 
-    $sentenciaText = "insert into ofertas_restaurante(id_oferta,id_restaurante) values(:id_oferta,:id_restaurante)";
-    $sentencia = $conexion->prepare($sentenciaText);
-    $sentencia->bindParam(':id_restaurante', $id_restaurante);
-    $sentencia->bindParam(':id_oferta', $id_oferta);
-    $sentencia->execute();
+        $sentenciaText = "insert into ofertas_restaurante(id_oferta,id_restaurante) values(:id_oferta,:id_restaurante)";
+        $sentencia = $conexion->prepare($sentenciaText);
+        $sentencia->bindParam(':id_restaurante', $id_restaurante);
+        $sentencia->bindParam(':id_oferta', $id_oferta);
+        $sentencia->execute();
 
-    $conexion = closeBd();
+        $conexion = closeBd();
 
-    $conexion = openBd();
+        $conexion = openBd();
 
-    $sentenciaText = "insert into ofertas(id_oferta,nombre,puntos,codigo) values(:id_oferta,:nombre,:puntos,:codigo)";
-    $sentencia = $conexion->prepare($sentenciaText);
-    $sentencia->bindParam(':id_oferta', $id_oferta);
-    $sentencia->bindParam(':nombre', $nombre);
-    $sentencia->bindParam(':puntos', $puntos);
-    $sentencia->bindParam(':codigo', $codigo);
-    
-    $sentencia->execute();
+        $sentenciaText = "insert into ofertas(id_oferta,nombre,puntos,codigo) values(:id_oferta,:nombre,:puntos,:codigo)";
+        $sentencia = $conexion->prepare($sentenciaText);
+        $sentencia->bindParam(':id_oferta', $id_oferta);
+        $sentencia->bindParam(':nombre', $nombre);
+        $sentencia->bindParam(':puntos', $puntos);
+        $sentencia->bindParam(':codigo', $codigo);
+        
+        $sentencia->execute();
 
+        $_SESSION['mensaje']= 'Registro insertado correctamente';
+
+        
+    }
+    catch(PDOException $e)
+    {
+        $_SESSION['error']= errorMessage($e);
+    }
     $conexion = closeBd();
 }
-function deleteOferta($id_oferta,$id_restaurante)
+function deleteOferta($id_restaurante,$id_oferta)
 {
+    try
+    {
     $conexion = openBd();
 
-    $sentenciaText = "delete from ofertas where id_oferta = :id_oferta";
+    $sentenciaText = "delete from ofertas where id_oferta = $id_oferta; delete from ofertas_restaurante where id_oferta = $id_oferta AND id_restaurante = $id_restaurante";
     $sentencia = $conexion->prepare($sentenciaText);
-    $sentencia->bindParam(':id_oferta', $id_oferta);
 
     $sentencia->execute();
 
-    $conexion = closeBd();
-    $conexion = openBd();
+    $_SESSION['mensaje']= 'Registro borrado correctamente';
 
-
-    $sentenciaText = "delete from ofertas_restaurante where id_oferta = :id_oferta AND id_restaurante = :id_restaurante";
-    $sentencia = $conexion->prepare($sentenciaText);
-    $sentencia->bindParam(':id_oferta', $id_oferta);
-    $sentencia->bindParam(':id_restaurante', $id_restaurante);
-
-    $sentencia->execute();
+    }
+    catch(PDOException $e)
+    {
+        $_SESSION['error']= errorMessage($e);
+    }
 
     $conexion = closeBd();
+   
+
 }
 ?>

@@ -1,5 +1,5 @@
 
-
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="esp">
@@ -76,6 +76,9 @@
 
 
 <div class="container" style="margin-top: 10px; margin-bottom: 35px;" >
+
+    <?php require_once('../php_partials/mensajes.php'); ?>
+
     <div class="card mt-2">
         <div class="card-header bg-secondary text-white"> Oferta
         </div>
@@ -113,7 +116,7 @@
 
                 <div class="float-right">
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="sumbit" class="btn btn-primary" name="insert">Aceptar</button>
+                        <button type="submit" class="btn btn-primary" name="insert">Aceptar</button>
                         <a href="./administracion.php" class="btn btn-secondary">Cancelar</a>
                     </div>
                 </div>
