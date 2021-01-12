@@ -25,7 +25,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="../index.php"><?php echo $lang['Principal'] ?><span class="sr-only"></span></a>
+        <a class="nav-link" href="../index.php"><?php echo $lang['Principal'] ?><span class="sr-only">(current)</span></a>
       </li>
 
       
@@ -42,18 +42,18 @@
         </li> -->
 
       <li class="nav-item">
-        <a class="nav-link" href="../frontend/baresRes.php"><?php echo $lang['Selection'] ?><span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="../frontend/baresRes.php"><?php echo $lang['Selection'] ?></a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="../frontend/juegos.php"><?php echo $lang['Juegos'] ?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><?php echo $lang['About'] ?></a>
+        <a class="nav-link" href="../frontend/about.php"><?php echo $lang['About'] ?></a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Admin</a>
+        <a class="nav-link disabled" href="../frontend/administracion.php" tabindex="-1" aria-disabled="true">Admin</a>
       </li>
     </ul>
 
@@ -64,7 +64,8 @@
           <?php echo $lang['Cuenta'] ?>
           </button>
           <div class="dropdown-menu">
-              <a class="dropdown-item" href="#"><?php echo $lang['ini_session'] ?></a>
+              <a class="dropdown-item" href="../frontend/CreateAcount.php"><?php echo $lang['create_account'] ?></a>
+              <a class="dropdown-item" href="../frontend/logIn.php"><?php echo $lang['ini_session'] ?></a>
               <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['close_session'] ?></a>
               <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['mi_cuenta'] ?></a>
           </div>

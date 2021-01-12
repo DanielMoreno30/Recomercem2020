@@ -113,27 +113,45 @@ function selectUsuarios()
 }
 function insertUsuario($nombre, $mail, $contr)
 {
-
-    try{
-    $conexion = openBd();
-
-    $sentenciaText = "insert into usuarios (nom_usuario, contr, mail) values (:nom_usuario, :contr, :mail)";
-    $sentencia = $conexion->prepare($sentenciaText);
-
-    $sentencia->bindParam(':nom_usuario', $nombre);
-    $sentencia->bindParam(':contr', $contr);
-    $sentencia->bindParam(':mail', $mail);
-    
-
-    $sentencia->execute();
-}
-
-    catch(PDOException $e)
-    {
-        $_SESSION['error']= errorMessage($e);
+    $duplicado = null;
+    $usuarios = selectUsuarios();
+    foreach ($usuarios as $usuario) {
+        if($usuario['nom_usuario'] == $nombre){
+            $_SESSION['error']="El nombre de usuario ya existe.";
+            $duplicado = true;
+        }
+        if($usuario['mail'] == $mail){
+            $_SESSION['error']="El mail ya está en uso.";
+            $duplicado = true;
+        }
     }
 
-    $conexion = closeBd();
+    if($duplicado == null){
+        try{
+            $conexion = openBd();
+        
+            $sentenciaText = "insert into usuarios (nom_usuario, contr, mail) values (:nom_usuario, :contr, :mail)";
+            $sentencia = $conexion->prepare($sentenciaText);
+        
+            $sentencia->bindParam(':nom_usuario', $nombre);
+            $sentencia->bindParam(':contr', $contr);
+            $sentencia->bindParam(':mail', $mail);
+            
+        
+            $sentencia->execute();
+        }
+        
+            catch(PDOException $e)
+            {
+                $_SESSION['error']= errorMessage($e);
+                $user['nombre'] = $nombre;
+                $user['mail'] = $mail;
+                $_SESSION['user'] = $user;
+            }
+        
+            $conexion = closeBd();
+    }
+    
 
 
 }
