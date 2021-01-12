@@ -1,3 +1,6 @@
+<?php
+    include "../confLang.php"
+?>
 <!DOCTYPE html>
 <html lang="esp">
 <head>
@@ -14,7 +17,7 @@
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
-      Recomerçem
+      <?php echo $lang['Recomencem'] ?>
     </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -23,7 +26,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php"><?php echo $lang['Principal'] ?><span class="sr-only"></span></a>
       </li>
 
       
@@ -40,15 +43,14 @@
         </li> -->
 
       <li class="nav-item">
-        <a class="nav-link" href="../frontend/baresRes.php">Nuestra selección</a>
+        <a class="nav-link" href="../frontend/baresRes.php"><?php echo $lang['Selection'] ?><span class="sr-only">(current)</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="../frontend/juegos.php">Juegos</a>
+        <a class="nav-link" href="../frontend/juegos.php"><?php echo $lang['Juegos'] ?></a>
       </li>
-
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#"><?php echo $lang['About'] ?></a>
       </li>
       
       <li class="nav-item">
@@ -60,12 +62,12 @@
       <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
       <div class="btn-group dropleft ml-3">
           <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-            Cuenta
+          <?php echo $lang['Cuenta'] ?>
           </button>
           <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Iniciar sesión</a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
+              <a class="dropdown-item" href="#"><?php echo $lang['ini_session'] ?></a>
+              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['close_session'] ?></a>
+              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['mi_cuenta'] ?></a>
           </div>
         </div>
   </div>
@@ -77,10 +79,10 @@
                 <div class="card" style="width: 17rem;">
                     <img class="card-img-top" src="../img/ramen.png" alt="Card image cap">
                     <div class="card-body">
-                      <p class="card-text">Un pequeño local con tematica japonesa con barra de madera. Entra a conocer una amplia seleccion de recetas japonesas para llenarte de emociones asiaticas.
-                        <br> <FONT COLOR="#F3B63E"> - Carrer Girona 164, 08037 Barcelona </FONT>
+                      <p class="card-text"><?php echo $lang['parafo1_seleccion'] ?>
+                        <br> <FONT COLOR="#F3B63E"><?php echo $lang['calle1_seleccion'] ?></FONT>
                       </p>
-                      <a href="../frontend/ramen-ya.php" class="btn botonesVisitar">Visitar</a>
+                      <a href="../frontend/ramen-ya.php" class="btn botonesVisitar"><?php echo $lang['visitar'] ?></a>
                     </div>
                   </div>
 
@@ -88,27 +90,27 @@
                  <div class="card" style="width: 17rem;">
                     <img class="card-img-top" src="../img/bracafe-portada.png" alt="Card image cap">
                     <div class="card-body">
-                      <p class="card-text">¿Nunca has pensado en la version perfecta de tu taza de cafe? En Bracafe tines una eleccion de cafes casi infinita y exportada desde Brasil. No te pierdas los aromas mas autenticos del café. <br>
-                        <FONT COLOR="#F3B63E"> - Ronda de la Universitat, 35, 08007 Barcelona </FONT></p>
-                      <a href="../frontend/bracafe.php" class="btn botonesVisitar">Visitar</a>
+                      <p class="card-text"><?php echo $lang['parafo2_seleccion'] ?> <br>
+                        <FONT COLOR="#F3B63E"><?php echo $lang['calle2_seleccion'] ?></FONT></p>
+                      <a href="../frontend/bracafe.php" class="btn botonesVisitar"><?php echo $lang['visitar'] ?></a>
                     </div>
                     </div>
 
                 <div class="card" style="width: 17rem;">
                         <img class="card-img-top" src="../img/bLobo.png" alt="Card image cap">
                         <div class="card-body">
-                          <p class="card-text">¿Buscas una reservar mesa para una cena espectacular? Este es tu sitio perfecto. Un restaurante cristalizado con una estetica modernista, comida Mediterranea y terraza para ver las vistas de Barcelona desde el centro.
-                              <br> <FONT COLOR="#F3B63E">- Carrer del Pintor Fortuny, 3, 08001 Barcelona</FONT>
+                          <p class="card-text"><?php echo $lang['parafo3_seleccion'] ?>
+                              <br> <FONT COLOR="#F3B63E"><?php echo $lang['calle3_seleccion'] ?></FONT>
                           </p>
-                          <a href="../frontend/barlobo.php" class=" align-self-end btn botonesVisitar">Visitar</a>
+                          <a href="../frontend/barlobo.php" class=" align-self-end btn botonesVisitar"><?php echo $lang['visitar'] ?></a>
                         </div>
                 </div>
 
                 <div class="card" style="width: 17rem;">
                         <img class="card-img-top" src="../img/pinchos.png" alt="Card image cap">
                         <div class="card-body">
-                        <p class="card-text">Disfruta de las tapas y los pintxos en uno de los restaurantes de pinchos vascos en Barcelona. <br> <FONT COLOR="#F3B63E"> - Passeig de Gràcia, 6</FONT></p>
-                        <a href="../frontend/txapela.php" class=" align-self-end btn botonesVisitar">Visitar</a>
+                        <p class="card-text"><?php echo $lang['parafo4_seleccion'] ?> <br> <FONT COLOR="#F3B63E"><?php echo $lang['calle4_seleccion'] ?></FONT></p>
+                        <a href="../frontend/txapela.php" class=" align-self-end btn botonesVisitar"><?php echo $lang['visitar'] ?></a>
                         </div>
                   </div>
             </div>
@@ -125,7 +127,7 @@
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-      
+        <p><a href="baresRes.php?lang=es">Espa~ol</a> <a href="baresRes.php?lang=en">Ingles</a></p>
     </div>
 </footer>
 

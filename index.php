@@ -1,3 +1,6 @@
+<?php
+    include "confLang.php"
+?>
 <!DOCTYPE html>
 <html lang="esp">
 <head>
@@ -19,7 +22,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
       <img src="./img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
-      Recomerçem
+      <?php echo $lang['Recomencem'] ?>
     </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -28,7 +31,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php"><?php echo $lang['Principal'] ?><span class="sr-only">(current)</span></a>
       </li>
 
       
@@ -45,14 +48,14 @@
         </li> -->
 
       <li class="nav-item">
-        <a class="nav-link" href="./frontend/baresRes.php">Nuestra selección</a>
+        <a class="nav-link" href="./frontend/baresRes.php"><?php echo $lang['Selection'] ?></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="./frontend/juegos.php">Juegos</a>
+        <a class="nav-link" href="./frontend/juegos.php"><?php echo $lang['Juegos'] ?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="#"><?php echo $lang['About'] ?></a>
       </li>
       
       <li class="nav-item">
@@ -64,12 +67,12 @@
       <img src="./img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
       <div class="btn-group dropleft ml-3">
           <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-            Cuenta
+          <?php echo $lang['Cuenta'] ?>
           </button>
           <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Iniciar sesión</a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
+              <a class="dropdown-item" href="#"><?php echo $lang['ini_session'] ?></a>
+              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['close_session'] ?></a>
+              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['mi_cuenta'] ?></a>
           </div>
         </div>
   </div>
@@ -93,14 +96,14 @@
 <!-- Page Content -->
 <div class="container">
   <div id="titulo" class="row">
-    <h1 style="color: #F3B63E;">¿Descuentos en bares jugando a juegos? Sigue leyendo...</h1>
+    <h1 style="color: #F3B63E;"><?php echo $lang['titulo_indice'] ?></h1>
   </div>
   <div class="row">
     <div class="col-lg-6">
-      <h2 id="titulo2"  style="color: #e43b3e;">RECOMERÇEM</h2>
-      <p id="parrafo1"> Debido a la pandemia del Covid-19, muchos pequeños comercios y los mercados municipales de ciudades y pueblos han perdido numerosos clientes y ganancias, provocando incluso el cierre definitivos de algunos de ellos.</p>
+      <h2 id="titulo2"  style="color: #e43b3e;"><?php echo $lang['Recomencem'] ?></h2>
+      <p id="parrafo1"> <?php echo $lang['parafo1_indice'] ?></p>
     
-      <p> Por esta razón, tanto la asociación Las Cortes Comercio 08028 como el Instituto Municipal de Mercados de Barcelona nos han pedido una aplicación web para divulgar y potenciar tanto el pequeño comercio como los mercados.</p>
+      <p> <?php echo $lang['parafo2_indice'] ?></p>
     </div>
     <div class="col-lg-6">
       <img class="img-fluid rounded" src="img/img2.jpg" width="450px">
@@ -110,17 +113,14 @@
   <hr>
   <div class="row">
     <div class="col-lg-6">
-      <h3 id="titulo3" style="color: #F3B63E;">¿Cual es la función de nuestra aplicación web?</h3>
-      <p>Esta página tiene como función la divulgación y potenciación del pequeño comercio y de los mercados municipales. 
-      Nuesro grupo formado por Fran, Hector, Dani e Illya hemos elegido como modelo de comercio municipal una selección 
-      de bares y restaurantes de barcelona. </p>
-      <p>En la sección de "Nuestra selección" podrás ver información sobre los bares y/o restaurantes que hemos elegido, 
-      además podrás ver que promociones/descuentos tienen diponibles y como conseguirlas.</p>
+      <h3 id="titulo3" style="color: #F3B63E;"><?php echo $lang['parafo3_indice'] ?></h3>
+      <p><?php echo $lang['parafo4_indice'] ?> </p>
+      <p><?php echo $lang['parafo5_indice'] ?></p>
     </div>
     <div class="col-lg-6">
-      <h3 id="titulo3" style="color: #F3B63E;">¿Te gustaría conseguir descuentos y promociones? </h3>
-      <p> Debido a la pandemia del Covid-19, muchos pequeños comercios y los mercados municipales de ciudades y pueblos han perdido numerosos clientes y ganancias, provocando incluso el cierre definitivos de algunos de ellos.</p>
-      <p> Por esta razón, tanto la asociación Las Cortes Comercio 08028 como el Instituto Municipal de Mercados de Barcelona nos han pedido una aplicación web para divulgar y potenciar tanto el pequeño comercio como los mercados.</p>
+      <h3 id="titulo3" style="color: #F3B63E;"><?php echo $lang['parafo6_indice'] ?></h3>
+      <p> <?php echo $lang['parafo7_indice'] ?></p>
+      <p><?php echo $lang['parafo8_indice'] ?></p>
     </div>
   </div>
 </div>
@@ -133,7 +133,7 @@
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-      
+        <p><a href="index.php?lang=es">Espa~ol</a> <a href="index.php?lang=en">Ingles</a></p>
     </div>
 </footer>
 
