@@ -51,7 +51,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="../frontend/about.php">About</a>
       </li>
       
       <li class="nav-item">
@@ -80,43 +80,38 @@
     <?php require_once('../php_partials/mensajes.php'); ?>
 
     <div class="card mt-2">
-        <div class="card-header bg-secondary text-white"> Oferta
+        <div class="card-header bg-secondary text-white"> Añadir Oferta
         </div>
             <form action="../php_controllers/ofertaController.php" method="POST">
             <div class="form-group row">
-                    <label for="id_restaurante" class="col-sm-2 col-form-label">Identificador Restaurante</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="id_restaurante" name="id_restaurante" placeholder="Identificador del restaurante" autofocus>
+                    <label for="id_restaurante" class="col-sm-3 col-form-label" style="margin-left: 20px;">Identificador Restaurante</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="id_restaurante" name="id_restaurante" placeholder="Identificador del restaurante" required="required"autofocus>
+                    </div>
+                </div>
+               
+                <div class="form-group row">
+                    <label for="nombre" class="col-sm-3 col-form-label" style="margin-left: 20px;">Nombre</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la oferta" required="required" >
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="id_oferta" class="col-sm-2 col-form-label">Identificador Oferta</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="id_oferta" name="id_oferta" placeholder="Identifdicador de la oferta" autofocus>
+                    <label for="puntos" class="col-sm-3 col-form-label" style="margin-left: 20px;">Puntos</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="puntos" name="puntos" placeholder="Puntos de la oferta" required="required">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la oferta" >
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="puntos" class="col-sm-2 col-form-label">Puntos</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="puntos" name="puntos" placeholder="Puntos de la oferta" >
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="codigo" class="col-sm-2 col-form-label">Codigo</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Codigo de la oferta">
+                    <label for="codigo" class="col-sm-3 col-form-label" style="margin-left: 20px;">Codigo</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Codigo de la oferta" required="required">
                     </div>
                 </div>
 
                 <div class="float-right">
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="submit" class="btn btn-primary" name="insert">Aceptar</button>
+                    <div class="btn-group" role="group" aria-label="Basic example" style="margin-bottom: 50px;">
+                        <button type="submit" class="btn btn-warning" name="insert">Aceptar</button>
                         <a href="./administracion.php" class="btn btn-secondary">Cancelar</a>
                     </div>
                 </div>
