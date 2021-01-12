@@ -48,18 +48,18 @@
         </li> -->
 
       <li class="nav-item">
-        <a class="nav-link" href="./frontend/baresRes.php"><?php echo $lang['Selection'] ?></a>
+        <a class="nav-link" href="frontend/baresRes.php"><?php echo $lang['Selection'] ?></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="./frontend/juegos.php"><?php echo $lang['Juegos'] ?></a>
+        <a class="nav-link" href="frontend/juegos.php"><?php echo $lang['Juegos'] ?></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><?php echo $lang['About'] ?></a>
+        <a class="nav-link" href="frontend/about.php"><?php echo $lang['About'] ?></a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Admin</a>
+        <a class="nav-link disabled" href="frontend/administracion.php" tabindex="-1" aria-disabled="true">Admin</a>
       </li>
     </ul>
 
@@ -70,14 +70,16 @@
           <?php echo $lang['Cuenta'] ?>
           </button>
           <div class="dropdown-menu">
-              <a class="dropdown-item" href="#"><?php echo $lang['ini_session'] ?></a>
+              <a class="dropdown-item" href="frontend/CreateAcount.php"><?php echo $lang['create_account'] ?></a>
+              <a class="dropdown-item" href="frontend/logIn.php"><?php echo $lang['ini_session'] ?></a>
               <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['close_session'] ?></a>
               <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['mi_cuenta'] ?></a>
           </div>
         </div>
   </div>
 </nav>
-<!-- -----------------------------------------BODY----------------------------------------------------------------------- -->   
+<!-- -----------------------------------------BODY----------------------------------------------------------------------- --> 
+<?php require_once('php_partials/mensajes.php'); ?>  
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

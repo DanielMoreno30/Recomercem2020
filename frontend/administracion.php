@@ -16,7 +16,6 @@
     <link  rel="icon"   href="../img/iconobirra.png" type="image/png" />
 </head>
 <body>
-<!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
  <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
@@ -59,7 +58,7 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Admin</a>
+        <a class="nav-link disabled" href="../frontend/administracion.php" tabindex="-1" aria-disabled="true">Admin</a>
       </li>
     </ul>
 
@@ -70,13 +69,15 @@
             Cuenta
           </button>
           <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Iniciar sesión</a>
+              <a class="dropdown-item" href="../frontend/CreateAcount.php">Crear cuenta</a>
+              <a class="dropdown-item" href="../frontend/logIn.php">Iniciar sesión</a>
               <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
               <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
           </div>
         </div>
   </div>
 </nav>
+
 <div class="d-flex" id="wrapper">
 <div  id="sidebar-wrapper">
     

@@ -6,10 +6,10 @@
             echo $_SESSION['mensaje'];
             unset($_SESSION['mensaje']);
         ?>    
-        <button type="button" class="close" data-dimiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
  <?php   } ?>
 
  <?php
@@ -20,15 +20,15 @@
             echo $_SESSION['error'];
             unset($_SESSION['error']);
         ?>    
-        <button type="button" class="close" data-dimiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
     </div>
  <?php   } ?>
 
 
 
-
+ 
 
 
 

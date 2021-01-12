@@ -1,6 +1,7 @@
 <?php
 $lang = array(
 
+    "create_account" => "New Account",
     "Principal" => "Home",
     "Selection" => "Our Selection",
     "Juegos" => "Games",

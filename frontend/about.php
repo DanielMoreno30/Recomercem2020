@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="esp">
 <head>
-  <meta charset="utf-8">
-  <title>About Us</title>
-  <link href="../style/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre nosotros - Recomerçem</title>
+    <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/recomercem.css">
+    <link  rel="icon"   href="../img/iconobirra.png" type="image/png" />
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
       Recomerçem
@@ -35,18 +39,19 @@
         </li> -->
 
       <li class="nav-item">
-        <a class="nav-link" href="baresRes.php">Nuestra selección</a>
+        <a class="nav-link" href="../frontend/baresRes.php">Nuestra selección</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="juegos.php">Juegos</a>
+        <a class="nav-link" href="../frontend/juegos.php">Juegos</a>
       </li>
+
       <li class="nav-item">
-        <a class="nav-link" href="about.php">About</a>
+        <a class="nav-link" href="../frontend/about.php">About</a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Admin</a>
+        <a class="nav-link disabled" href="../frontend/administracion.php" tabindex="-1" aria-disabled="true">Admin</a>
       </li>
     </ul>
 
@@ -57,10 +62,10 @@
             Cuenta
           </button>
           <div class="dropdown-menu">
-              <a class="dropdown-item" href="./frontend/CreateAcount.php">Crear Cuenta</a>
-              <a class="dropdown-item" href="#">Iniciar sesión</a>
+              <a class="dropdown-item" href="../frontend/CreateAcount.php">Crear cuenta</a>
+              <a class="dropdown-item" href="../frontend/logIn.php">Iniciar sesión</a>
               <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
-              <a class="dropdown-item" href="./frontend/micuenta.php" tabindex="-1" aria-disabled="true">Mi cuenta</a>
+              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
           </div>
         </div>
   </div>

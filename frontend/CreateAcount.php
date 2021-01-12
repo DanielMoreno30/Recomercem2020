@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="esp">
 <head>
@@ -17,75 +18,94 @@
 </head>
 <body>
 <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#" id = "textTituloNav">
-            <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
-            Recomerçem
-          </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#" id = "textTituloNav">
+      <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
+      Recomerçem
+    </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+      </li>
+
       
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
+      <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Nuestra selección
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Bar 1</a>
+            <a class="dropdown-item" href="#">Bar 2</a>
+            <a class="dropdown-item" href="#">Bar 3</a>
+            <a class="dropdown-item" href="#">Bar 4</a>
+          </div>
+        </li> -->
 
-            
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Nuestra selección
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Bar 1</a>
-                  <a class="dropdown-item" href="#">Bar 2</a>
-                  <a class="dropdown-item" href="#">Bar 3</a>
-                  <a class="dropdown-item" href="#">Bar 4</a>
-                </div>
-              </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="../frontend/baresRes.php">Nuestra selección</a>
+      </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="baresRes.php">Nuestra selección</a>
-            </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../frontend/juegos.php">Juegos</a>
+      </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="juegos.php">Juegos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../frontend/about.php">About</a>
-            </li>
-            
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Admin</a>
-            </li>
-          </ul>
+      <li class="nav-item">
+        <a class="nav-link" href="../frontend/about.php">About</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link disabled" href="../frontend/administracion.php" tabindex="-1" aria-disabled="true">Admin</a>
+      </li>
+    </ul>
 
-          <div>
-            <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
-            <div class="btn-group dropleft ml-3">
-                <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-                  Cuenta
-                </button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Iniciar sesión</a>
-                    <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
-                    <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
-                </div>
-              </div>
+    <div>
+      <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
+      <div class="btn-group dropleft ml-3">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            Cuenta
+          </button>
+          <div class="dropdown-menu">
+              <a class="dropdown-item" href="../frontend/CreateAcount.php">Crear cuenta</a>
+              <a class="dropdown-item" href="../frontend/logIn.php">Iniciar sesión</a>
+              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
+              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
+          </div>
         </div>
-      </nav>
+  </div>
+</nav>
 <!-- -----------------------------------------BODY----------------------------------------------------------------------- -->   
 <div class="container">
+
+     <?php 
+        require_once('../php_partials/mensajes.php'); 
+
+        if(isset($_SESSION['user'])){
+            $user = $_SESSION['user'];
+            unset($_SESSION['user']);
+        }
+        else{
+          $user = [
+            'nombre' => "",
+            'mail' => ""
+          ];
+        }
+
+     ?>
+
     <div class="col ggeasy">
 <form action="../php_controllers/recomercemController.php" method="POST">
     <div class="form-group">
       <label for="exampleInputEmail1">Correo Electronico</label>
-      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email">
+      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" value=" <?php echo $user['mail'] ?> ">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Nombre</label>
-      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="<?php echo $user['nombre'] ?>">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Contraseña</label>
@@ -100,6 +120,9 @@
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div> -->
     <button type="submit" class="btn btn-secondary" name="crearCuenta">Crear</button>
+
+    
+
   </form>
   </div>
   </div>
