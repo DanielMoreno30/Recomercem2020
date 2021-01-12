@@ -54,7 +54,11 @@
             </li>
             <li class="nav-item">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <a class="nav-link" href="../frontend/about.php">About</a>
+=======
+              <a class="nav-link" href="#">About</a>
+>>>>>>> parent of deba66e... Crear cuenta
 =======
               <a class="nav-link" href="#">About</a>
 >>>>>>> parent of deba66e... Crear cuenta

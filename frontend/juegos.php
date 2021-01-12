@@ -14,6 +14,7 @@
 <body>
 <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
 <<<<<<< HEAD
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
@@ -129,6 +130,64 @@
                 <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
             </div>
           </div>
+=======
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#" id = "textTituloNav">
+        <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
+        Recomerçem
+      </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+        </li>
+
+        
+        <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Nuestra selección
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Bar 1</a>
+              <a class="dropdown-item" href="#">Bar 2</a>
+              <a class="dropdown-item" href="#">Bar 3</a>
+              <a class="dropdown-item" href="#">Bar 4</a>
+            </div>
+          </li> -->
+
+        <li class="nav-item">
+          <a class="nav-link" href="./baresRes.php">Nuestra selección</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="./juegos.php">Juegos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Admin</a>
+        </li>
+      </ul>
+
+      <div>
+        <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
+        <div class="btn-group dropleft ml-3">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+              Cuenta
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Iniciar sesión</a>
+                <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
+                <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
+            </div>
+          </div>
+>>>>>>> parent of deba66e... Crear cuenta
     </div>
   </nav>
     
