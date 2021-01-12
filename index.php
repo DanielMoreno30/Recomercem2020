@@ -70,9 +70,15 @@
           <?php echo $lang['Cuenta'] ?>
           </button>
           <div class="dropdown-menu">
+<<<<<<< HEAD
               <a class="dropdown-item" href="#"><?php echo $lang['ini_session'] ?></a>
               <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['close_session'] ?></a>
               <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['mi_cuenta'] ?></a>
+=======
+              <a class="dropdown-item" href="#">Iniciar sesión</a>
+              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
+              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
+>>>>>>> parent of deba66e... Crear cuenta
           </div>
         </div>
   </div>

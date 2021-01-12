@@ -53,7 +53,11 @@
               <a class="nav-link" href="juegos.php">Juegos</a>
             </li>
             <li class="nav-item">
+<<<<<<< HEAD
               <a class="nav-link" href="../frontend/about.php">About</a>
+=======
+              <a class="nav-link" href="#">About</a>
+>>>>>>> parent of deba66e... Crear cuenta
             </li>
             
             <li class="nav-item">
