@@ -7,29 +7,60 @@
     }
     
    
-    
+    #sidebar-wrapper {
+        margin-top: 30px;
+        min-height: 100vh;
+        margin-left: -15rem;
+        -webkit-transition: margin .25s ease-out;
+        -moz-transition: margin .25s ease-out;
+        -o-transition: margin .25s ease-out;
+        transition: margin .25s ease-out;
 
+      }
+      #wrapper {
+        overflow-x: hidden;
+     }
+     #sidebar-wrapper .sidebar-heading {
+        padding: 0.875rem 1.25rem;
+        font-size: 1.2rem;
+      }
+      
+      #sidebar-wrapper .list-group {
+        width: 15rem;
+      }
+      #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+      }
+      #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+      }    
+
+      
 
 /*--------------------------------------Pantalla Juegos--------------------------------------------------------*/
 
 
-    #divsHome{
+    #divsHome
+    {
         width: 600px;
         height: 250px;
     }
     
-    #img1{
+    #img1
+    {
         width: 300px;
         height: 150px;
         margin-bottom: 50px;
         
     }
-    #img2{
+    #img2
+    {
         width: 300px;
         height: 150px;
         margin-bottom: 50px;
     }
-    #bracafelogo{
+    #bracafelogo
+    {
 
         width: 800px;
         height: 300px;

@@ -1,19 +1,22 @@
 <?php
- require_once('../php_libraries/bd.php');
- $ofertas = selectOfertaByRestaurante(1);
-?>
+
+  require_once('../php_libraries/bd.php');
+  $Usuarios = selectUsuarios();
+  ?>
+
 
 <!DOCTYPE html>
 <html lang="esp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bracafé - Recomerçem</title>
+    <title>Admin - Recomerçem</title>
     <link rel="stylesheet" href="../style/bootstrap.min.css">
     <link rel="stylesheet" href="../style/recomercem.css">
     <link  rel="icon"   href="../img/iconobirra.png" type="image/png" />
 </head>
 <body>
+<!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
  <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
@@ -74,107 +77,59 @@
         </div>
   </div>
 </nav>
-<!-- -----------------------------------------BODY----------------------------------------------------------------------- -->   
-<div class="text-center">
-<img src="../img/bracafelogo.png" class="img-fluid">
-</div>
-
-
-  <div class="card m-3" style="height: 440px;">
-    <div class="row g-0">
-      <div class="col-md-5 col-sm-3" >
-        <img src="../img/imgCard1.jpg" class="imgCardsBracafe" alt="...">
-      </div>
-      <div class="col-md-7 col-sm-9">
-        <div class="card-body">
-          <h3 class="card-title" style="color: #e43b3e;">Bracafé</h3>
-          <p class="card-text" style="font-size: large;">Abierto desde 1929, llevan seleccionando el mejor café importado de Brasil para sus tiendas.
-            Tras 6 generaciones de cafeteros su producto y su servicio sigue estando a la máxima altura en calidad-precio y
-            ofreciendo las mejores experiencias a las siguientes generaciones. Manteniendo el producto más natural que nunca. 
-            A parte de una eleccion de cafes casi infinita, también ofrecen una amplia variedad de bocadillos, bollería
-            bebidas, chocolates y tapas.
-            </p>
-            <a href="https://bracafe.com/" class="btn" style="background-color: #F3B63E; color: black;">Visita su página web</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-<div class="card m-3" style="height: 440px;" >
-  <div class="row g-0">
-    <div class="col-md-5 col-sm-3" >
-      <img src="../img/qrBracafe.PNG" id="imgQR" alt="...">
-    </div>
-    <div class="col-md-7 col-sm-9">
-      <div class="card-body">
-        <h3 class="card-title" style="color: #e43b3e;">Menú y Carta</h3>
-        <p class="card-text" style="font-size: large;">
-          Bracafé ofrece a sus clientes una gran variedad de cafés, combinados de cafés, bocadillos, bollería, bebidas, cervezas, cervazas de importación,
-           tapas, tisanas, chocolates de sabores, zumos, tés de sabores y sangrías.<br>
-           Si quieres ver más accede a la carta con este codigo QR o pulsa el botón.
-          </p>
-          <a href="https://el-menu.online/bracafe-urgell" class="btn" style="background-color: #F3B63E; color: black;">Mirar la carta</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="card m-3" style="height: 440px;" >
-  <div class="row g-0">
-    <div class="col-md-5 col-sm-3" >
-      <img src="../img/bracafeMaps.PNG" id="imgMaps" alt="...">
-    </div>
-    <div class="col-md-7 col-sm-9">
-      <div class="card-body">
-        <h3 class="card-title" style="color: #e43b3e;">Ubicación</h3>
-        <p class="card-text" style="font-size: large;">
-          Bracafé cuenta con 29 franquicias repartidas por toda Barcelona, las más centricas e importantes son las del Carrer del Comte d’Urgell, 35, 08011 Barcelona // ADD OPENING TIMES!, Thanks, Carrer de Calàbria, 97, 08015 Barcelona//
-          Gran Via de les Corts Catalanes, 555, 08011 Barcelona // Ronda de la Universitat, 35, 08007 Barcelona // Plaça de Tetuan, 17, 18, 08010 Barcelona <br>
-          Clica en el siguiente botón para ver todas las frnquicias en google maps.
-          </p>
-          <a href="https://www.google.com/maps/search/bracafe/@41.2738717,1.8470385,11z/data=!3m1!4b1?hl=es" class="btn" style="background-color: #F3B63E; color: black;">Ubicaciones</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="card m-3" style="height: 440px;" >
-  <div class="row g-0">
-    <div class="container">
-      <div class="card-body">
-        <h3 class="card-title text-center " style="color: #e43b3e;">Ofertas disponibles</h3>
+<div class="d-flex" id="wrapper">
+<div  id="sidebar-wrapper">
+    
+      <div class="list-group list-group-flush">
+        <a href="./administracion.php" class="list-group-item list-group-item-action">Ofertas</a>
+        <a href="./adminUser.php" class="list-group-item list-group-item-action">Usuarios</a>
         
-        <div class="container">
-            <table class="table">
-              <tr>
-                <th style="color: #F3B63E;">Oferta</th>
-                <th style="color: #F3B63E;">Puntos necesarios</th>
-              </tr>
-
-                <?php foreach ($ofertas as $oferta) {?>
-
-                    <tr>
-                      <td><?php echo $oferta['nombre'] ?></td>
-                      <td><?php echo $oferta['puntos'] ?></td>
-                    </tr>
-
-              <?php } ?>
-
-              
-            </table>
-          </div>
-
-
+        
       </div>
     </div>
-  </div>
-</div>
 
+  <div class="container"style="margin-top: 10px; margin-bottom: 35px;" >
+
+    <?php require_once('../php_partials/mensajes.php'); ?>
+
+      <div class="row">
+        <div style="margin-bottom: 20px;">
+          <button type="button" class="btn btn-warning" onclick="location.href='./usuario.php'">Añadir Usuario</button>
+        </div>
+              <table class="table table-striped">
+                  <tr>
+                      <th >Id</th>
+                      <th >Username</th>
+                      <th >Password</th>
+                      <th >Admin</th>
+                      <th >Puntos</th>
+                      <th >Mail</th>
+                      <th >Borrar</th>
+                  </tr>
+
+                  <?php foreach ($Usuarios as $usuario) { ?>
+                    <tr>
+                      <td><?php echo $usuario['id_usuario'];?></td>
+                      <td><?php echo $usuario['nom_usuario']; ?></td>
+                      <td><?php echo $usuario['contr']; ?></td>
+                      <td><?php echo $usuario['admin']; ?></td>
+                      <td><?php echo $usuario['puntos']; ?></td>
+                      <td><?php echo $usuario['mail']; ?></td>
+                      <td>
+                        <form action="../php_controllers/userController.php" method="POST">
+                          <button type="submit" class="btn btn-danger" name="delete">Borrar</button>
+                          <input type="hidden" id="id_usuario" name="id_usuario" value=<?php echo $usuario['id_usuario'];?>>
+                          
+                        </form>
+                      </td>
+                    </tr>
+                <?php  } ?>
+              </table>
+            </div>
+        </div>
+</div>  
 <!-- -----------------------------------------FOOTER----------------------------------------------------------------------- -->
+  <!-- Illya-->
   <footer class="bg-dark text-center text-lg-start">
     <div class="text-center p-3" >
         <div id="footerLinks">
@@ -190,4 +145,5 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+<script src="extensions/editable/bootstrap-table-editable.js"></script>
 </html>
