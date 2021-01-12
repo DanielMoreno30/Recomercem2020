@@ -55,7 +55,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">About</a>
+        <a class="nav-link" href="../frontend/about.php">About</a>
       </li>
       
       <li class="nav-item">
@@ -77,8 +77,18 @@
         </div>
   </div>
 </nav>
+<div class="d-flex" id="wrapper">
+<div  id="sidebar-wrapper">
+    
+      <div class="list-group list-group-flush">
+        <a href="./administracion.php" class="list-group-item list-group-item-action">Ofertas</a>
+        <a href="./adminUser.php" class="list-group-item list-group-item-action">Usuarios</a>
+        
+        
+      </div>
+    </div>
 
-  <div class="container" style="margin-top: 10px; margin-bottom: 35px;" >
+  <div class="container"style="margin-top: 10px; margin-bottom: 35px;" >
 
     <?php require_once('../php_partials/mensajes.php'); ?>
 
@@ -88,7 +98,7 @@
         </div>
               <table class="table table-striped">
                   <tr>
-                      <th >Id Res</th>
+                      <th >Restaurante</th>
                       <th >Id</th>
                       <th >Nombre</th>
                       <th >Puntos</th>
@@ -98,14 +108,14 @@
 
                   <?php foreach ($ofertas as $oferta) { ?>
                     <tr>
-                      <td><?php echo $oferta['id_restaurante'];?></td>
+                      <td><?php echo $oferta['nomres'];?></td>
                       <td><?php echo $oferta['id_oferta']; ?></td>
                       <td><?php echo $oferta['nombre']; ?></td>
                       <td><?php echo $oferta['puntos']; ?></td>
                       <td><?php echo $oferta['codigo']; ?></td>
                       <td>
                         <form action="../php_controllers/ofertaController.php" method="POST">
-                          <button type="submit" class="btn btn-warning" name="delete">Borrar</button>
+                          <button type="submit" class="btn btn-danger" name="delete">Borrar</button>
                           <input type="hidden" id="id_restaurante" name="id_restaurante" value=<?php echo $oferta['id_restaurante'];?>>
                           <input type="hidden" id="id_oferta" name="id_oferta" value=<?php echo $oferta['id_oferta'];?>>
                         </form>
@@ -115,7 +125,7 @@
               </table>
             </div>
         </div>
-    
+</div>  
 <!-- -----------------------------------------FOOTER----------------------------------------------------------------------- -->
   <!-- Illya-->
   <footer class="bg-dark text-center text-lg-start">
