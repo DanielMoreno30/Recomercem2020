@@ -1,7 +1,7 @@
 <?php
 
   require_once('../php_libraries/bd.php');
-  $ofertas = selectOfertasRestaurante();
+  $Usuarios = selectUsuarios();
   ?>
 
 
@@ -94,30 +94,32 @@
 
       <div class="row">
         <div style="margin-bottom: 20px;">
-          <button type="button" class="btn btn-warning" onclick="location.href='./oferta.php'">Añadir Oferta</button>
+          <button type="button" class="btn btn-warning" onclick="location.href='./usuario.php'">Añadir Usuario</button>
         </div>
               <table class="table table-striped">
                   <tr>
-                      <th >Restaurante</th>
                       <th >Id</th>
-                      <th >Nombre</th>
+                      <th >Username</th>
+                      <th >Password</th>
+                      <th >Admin</th>
                       <th >Puntos</th>
-                      <th >Codigo</th>
+                      <th >Mail</th>
                       <th >Borrar</th>
                   </tr>
 
-                  <?php foreach ($ofertas as $oferta) { ?>
+                  <?php foreach ($Usuarios as $usuario) { ?>
                     <tr>
-                      <td><?php echo $oferta['nomres'];?></td>
-                      <td><?php echo $oferta['id_oferta']; ?></td>
-                      <td><?php echo $oferta['nombre']; ?></td>
-                      <td><?php echo $oferta['puntos']; ?></td>
-                      <td><?php echo $oferta['codigo']; ?></td>
+                      <td><?php echo $usuario['id_usuario'];?></td>
+                      <td><?php echo $usuario['nom_usuario']; ?></td>
+                      <td><?php echo $usuario['contr']; ?></td>
+                      <td><?php echo $usuario['admin']; ?></td>
+                      <td><?php echo $usuario['puntos']; ?></td>
+                      <td><?php echo $usuario['mail']; ?></td>
                       <td>
-                        <form action="../php_controllers/ofertaController.php" method="POST">
+                        <form action="../php_controllers/userController.php" method="POST">
                           <button type="submit" class="btn btn-danger" name="delete">Borrar</button>
-                          <input type="hidden" id="id_restaurante" name="id_restaurante" value=<?php echo $oferta['id_restaurante'];?>>
-                          <input type="hidden" id="id_oferta" name="id_oferta" value=<?php echo $oferta['id_oferta'];?>>
+                          <input type="hidden" id="id_usuario" name="id_usuario" value=<?php echo $usuario['id_usuario'];?>>
+                          
                         </form>
                       </td>
                     </tr>

@@ -1,16 +1,12 @@
-<?php
 
-  require_once('../php_libraries/bd.php');
-  $ofertas = selectOfertasRestaurante();
-  ?>
-
+<?php session_start(); ?>
 
 <!DOCTYPE html>
 <html lang="esp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Recomerçem</title>
+    <title>Añadir usuario - Recomerçem</title>
     <link rel="stylesheet" href="../style/bootstrap.min.css">
     <link rel="stylesheet" href="../style/recomercem.css">
     <link  rel="icon"   href="../img/iconobirra.png" type="image/png" />
@@ -77,55 +73,63 @@
         </div>
   </div>
 </nav>
-<div class="d-flex" id="wrapper">
-<div  id="sidebar-wrapper">
-    
-      <div class="list-group list-group-flush">
-        <a href="./administracion.php" class="list-group-item list-group-item-action">Ofertas</a>
-        <a href="./adminUser.php" class="list-group-item list-group-item-action">Usuarios</a>
-        
-        
-      </div>
-    </div>
 
-  <div class="container"style="margin-top: 10px; margin-bottom: 35px;" >
+
+<div class="container" style="margin-top: 10px; margin-bottom: 35px;" >
 
     <?php require_once('../php_partials/mensajes.php'); ?>
 
-      <div class="row">
-        <div style="margin-bottom: 20px;">
-          <button type="button" class="btn btn-warning" onclick="location.href='./oferta.php'">Añadir Oferta</button>
+    <div class="card mt-2">
+        <div class="card-header bg-secondary text-white"> Añadir Oferta
         </div>
-              <table class="table table-striped">
-                  <tr>
-                      <th >Restaurante</th>
-                      <th >Id</th>
-                      <th >Nombre</th>
-                      <th >Puntos</th>
-                      <th >Codigo</th>
-                      <th >Borrar</th>
-                  </tr>
+            <form action="../php_controllers/userController.php" method="POST">
+            <div class="form-group row">
+                    <label for="id_usuario" class="col-sm-3 col-form-label" style="margin-left: 20px;">Identificador Usuario</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="id_usuario" name="id_usuario" placeholder="Identificador Usuario" required="required"autofocus>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="nom_usuario" class="col-sm-3 col-form-label" style="margin-left: 20px;">Nombre de usuario</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="nom_usuario" name="nom_usuario" placeholder="Nombre de Usuario" required="required" autofocus>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="contr" class="col-sm-3 col-form-label" style="margin-left: 20px;">Contraseña</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="contr" name="contr" placeholder="Password" required="required" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="admin" class="col-sm-3 col-form-label" style="margin-left: 20px;">Administrador</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="admin" name="admin" placeholder="Administrador" required="required" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="puntos" class="col-sm-3 col-form-label" style="margin-left: 20px;">Puntos</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="puntos" name="puntos" placeholder="Puntos de la oferta" required="required">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="mail" class="col-sm-3 col-form-label" style="margin-left: 20px;">mail</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="mail" name="mail" placeholder="Mail del usuario" required="required">
+                    </div>
+                </div>
 
-                  <?php foreach ($ofertas as $oferta) { ?>
-                    <tr>
-                      <td><?php echo $oferta['nomres'];?></td>
-                      <td><?php echo $oferta['id_oferta']; ?></td>
-                      <td><?php echo $oferta['nombre']; ?></td>
-                      <td><?php echo $oferta['puntos']; ?></td>
-                      <td><?php echo $oferta['codigo']; ?></td>
-                      <td>
-                        <form action="../php_controllers/ofertaController.php" method="POST">
-                          <button type="submit" class="btn btn-danger" name="delete">Borrar</button>
-                          <input type="hidden" id="id_restaurante" name="id_restaurante" value=<?php echo $oferta['id_restaurante'];?>>
-                          <input type="hidden" id="id_oferta" name="id_oferta" value=<?php echo $oferta['id_oferta'];?>>
-                        </form>
-                      </td>
-                    </tr>
-                <?php  } ?>
-              </table>
-            </div>
-        </div>
-</div>  
+                <div class="float-right">
+                    <div class="btn-group" role="group" aria-label="Basic example" style="margin-bottom: 50px;">
+                        <button type="submit" class="btn btn-warning" name="insert">Aceptar</button>
+                        <a href="./administracion.php" class="btn btn-secondary">Cancelar</a>
+                    </div>
+                </div>
+            </form>
+          </div>
+      </div>
+
 <!-- -----------------------------------------FOOTER----------------------------------------------------------------------- -->
   <!-- Illya-->
   <footer class="bg-dark text-center text-lg-start">
