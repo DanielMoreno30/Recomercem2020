@@ -98,13 +98,13 @@
         </div>
               <table class="table table-striped">
                   <tr>
-                      <th >Id</th>
-                      <th >Username</th>
-                      <th >Password</th>
-                      <th >Admin</th>
-                      <th >Puntos</th>
-                      <th >Mail</th>
-                      <th >Borrar</th>
+                      <th style="color: #F3B63E;">Id</th>
+                      <th style="color: #F3B63E;">Username</th>
+                      <th style="color: #F3B63E;">Password</th>
+                      <th style="color: #F3B63E;">Admin</th>
+                      <th style="color: #F3B63E;">Puntos</th>
+                      <th style="color: #F3B63E;">Mail</th>
+                      <th style="color: #F3B63E;">Borrar</th>
                   </tr>
 
                   <?php foreach ($Usuarios as $usuario) { ?>

@@ -98,12 +98,12 @@
         </div>
               <table class="table table-striped">
                   <tr>
-                      <th >Restaurante</th>
-                      <th >Id</th>
-                      <th >Nombre</th>
-                      <th >Puntos</th>
-                      <th >Codigo</th>
-                      <th >Borrar</th>
+                      <th style="color: #F3B63E;">Restaurante</th>
+                      <th style="color: #F3B63E;">Id</th>
+                      <th style="color: #F3B63E;">Nombre</th>
+                      <th style="color: #F3B63E;">Puntos</th>
+                      <th style="color: #F3B63E;">Codigo</th>
+                      <th style="color: #F3B63E;">Borrar</th>
                   </tr>
 
                   <?php foreach ($ofertas as $oferta) { ?>
