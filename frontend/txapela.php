@@ -60,7 +60,7 @@
       
     </ul>
 
-    <div>
+    <div style="height: 30px;">
       <?php login_frontend($lang); ?>
   </div>
 </nav>

@@ -66,7 +66,7 @@
       
     </ul>
 
-    <div>
+    <div style="height: 30px;">
       <?php login_index($lang); ?>
   </div>
 </nav>

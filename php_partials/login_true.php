@@ -57,16 +57,25 @@ function login_index($lang){
         if(isset($_SESSION['login'])) { ?>
 
                 
-        <img src="./img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
-      <div class="btn-group dropleft ml-3">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-          <?php echo $lang['Cuenta'] ?>
-          </button>
-          <div class="dropdown-menu">
-              <a class="dropdown-item" href="php_partials/login_true.php?cerrarsesion=true" tabindex="-1" ><?php echo $lang['close_session'] ?></a>
-              <a class="dropdown-item" href="frontend/micuenta.php" tabindex="-1" ><?php echo $lang['mi_cuenta'] ?></a>
-          </div>
-        </div>   
+            <div class="container" >
+
+                      
+            <img src="./img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
+
+            <a class="text-secondary" style="margin-left: 20px;" href="frontend/micuenta.php"><?php echo $_SESSION['user_loged']['nom_usuario']; ?></a>
+
+            <div class="btn-group dropleft ml-3">
+
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            <?php echo $lang['Cuenta'] ?>
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="php_partials/login_true.php?cerrarsesion=true" tabindex="-1" ><?php echo $lang['close_session'] ?></a>
+                <a class="dropdown-item" href="frontend/micuenta.php" tabindex="-1" ><?php echo $lang['mi_cuenta'] ?></a>
+            </div>
+            </div>   
+
+            </div>   
                       
                    
         <?php }else{?>
@@ -102,9 +111,11 @@ function login_frontend($lang){
 
         if(isset($_SESSION['login'])) { ?>
 
-                
-        <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
-      <div class="btn-group dropleft ml-3">
+         <div class="container">
+         
+         <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
+         <a class="text-secondary" style="margin-left: 20px;" href="../frontend/micuenta.php"><?php echo $_SESSION['user_loged']['nom_usuario']; ?></a>
+        <div class="btn-group dropleft ml-3">
           <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
           <?php echo $lang['Cuenta'] ?>
           </button>
@@ -112,7 +123,10 @@ function login_frontend($lang){
               <a class="dropdown-item" href="../php_partials/login_true.php?cerrarsesion=true" tabindex="-1" ><?php echo $lang['close_session'] ?></a>
               <a class="dropdown-item" href="../frontend/micuenta.php" tabindex="-1" ><?php echo $lang['mi_cuenta'] ?></a>
           </div>
-        </div>   
+        </div>
+         
+         </div>       
+           
                       
                    
         <?php }else{?>
