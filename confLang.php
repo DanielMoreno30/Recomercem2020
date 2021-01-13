@@ -1,6 +1,9 @@
 
 <?php
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 
 if(isset($_GET["lang"]) && $_GET["lang"]!=""){
     if($_GET["lang"]=="en" || $_GET["lang"]=="es"){
