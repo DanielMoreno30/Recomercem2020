@@ -71,30 +71,30 @@ include "../php_partials/login_true.php";
     <?php require_once('../php_partials/mensajes.php'); ?>
 
     <div class="card mt-2">
-        <div class="card-header bg-secondary text-white"> Añadir Oferta
+        <div class="card-header bg-secondary text-white"> <?php echo $lang['añadir_oferta'] ?>
         </div>
             <form action="../php_controllers/ofertaController.php" method="POST">
             <div class="form-group row">
-                    <label for="id_restaurante" class="col-sm-3 col-form-label" style="margin-left: 20px;">Identificador Restaurante</label>
+                    <label for="id_restaurante" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['id_res'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="id_restaurante" name="id_restaurante" placeholder="Identificador del restaurante" required="required"autofocus>
                     </div>
                 </div>
                
                 <div class="form-group row">
-                    <label for="nombre" class="col-sm-3 col-form-label" style="margin-left: 20px;">Nombre</label>
+                    <label for="nombre" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['Nombre'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la oferta" required="required" >
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="puntos" class="col-sm-3 col-form-label" style="margin-left: 20px;">Puntos</label>
+                    <label for="puntos" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['puntos'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="puntos" name="puntos" placeholder="Puntos de la oferta" required="required">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="codigo" class="col-sm-3 col-form-label" style="margin-left: 20px;">Codigo</label>
+                    <label for="codigo" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['Codigo'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Codigo de la oferta" required="required">
                     </div>
@@ -102,8 +102,8 @@ include "../php_partials/login_true.php";
 
                 <div class="float-right">
                     <div class="btn-group" role="group" aria-label="Basic example" style="margin-bottom: 50px;">
-                        <button type="submit" class="btn btn-warning" name="insert">Aceptar</button>
-                        <a href="./administracion.php" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-warning" name="insert"><?php echo $lang['aceptar'] ?></button>
+                        <a href="./administracion.php" class="btn btn-secondary"><?php echo $lang['cancelar'] ?></a>
                     </div>
                 </div>
             </form>
@@ -119,7 +119,7 @@ include "../php_partials/login_true.php";
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-      
+        <p><a href="oferta.php?lang=es">Espa~ol</a> || <a href="oferta.php?lang=en">Ingles</a> || <a href="oferta.php?lang=ru">Ruso</a></p>
     </div>
 </footer>
 

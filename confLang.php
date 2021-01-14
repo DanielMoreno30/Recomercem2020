@@ -6,7 +6,7 @@ if(!isset($_SESSION))
 } 
 
 if(isset($_GET["lang"]) && $_GET["lang"]!=""){
-    if($_GET["lang"]=="en" || $_GET["lang"]=="es"){
+    if($_GET["lang"]=="en" || $_GET["lang"]=="es" || $_GET["lang"]=="ru"){
         $_SESSION['lang'] = $_GET["lang"];
     }
 }

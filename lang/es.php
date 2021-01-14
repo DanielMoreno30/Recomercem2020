@@ -13,6 +13,16 @@ $lang = array(
     "es" => "Español",
     "en" => "Ingles",
     "ru" => "Ruso",
+    "puntos_necesarios" => "Puntos necesarios",
+    "oferta" => "Oferta",
+    "ofertas_disponibles" => "Ofertas disponibles",
+    "clicar" => "Clica en el siguiente botón para abrir google maps.",
+    "click_aqui" => "Click aqui",
+    "mirar" => "Mirar la carta",
+    "ubicacion" => "Ubicación",
+    "visitar" => "Visita su página web",
+    "menu" => "Menú y Carta",
+
     "titulo_indice" => "¿Descuentos en bares jugando a juegos? Sigue leyendo...",
     "Recomencem" => "RECOMERÇEM",
     "parafo1_indice" => "Debido a la pandemia del Covid-19, muchos pequeños comercios y los mercados municipales de ciudades y pueblos han perdido numerosos clientes y ganancias, provocando incluso el cierre definitivos de algunos de ellos.",
@@ -41,7 +51,52 @@ $lang = array(
     "parafo2_juegos" => "Ahora que ya has recogido los ingredientes, tendras que preparar los platos en funcion de cada pedido.",
     "parafo3_juegos" => "Los pedidos ya estan listos y ahora tendras que repartirlos, pero cuidado con los coches!",
     "parafo4_juegos" => "Ahora que has llegado al destino reparte los pedidos al domicilio correspondiente.",
-    "jugar" => "Jugar"
+    "jugar" => "Jugar",
+
+    "info_about" => "Somos un grupo de cuatro integrantes de el Institut Politecnics de Barcelona, con un proyecto entre manos con el fin de ayudar a los pequeños comercios,
+    aquellos que lo necesitan más que nadie.
+    Hemos utilizado una serie de herramientas como PHP, Bootstrap y CSS, con un diseño sencillo e intuitivo que nos ha permitido aprender y descubrir muchas
+    funciones que no conocíamos.
+    Estamos muy contentos con nuestro proyecto, y creemos que es el momento de que vosotros también lo veais y lo disfrutéis.",
+
+    "titulo_barLobo" => "Bar Lobo",
+    "info_barLobo" =>"El Bar Lobo es un local de tapas y platos rápidos del Grupo Tragaluz, muy próximo a Las Ramblas. 
+        En él se sirve una cocina sencilla con toques de modernidad y sabores de las mejores influencias internacionales. 
+        Todo en un ambiente distendido, pero con clase y con una carta con una buena relación calidad-precio.",
+    "tipos_comida_lobo" => "Desde los desayunos variados hasta las comidas y cenas divertidas, cuando quieras descansar de tu paseo, pasa por el Bar Lobo. Comida de Mercado, tapas y gran variedad de segundos. .<br>
+        Si quieres ver más accede a la carta con este codigo QR o pulsa el botón.",
+    "calle_lobo" => "Pintor Fortuny 3 08001 Barcelona",
+
+    "info_bracafe" => "Abierto desde 1929, llevan seleccionando el mejor café importado de Brasil para sus tiendas.
+        Tras 6 generaciones de cafeteros su producto y su servicio sigue estando a la máxima altura en calidad-precio y
+        ofreciendo las mejores experiencias a las siguientes generaciones. Manteniendo el producto más natural que nunca. 
+        A parte de una eleccion de cafes casi infinita, también ofrecen una amplia variedad de bocadillos, bollería
+        bebidas, chocolates y tapas.",
+    "comida_bracafe" => " Bracafé ofrece a sus clientes una gran variedad de cafés, combinados de cafés, bocadillos, bollería, bebidas, cervezas, cervazas de importación,
+        tapas, tisanas, chocolates de sabores, zumos, tés de sabores y sangrías.",
+    "acceder_qr" => "Si quieres ver más accede a la carta con este codigo QR o pulsa el botón.",
+    "ubi_bracafe" => "Bracafé cuenta con 29 franquicias repartidas por toda Barcelona, las más centricas e importantes son las del Carrer del Comte d’Urgell, 35, 08011 Barcelona // ADD OPENING TIMES!, Thanks, Carrer de Calàbria, 97, 08015 Barcelona//
+        Gran Via de les Corts Catalanes, 555, 08011 Barcelona // Ronda de la Universitat, 35, 08007 Barcelona // Plaça de Tetuan, 17, 18, 08010 Barcelona <br>
+         Clica en el siguiente botón para ver todas las frnquicias en google maps.",
+
+    "Usuario" => "Usuario:",
+    "Email" => "Email:",
+    "Cambiar_correo" => "Cambiar correo actual:",
+    "Cambiar_contra" => "Cambiar contraseña actual:",
+    "añadir_oferta" => "Añadir Oferta",
+    "id_res" => "Identificador Restaurante",
+    "Nombre" => "Nombre",
+    "puntos" => "Puntos",
+    "Codigo" => "Codigo",
+    "aceptar" => "Aceptar",
+    "cancelar" => "Cancelar",
+    "id_user" => "Identificador Usuario",
+    "name_user" => "Nombre Usuario",
+    "contrtaseña" => "Contraseña",
+    "admin" => "Administrador",
+    "puntos" => "Puntos",
+    "correo" => "Correo Electronico",
+    "entrar" => "Entrar"
     )
 
 ?>

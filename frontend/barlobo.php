@@ -75,12 +75,10 @@
       </div>
       <div class="col-md-7 col-sm-9">
         <div class="card-body">
-          <h3 class="card-title" style="color: #e43b3e;">Bar Lobo</h3>
-          <p class="card-text" style="font-size: large;"> El Bar Lobo es un local de tapas y platos rápidos del Grupo Tragaluz, muy próximo a Las Ramblas. 
-            En él se sirve una cocina sencilla con toques de modernidad y sabores de las mejores influencias internacionales. 
-            Todo en un ambiente distendido, pero con clase y con una carta con una buena relación calidad-precio.
+          <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['titulo_barLobo'] ?></h3>
+          <p class="card-text" style="font-size: large;"> <?php echo $lang['info_barLobo'] ?>
             </p>
-            <a href="https://grupotragaluz.com/restaurante/bar-lobo/" class="btn" style="background-color: #F3B63E; color: black;">Visita su página web</a>
+            <a href="https://grupotragaluz.com/restaurante/bar-lobo/" class="btn" style="background-color: #F3B63E; color: black;"><?php echo $lang['visitar'] ?></a>
         </div>
       </div>
     </div>
@@ -96,12 +94,11 @@
     </div>
     <div class="col-md-7 col-sm-9">
       <div class="card-body">
-        <h3 class="card-title" style="color: #e43b3e;">Menú y Carta</h3>
+        <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['menu'] ?></h3>
         <p class="card-text" style="font-size: large;">
-            Desde los desayunos variados hasta las comidas y cenas divertidas, cuando quieras descansar de tu paseo, pasa por el Bar Lobo. Comida de Mercado, tapas y gran variedad de segundos. .<br>
-           Si quieres ver más accede a la carta con este codigo QR o pulsa el botón.
+              <?php echo $lang['tipos_comida_lobo'] ?>
           </p>
-          <a href="https://grupotragaluz.com/wp-content/uploads/cartas/bar-lobo-es-web.pdf" class="btn" style="background-color: #F3B63E; color: black;">Mirar la carta</a>
+          <a href="https://grupotragaluz.com/wp-content/uploads/cartas/bar-lobo-es-web.pdf" class="btn" style="background-color: #F3B63E; color: black;"><?php echo $lang['mirar'] ?></a>
       </div>
     </div>
   </div>
@@ -115,11 +112,11 @@
     </div>
     <div class="col-md-7 col-sm-9">
       <div class="card-body">
-        <h3 class="card-title" style="color: #e43b3e;">Ubicación</h3>
+        <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['ubicacion'] ?></h3>
         <p class="card-text" style="font-size: large;">
             Pintor Fortuny 3
             08001 Barcelona <br>
-          Clica en el siguiente botón para abrir google maps.
+            <?php echo $lang['clicar'] ?>
           </p>
           <a href="https://www.google.es/maps/place/Bar+Lobo/@41.3834022,2.1684099,16.75z/data=!4m5!3m4!1s0x12a4a2f68991e5a5:0xa248a773ea1adb86!8m2!3d41.383245!4d2.170511" class="btn" style="background-color: #F3B63E; color: black;">Ubicaciones</a>
       </div>
@@ -131,13 +128,13 @@
   <div class="row g-0">
     <div class="container">
       <div class="card-body">
-        <h3 class="card-title text-center " style="color: #e43b3e;">Ofertas disponibles</h3>
+        <h3 class="card-title text-center " style="color: #e43b3e;"><?php echo $lang['ofertas_disponibles'] ?></h3>
         
         <div class="container">
             <table class="table">
               <tr>
-                <th style="color: #F3B63E;">Oferta</th>
-                <th style="color: #F3B63E;">Puntos necesarios</th>
+                <th style="color: #F3B63E;"><?php echo $lang['oferta'] ?></th>
+                <th style="color: #F3B63E;"><?php echo $lang['puntos_necesarios'] ?></th>
               </tr>
 
                 <?php foreach ($ofertas as $oferta) {?>
@@ -167,7 +164,7 @@
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-      
+        <p><a href="barlobo.php?lang=es">Espa~ol</a> || <a href="barlobo.php?lang=en">Ingles</a> || <a href="barlobo.php?lang=ru">Ruso</a></p>
     </div>
 </footer>
 

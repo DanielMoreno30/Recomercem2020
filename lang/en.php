@@ -13,6 +13,17 @@ $lang = array(
     "es" => "Spanish",
     "en" => "English",
     "ru" => "Russian",
+
+    "puntos_necesarios" => "Needed Points",
+    "oferta" => "offer",
+    "ofertas_disponibles" => "Available offers",
+    "clicar" => "Click on the following button to open google maps.",
+    "click_aqui" => "Click here",
+    "mirar" => "Look at the letter",
+    "ubicacion" => "Location",
+    "visitar" => "Visit their website",
+    "menu" => "Menu and Card",
+
     "titulo_indice" => "Discounts at bars playing games? Keep reading...",
     "Recomencem" => "RECOMMENCE",
     "parafo1_indice" => "Due to the Covid-19 pandemic, many small businesses and municipal markets in cities and towns have lost numerous customers and profits, even causing the definitive closure of some of them.",
@@ -42,7 +53,51 @@ $lang = array(
     "parafo2_juegos" => "Now that you have collected the ingredients, you will have to prepare the dishes according to each order.",
     "parafo3_juegos" => "The orders are ready and now you will have to distribute them, but watch out for the cars!",
     "parafo4_juegos" => "Now that you have arrived at the destination, distribute the orders to the corresponding address.",
-    "jugar" => "Play"
+    "jugar" => "Play",
+
+    "info_about" => "We are a group of four members of the Institut Politecnics de Barcelona, ​​with a project in hand in order to help small businesses,
+    those who need it more than anyone.
+    We have used a series of tools such as PHP, Bootstrap and CSS, with a simple and intuitive design that has allowed us to learn and discover many
+    functions that we did not know.
+    We are very happy with our project, and we believe that it is time for you to see it too and enjoy it.",
+
+    "titulo_barLobo" => "Bar Lobo",
+    "info_barLobo" =>"Bar Lobo is a place for tapas and fast dishes from Grupo Tragaluz, very close to Las Ramblas.
+        It serves simple cuisine with touches of modernity and flavors of the best international influences.
+        All in a relaxed atmosphere, but with class and a menu with a good value for money.",
+    "tipos_comida_lobo" => "From varied breakfasts to fun lunches and dinners, when you want to take a break from your walk, stop by the Lobo Bar. Market food, tapas and a great variety of seconds. 
+            If you want to see more, access the menu with this QR code or press the button.",
+    "calle_lobo" => "Pintor Fortuny 3 08001 Barcelona",
+
+    "info_bracafe" => "Open since 1929, they have been selecting the best coffee imported from Brazil for their stores.
+        After 6 generations of coffee growers, their product and service continues to be at the highest quality-price and
+        offering the best experiences to the next generations. Keeping the product more natural than ever.
+        Apart from an almost infinite choice of coffees, they also offer a wide variety of sandwiches, pastries
+        drinks, chocolates and tapas.",
+    "comida_bracafe" => " Bracafé offers its clients a great variety of coffees, coffee combinations, sandwiches, pastries, drinks, beers, imported beer,
+        tapas, tisanes, flavored chocolates, juices, flavored teas and sangrías.",
+    "acceder_qr" => "If you want to see more, access the menu with this QR code or press the button.",
+    "ubi_bracafe" => "Bracafé has 29 franchises distributed throughout Barcelona, ​​the most central and important are those of Carrer del Comte d'Urgell, 35, 08011 Barcelona // ADD OPENING TIMES !, Thanks, Carrer de Calàbria, 97, 08015 Barcelona //
+        Gran Via de les Corts Catalanes, 555, 08011 Barcelona // Ronda de la Universitat, 35, 08007 Barcelona // Plaça de Tetuan, 17, 18, 08010 Barcelona 
+        Click on the following button to see all the funds in google maps.",
+
+    "Usuario" => "User:",
+    "Email" => "Email:",
+    "Cambiar_correo" => "Change email:",
+    "Cambiar_contra" => "Change password:",
+    "añadir_oferta" => "Add Offer",
+    "id_res" => "Restaurant Identifier",
+    "Nombre" => "Name",
+    "puntos" => "Points",
+    "Codigo" => "Code",
+    "aceptar" => "Accept",
+    "cancelar" => "Cancel",
+    "id_user" => "User Identifier",
+    "name_user" => "User Name",
+    "contrtaseña" => "Password",
+    "admin" => "Admin",
+    "correo" => "Email Adress",
+    "entrar" => "Entry"
 )
 
 ?>

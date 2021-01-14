@@ -78,11 +78,7 @@
       <div class="col-md-7 col-sm-9">
         <div class="card-body">
           <h3 class="card-title" style="color: #e43b3e;">Bracafé</h3>
-          <p class="card-text" style="font-size: large;">Abierto desde 1929, llevan seleccionando el mejor café importado de Brasil para sus tiendas.
-            Tras 6 generaciones de cafeteros su producto y su servicio sigue estando a la máxima altura en calidad-precio y
-            ofreciendo las mejores experiencias a las siguientes generaciones. Manteniendo el producto más natural que nunca. 
-            A parte de una eleccion de cafes casi infinita, también ofrecen una amplia variedad de bocadillos, bollería
-            bebidas, chocolates y tapas.
+          <p class="card-text" style="font-size: large;"><?php echo $lang['info_bracafe'] ?>
             </p>
             <a href="https://bracafe.com/" class="btn" style="background-color: #F3B63E; color: black;">Visita su página web</a>
         </div>
@@ -100,11 +96,10 @@
     </div>
     <div class="col-md-7 col-sm-9">
       <div class="card-body">
-        <h3 class="card-title" style="color: #e43b3e;">Menú y Carta</h3>
+        <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['mirar'] ?></h3>
         <p class="card-text" style="font-size: large;">
-          Bracafé ofrece a sus clientes una gran variedad de cafés, combinados de cafés, bocadillos, bollería, bebidas, cervezas, cervazas de importación,
-           tapas, tisanas, chocolates de sabores, zumos, tés de sabores y sangrías.<br>
-           Si quieres ver más accede a la carta con este codigo QR o pulsa el botón.
+        <?php echo $lang['comida_bracafe'] ?><br>
+           <?php echo $lang['acceder_qr'] ?>
           </p>
           <a href="https://el-menu.online/bracafe-urgell" class="btn" style="background-color: #F3B63E; color: black;">Mirar la carta</a>
       </div>
@@ -120,11 +115,9 @@
     </div>
     <div class="col-md-7 col-sm-9">
       <div class="card-body">
-        <h3 class="card-title" style="color: #e43b3e;">Ubicación</h3>
+        <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['ubicacion'] ?></h3>
         <p class="card-text" style="font-size: large;">
-          Bracafé cuenta con 29 franquicias repartidas por toda Barcelona, las más centricas e importantes son las del Carrer del Comte d’Urgell, 35, 08011 Barcelona // ADD OPENING TIMES!, Thanks, Carrer de Calàbria, 97, 08015 Barcelona//
-          Gran Via de les Corts Catalanes, 555, 08011 Barcelona // Ronda de la Universitat, 35, 08007 Barcelona // Plaça de Tetuan, 17, 18, 08010 Barcelona <br>
-          Clica en el siguiente botón para ver todas las frnquicias en google maps.
+              <?php echo $lang['ubi:bracafe'] ?>
           </p>
           <a href="https://www.google.com/maps/search/bracafe/@41.2738717,1.8470385,11z/data=!3m1!4b1?hl=es" class="btn" style="background-color: #F3B63E; color: black;">Ubicaciones</a>
       </div>
@@ -136,13 +129,13 @@
   <div class="row g-0">
     <div class="container">
       <div class="card-body">
-        <h3 class="card-title text-center " style="color: #e43b3e;">Ofertas disponibles</h3>
+        <h3 class="card-title text-center " style="color: #e43b3e;"><?php echo $lang['ofertas_disponibles'] ?></h3>
         
         <div class="container">
             <table class="table">
               <tr>
-                <th style="color: #F3B63E;">Oferta</th>
-                <th style="color: #F3B63E;">Puntos necesarios</th>
+                <th style="color: #F3B63E;"><?php echo $lang['oferta'] ?></th>
+                <th style="color: #F3B63E;"><?php echo $lang['puntos_necesarios'] ?></th>
               </tr>
 
                 <?php foreach ($ofertas as $oferta) {?>
@@ -172,7 +165,7 @@
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-      
+        <p><a href="bracafe.php?lang=es">Espa~ol</a> || <a href="bracafe.php?lang=en">Ingles</a> || <a href="bracafe.php?lang=ru">Ruso</a></p>
     </div>
 </footer>
 

@@ -71,41 +71,41 @@ include "../php_partials/login_true.php";
     <?php require_once('../php_partials/mensajes.php'); ?>
 
     <div class="card mt-2">
-        <div class="card-header bg-secondary text-white"> Añadir Oferta
+        <div class="card-header bg-secondary text-white"> <?php echo $lang['añadir_oferta'] ?>
         </div>
             <form action="../php_controllers/userController.php" method="POST">
             <div class="form-group row">
-                    <label for="id_usuario" class="col-sm-3 col-form-label" style="margin-left: 20px;">Identificador Usuario</label>
+                    <label for="id_usuario" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['id_user'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="id_usuario" name="id_usuario" placeholder="Identificador Usuario" required="required"autofocus>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="nom_usuario" class="col-sm-3 col-form-label" style="margin-left: 20px;">Nombre de usuario</label>
+                    <label for="nom_usuario" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['name_user'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="nom_usuario" name="nom_usuario" placeholder="Nombre de Usuario" required="required" autofocus>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="contr" class="col-sm-3 col-form-label" style="margin-left: 20px;">Contraseña</label>
+                    <label for="contr" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['contraseña'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="contr" name="contr" placeholder="Password" required="required" >
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="admin" class="col-sm-3 col-form-label" style="margin-left: 20px;">Administrador</label>
+                    <label for="admin" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['admin'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="admin" name="admin" placeholder="Administrador" required="required" >
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="puntos" class="col-sm-3 col-form-label" style="margin-left: 20px;">Puntos</label>
+                    <label for="puntos" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['puntos'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="puntos" name="puntos" placeholder="Puntos de la oferta" required="required">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="mail" class="col-sm-3 col-form-label" style="margin-left: 20px;">mail</label>
+                    <label for="mail" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['Email'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="mail" name="mail" placeholder="Mail del usuario" required="required">
                     </div>
@@ -113,8 +113,8 @@ include "../php_partials/login_true.php";
 
                 <div class="float-right">
                     <div class="btn-group" role="group" aria-label="Basic example" style="margin-bottom: 50px;">
-                        <button type="submit" class="btn btn-warning" name="insert">Aceptar</button>
-                        <a href="./administracion.php" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-warning" name="insert"><?php echo $lang['aceptar'] ?></button>
+                        <a href="./administracion.php" class="btn btn-secondary"><?php echo $lang['cancelar'] ?></a>
                     </div>
                 </div>
             </form>
@@ -130,7 +130,7 @@ include "../php_partials/login_true.php";
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-      
+        <p><a href="usuario.php?lang=es">Espa~ol</a> || <a href="usuario.php?lang=en">Ingles</a> || <a href="usuario.php?lang=ru">Ruso</a></p>
     </div>
 </footer>
 

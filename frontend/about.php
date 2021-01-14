@@ -69,7 +69,7 @@
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
 	<center>
-      <h1 class="display-3">¡Recomerçem!</h1>
+      <h1 class="display-3"><?php echo $lang["Recomencem"] ?></h1>
       <!-- <p class="lead">
 		Más de tres meses trabajando para este momento. El momento de presentar nuestro proyecto. Somos un grupo de 4 compañeros con el destino de ayudar
 		a los pequeños comercios, aquellos que necesitan más que nadie.
@@ -78,11 +78,7 @@
 	  </p> -->
 		<br>
 	  <p class="lead">
-		Somos un grupo de cuatro integrantes de el Institut Politecnics de Barcelona, con un proyecto entre manos con el fin de ayudar a los pequeños comercios,
-		aquellos que lo necesitan más que nadie.
-		Hemos utilizado una serie de herramientas como PHP, Bootstrap y CSS, con un diseño sencillo e intuitivo que nos ha permitido aprender y descubrir muchas
-		funciones que no conocíamos.
-		Estamos muy contentos con nuestro proyecto, y creemos que es el momento de que vosotros también lo veais y lo disfrutéis.
+		  <?php echo $lang["info_about"] ?>
 	  </p>
 		<br>
       <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
@@ -154,6 +150,7 @@
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+      <p><a href="about.php?lang=es">Espa~ol</a> || <a href="about.php?lang=en">Ingles</a> || <a href="about.php?lang=ru">Ruso</a></p>
     </div>
     <!-- /.container -->
   </footer>

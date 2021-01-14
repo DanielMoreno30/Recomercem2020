@@ -98,7 +98,7 @@
     </div>
     <div class="col-md-7 col-sm-9">
       <div class="card-body">
-        <h3 class="card-title" style="color: #e43b3e;">Menú y Carta</h3>
+        <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['menu'] ?></h3>
         <p class="card-text" style="font-size: large;">
           Txapela ofrece a sus clientes una gran variedad de desayunos, menús para grupos, comida para llevar y sus famosas cartas de pintxos.<br>
           Si quieres ver más accede a la carta pulsando el botón.
@@ -117,7 +117,7 @@
     </div>
     <div class="col-md-7 col-sm-9">
       <div class="card-body">
-        <h3 class="card-title" style="color: #e43b3e;">Ubicación</h3>
+        <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['ubicacion'] ?></h3>
         <p class="card-text" style="font-size: large;">
           Txapela cuenta con 3 franquicias repartidas por Barcelona y Madrid, las más centricas e importantes son las de Passeig de Gràcia, 58, 08007 Barcelona // 
 		  Plaça Catalunya, 8, 08002 Barcelona //
@@ -134,13 +134,13 @@
   <div class="row g-0">
     <div class="container">
       <div class="card-body">
-        <h3 class="card-title text-center " style="color: #e43b3e;">Ofertas disponibles</h3>
+        <h3 class="card-title text-center " style="color: #e43b3e;"><?php echo $lang['ofertas_disponibles'] ?></h3>
         
         <div class="container">
             <table class="table">
               <tr>
-                <th style="color: #F3B63E;">Oferta</th>
-                <th style="color: #F3B63E;">Puntos necesarios</th>
+                <th style="color: #F3B63E;"><?php echo $lang['oferta'] ?></th>
+                <th style="color: #F3B63E;"><?php echo $lang['ofertas_disponibles'] ?></th>
               </tr>
 
                 <?php foreach ($ofertas as $oferta) {?>
@@ -170,6 +170,7 @@
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
+        <p><a href="txapela.php?lang=es">Espa~ol</a> || <a href="txapela.php?lang=en">Ingles</a> || <a href="txapela.php?lang=ru">Ruso</a></p>
       
     </div>
 </footer>
