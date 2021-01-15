@@ -6,11 +6,10 @@
     margin-bottom: 15px;
     }
     
-   
     #sidebar-wrapper {
         margin-top: 30px;
         min-height: 100vh;
-        margin-left: -15rem;
+       
         -webkit-transition: margin .25s ease-out;
         -moz-transition: margin .25s ease-out;
         -o-transition: margin .25s ease-out;
@@ -34,7 +33,6 @@
       #wrapper.toggled #sidebar-wrapper {
         margin-left: -15rem;
       }    
-
       
 
 /*--------------------------------------Pantalla Juegos--------------------------------------------------------*/

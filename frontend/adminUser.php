@@ -4,7 +4,6 @@
   $Usuarios = selectUsuarios();
   include "../confLang.php";
   include "../php_partials/login_true.php";
-  
   ?>
 
 
@@ -20,7 +19,8 @@
 </head>
 <body>
 <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
       <?php echo $lang['Recomencem'] ?>
@@ -67,7 +67,6 @@
       <?php login_frontend($lang); ?>
   </div>
 </nav>
-
 
 <div class="d-flex" id="wrapper">
 <div  id="sidebar-wrapper">
@@ -119,6 +118,7 @@
               </table>
             </div>
         </div>
+
 </div>  
 <!-- -----------------------------------------FOOTER----------------------------------------------------------------------- -->
   <!-- Illya-->
