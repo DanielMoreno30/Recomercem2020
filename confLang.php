@@ -1,9 +1,12 @@
 
 <?php
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
 
 if(isset($_GET["lang"]) && $_GET["lang"]!=""){
-    if($_GET["lang"]=="en" || $_GET["lang"]=="es"){
+    if($_GET["lang"]=="en" || $_GET["lang"]=="es" || $_GET["lang"]=="ru"){
         $_SESSION['lang'] = $_GET["lang"];
     }
 }

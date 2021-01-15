@@ -1,5 +1,6 @@
 <?php
-    include "../confLang.php"
+    include "../confLang.php";
+    include "../php_partials/login_true.php";
 ?>
 <!DOCTYPE html>
 <html lang="esp">
@@ -12,7 +13,8 @@
     <link  rel="icon"   href="../img/iconobirra.png" type="image/png" />
 </head>
 <body>
-<!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
+
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
@@ -51,25 +53,13 @@
       <li class="nav-item">
         <a class="nav-link" href="../frontend/about.php"><?php echo $lang['About'] ?></a>
       </li>
+  
+      <?php admin_frontend(); ?> 
       
-      <li class="nav-item">
-        <a class="nav-link disabled" href="../frontend/administracion.php" tabindex="-1" aria-disabled="true">Admin</a>
-      </li>
     </ul>
 
-    <div>
-      <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
-      <div class="btn-group dropleft ml-3">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-          <?php echo $lang['Cuenta'] ?>
-          </button>
-          <div class="dropdown-menu">
-              <a class="dropdown-item" href="../frontend/CreateAcount.php"><?php echo $lang['create_account'] ?></a>
-              <a class="dropdown-item" href="../frontend/logIn.php"><?php echo $lang['ini_session'] ?></a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['close_session'] ?></a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['mi_cuenta'] ?></a>
-          </div>
-        </div>
+    <div style="height: 30px;">
+      <?php login_frontend($lang); ?>
   </div>
 </nav>
 
@@ -127,7 +117,7 @@
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-        <p><a href="baresRes.php?lang=es">Espa~ol</a> <a href="baresRes.php?lang=en">Ingles</a></p>
+        <p><a href="baresRes.php?lang=es">Espa~ol</a> || <a href="baresRes.php?lang=en">Ingles</a> || <a href="baresRes.php?lang=ru">Ruso</a></p>
     </div>
 </footer>
 

@@ -1,3 +1,7 @@
+<?php 
+include "../confLang.php";
+include "../php_partials/login_true.php";
+?>
 <!DOCTYPE html>
 <html lang="esp">
 <head>
@@ -20,7 +24,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
-      Recomerçem
+      <?php echo $lang['Recomencem'] ?>
     </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -29,7 +33,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="../index.php"><?php echo $lang['Principal'] ?><span class="sr-only">(current)</span></a>
       </li>
 
       
@@ -46,50 +50,38 @@
         </li> -->
 
       <li class="nav-item">
-        <a class="nav-link" href="../frontend/baresRes.php">Nuestra selección</a>
+        <a class="nav-link" href="../frontend/baresRes.php"><?php echo $lang['Selection'] ?></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="../frontend/juegos.php">Juegos</a>
+        <a class="nav-link" href="../frontend/juegos.php"><?php echo $lang['Juegos'] ?></a>
       </li>
-
       <li class="nav-item">
-        <a class="nav-link" href="../frontend/about.php">About</a>
+        <a class="nav-link" href="../frontend/about.php"><?php echo $lang['About'] ?></a>
       </li>
+  
+      <?php admin_frontend(); ?> 
       
-      <li class="nav-item">
-        <a class="nav-link disabled" href="../frontend/administracion.php" tabindex="-1" aria-disabled="true">Admin</a>
-      </li>
     </ul>
 
-    <div>
-      <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
-      <div class="btn-group dropleft ml-3">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-            Cuenta
-          </button>
-          <div class="dropdown-menu">
-              <a class="dropdown-item" href="../frontend/CreateAcount.php">Crear cuenta</a>
-              <a class="dropdown-item" href="../frontend/logIn.php">Iniciar sesión</a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
-          </div>
-        </div>
+    <div style="height: 30px;">
+      <?php login_frontend($lang); ?>
   </div>
 </nav>
 <!-- -----------------------------------------BODY----------------------------------------------------------------------- -->   
 <div class="container">
+<?php require_once('../php_partials/mensajes.php'); ?>
     <div class="col ggeasy">
-<form>
+<form action="../php_controllers/recomercemController.php" method="POST">
     <div class="form-group">
-      <label for="exampleInputEmail1">Correo Electronico</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+      <label for="exampleInputEmail1"><?php echo $lang['correo'] ?></label>
+      <input type="email" class="form-control" id="mail_login" aria-describedby="emailHelp" placeholder="Email" name="mail_login">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">Contraseña</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+        <label for="exampleInputPassword1"><?php echo $lang['contraseña'] ?></label>
+        <input type="password" class="form-control" id="contr_login" placeholder="Contraseña" name="contr_login">
       </div>
-    <button type="submit" class="btn btn-secondary">Entrar</button>
+    <button type="submit" class="btn btn-secondary" name="login"><?php echo $lang['entrar'] ?></button>
   </form>
   </div>
   </div>
@@ -102,7 +94,7 @@
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-      
+        <p><a href="logIn.php?lang=es">Espa~ol</a> || <a href="logIn.php?lang=en">Ingles</a> || <a href="LogIn.php?lang=ru">Ruso</a></p>
     </div>
 </footer>
 

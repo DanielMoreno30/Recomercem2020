@@ -1,5 +1,6 @@
 <?php
-    include "../confLang.php"
+    include "../confLang.php";
+    include "../php_partials/login_true.php";
 ?>
 <!DOCTYPE html>
 <html lang="esp">
@@ -12,7 +13,7 @@
     <link  rel="icon"   href="../img/iconobirra.png" type="image/png" />
 </head>
 <body>
-<!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
@@ -51,25 +52,13 @@
       <li class="nav-item">
         <a class="nav-link" href="../frontend/about.php"><?php echo $lang['About'] ?></a>
       </li>
+  
+      <?php admin_frontend(); ?> 
       
-      <li class="nav-item">
-        <a class="nav-link disabled" href="../frontend/administracion.php" tabindex="-1" aria-disabled="true">Admin</a>
-      </li>
     </ul>
 
-    <div>
-      <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
-      <div class="btn-group dropleft ml-3">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-          <?php echo $lang['Cuenta'] ?>
-          </button>
-          <div class="dropdown-menu">
-              <a class="dropdown-item" href="../frontend/CreateAcount.php"><?php echo $lang['create_account'] ?></a>
-              <a class="dropdown-item" href="../frontend/logIn.php"><?php echo $lang['ini_session'] ?></a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['close_session'] ?></a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true"><?php echo $lang['mi_cuenta'] ?></a>
-          </div>
-        </div>
+    <div style="height: 30px;">
+      <?php login_frontend($lang); ?>
   </div>
 </nav>
 <!---------------------------------------------BODY---------------------------------------------------------------------------->
@@ -82,7 +71,7 @@
             <img class="card-img-top" src="../img/juego1.PNG" alt="Card image cap" >
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo1_juegos'] ?></p>
-              <a href="./juegosuper.html" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+              <a href="./juegosuper.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
             </div>
           </div>
     </div>
@@ -91,7 +80,7 @@
             <img class="card-img-top" src="../img/juego3.PNG" alt="Card image cap" >
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo2_juegos'] ?></p>
-              <a href="./JuegoCKMama.html" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+              <a href="./JuegoCKMama.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
             </div>
         </div>
     </div>
@@ -102,7 +91,7 @@
             <img class="card-img-top" src="../img/juego2.PNG" alt="Card image cap" >
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo3_juegos'] ?></p>
-              <a href="./juegomoto.html" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+              <a href="./juegomoto.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
             </div>
         </div>
     </div>
@@ -129,7 +118,7 @@
       </div>
       <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
     <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    <p><a href="juegos.php?lang=es">Espa~ol</a> <a href="juegos.php?lang=en">Ingles</a></p>
+    <p><a href="juegos.php?lang=es">Espa~ol</a> || <a href="juegos.php?lang=en">Ingles</a> || <a href="juegos.php?lang=ru">Ruso</a></p>
   </div>
 </footer>
 </body>

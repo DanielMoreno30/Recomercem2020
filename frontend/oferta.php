@@ -1,5 +1,9 @@
 
-<?php session_start(); ?>
+<?php 
+include "../confLang.php";
+include "../php_partials/login_true.php";
+
+?>
 
 <!DOCTYPE html>
 <html lang="esp">
@@ -16,7 +20,7 @@
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
-      Recomerçem
+      <?php echo $lang['Recomencem'] ?>
     </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -25,7 +29,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="../index.php"><?php echo $lang['Principal'] ?><span class="sr-only">(current)</span></a>
       </li>
 
       
@@ -42,35 +46,22 @@
         </li> -->
 
       <li class="nav-item">
-        <a class="nav-link" href="../frontend/baresRes.php">Nuestra selección</a>
+        <a class="nav-link" href="../frontend/baresRes.php"><?php echo $lang['Selection'] ?></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="../frontend/juegos.php">Juegos</a>
+        <a class="nav-link" href="../frontend/juegos.php"><?php echo $lang['Juegos'] ?></a>
       </li>
-
       <li class="nav-item">
-        <a class="nav-link" href="../frontend/about.php">About</a>
+        <a class="nav-link" href="../frontend/about.php"><?php echo $lang['About'] ?></a>
       </li>
+  
+      <?php admin_frontend(); ?> 
       
-      <li class="nav-item">
-        <a class="nav-link disabled" href="../frontend/administracion.php" tabindex="-1" aria-disabled="true">Admin</a>
-      </li>
     </ul>
 
-    <div>
-      <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
-      <div class="btn-group dropleft ml-3">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-            Cuenta
-          </button>
-          <div class="dropdown-menu">
-              <a class="dropdown-item" href="../frontend/CreateAcount.php">Crear cuenta</a>
-              <a class="dropdown-item" href="../frontend/logIn.php">Iniciar sesión</a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
-          </div>
-        </div>
+    <div style="height: 30px;">
+      <?php login_frontend($lang); ?>
   </div>
 </nav>
 
@@ -80,30 +71,30 @@
     <?php require_once('../php_partials/mensajes.php'); ?>
 
     <div class="card mt-2">
-        <div class="card-header bg-secondary text-white"> Añadir Oferta
+        <div class="card-header bg-secondary text-white"> <?php echo $lang['añadir_oferta'] ?>
         </div>
             <form action="../php_controllers/ofertaController.php" method="POST">
             <div class="form-group row">
-                    <label for="id_restaurante" class="col-sm-3 col-form-label" style="margin-left: 20px;">Identificador Restaurante</label>
+                    <label for="id_restaurante" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['id_res'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="id_restaurante" name="id_restaurante" placeholder="Identificador del restaurante" required="required"autofocus>
                     </div>
                 </div>
                
                 <div class="form-group row">
-                    <label for="nombre" class="col-sm-3 col-form-label" style="margin-left: 20px;">Nombre</label>
+                    <label for="nombre" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['Nombre'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la oferta" required="required" >
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="puntos" class="col-sm-3 col-form-label" style="margin-left: 20px;">Puntos</label>
+                    <label for="puntos" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['puntos'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="puntos" name="puntos" placeholder="Puntos de la oferta" required="required">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="codigo" class="col-sm-3 col-form-label" style="margin-left: 20px;">Codigo</label>
+                    <label for="codigo" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['Codigo'] ?></label>
                     <div class="col-sm-8">
                         <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Codigo de la oferta" required="required">
                     </div>
@@ -111,8 +102,8 @@
 
                 <div class="float-right">
                     <div class="btn-group" role="group" aria-label="Basic example" style="margin-bottom: 50px;">
-                        <button type="submit" class="btn btn-warning" name="insert">Aceptar</button>
-                        <a href="./administracion.php" class="btn btn-secondary">Cancelar</a>
+                        <button type="submit" class="btn btn-warning" name="insert"><?php echo $lang['aceptar'] ?></button>
+                        <a href="./administracion.php" class="btn btn-secondary"><?php echo $lang['cancelar'] ?></a>
                     </div>
                 </div>
             </form>
@@ -128,7 +119,7 @@
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-      
+        <p><a href="oferta.php?lang=es">Espa~ol</a> || <a href="oferta.php?lang=en">Ingles</a> || <a href="oferta.php?lang=ru">Ruso</a></p>
     </div>
 </footer>
 

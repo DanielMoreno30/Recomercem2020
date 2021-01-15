@@ -1,5 +1,6 @@
 <?php 
 
+session_start();
 require_once('../php_libraries/bd.php');
 
     if(isset($_POST['crearCuenta']))
@@ -36,7 +37,9 @@ require_once('../php_libraries/bd.php');
                 
             }else{
                 $_SESSION['error'] = "Las contraseñas no son iguales";
-                header("Refresh:0; url = '../frontend/CreateAcount.php'");
+                header('Location: ../frontend/CreateAcount.php');
+                
+
             }
         }
 
@@ -49,11 +52,50 @@ require_once('../php_libraries/bd.php');
 
 
 
+    if(isset($_POST['login']))
+    {
+        login();
+    }
 
 
-  
+
+    function login(){
+        $usuarios = selectUsuarios();
+        $contr = encryption($_POST['contr_login']);
+        $login = false;
+        
+
+        foreach ($usuarios as $usu)
+        {
+            if ($usu['mail'] == $_POST['mail_login'] && $usu['contr'] == $contr) {
+                $login = true;
+                $usuario = $usu;
+            }
+    
+        }
+        
+        if ($login == true) {
+            $_SESSION['login'] = true;
+            $_SESSION['user_loged'] = $usuario;
+            $_SESSION['mensaje'] = "Bienvenido " . $usuario['nom_usuario'] . ".";
+
+            if ($usuario['admin'] == 1) {
+                $_SESSION['admin'] = true;
+            }
+
+            header('Location: ../index.php');
+            exit();
+        }
+
+        $_SESSION['error'] = "Usuario y/o contraseña incorrectos.";
+            header('Location: ../frontend/logIn.php');
+            exit();
+
+    }
+
+
 	
-	  function encryption($string){
+	function encryption($string){
         $METHOD = 'AES-256-CBC';
         $SECRET_KEY = '$RECOMERCEM@2021';
         $SECRET_IV = 526341;
@@ -64,9 +106,9 @@ require_once('../php_libraries/bd.php');
 			$output=openssl_encrypt($string, $METHOD, $key, 0, $iv);
 			$output=base64_encode($output);
 			return $output;
-        }
+    }
         
-	  function decryption($string){
+	function decryption($string){
         $METHOD = 'AES-256-CBC';
 	    $SECRET_KEY = '$RECOMERCEM@2021';
 	    $SECRET_IV = 526341;
@@ -75,7 +117,7 @@ require_once('../php_libraries/bd.php');
 			$iv=substr(hash('sha256', $SECRET_IV), 0, 16);
 			$output=openssl_decrypt(base64_decode($string), $METHOD, $key, 0, $iv);
 			return $output;
-		}
+	}
 
 
 

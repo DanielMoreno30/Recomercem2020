@@ -1,6 +1,8 @@
 <?php
  require_once('../php_libraries/bd.php');
  $ofertas = selectOfertaByRestaurante(4);
+ include "../confLang.php";
+  include "../php_partials/login_true.php";
 ?>
 
 <!DOCTYPE html>
@@ -15,10 +17,10 @@
 </head>
 <body>
  <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
-      Recomerçem
+      <?php echo $lang['Recomencem'] ?>
     </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -27,7 +29,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="../index.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="../index.php"><?php echo $lang['Principal'] ?><span class="sr-only">(current)</span></a>
       </li>
 
       
@@ -44,35 +46,22 @@
         </li> -->
 
       <li class="nav-item">
-        <a class="nav-link" href="../frontend/baresRes.php">Nuestra selección</a>
+        <a class="nav-link" href="../frontend/baresRes.php"><?php echo $lang['Selection'] ?></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="../frontend/juegos.php">Juegos</a>
+        <a class="nav-link" href="../frontend/juegos.php"><?php echo $lang['Juegos'] ?></a>
       </li>
-
       <li class="nav-item">
-        <a class="nav-link" href="../frontend/about.php">About</a>
+        <a class="nav-link" href="../frontend/about.php"><?php echo $lang['About'] ?></a>
       </li>
+  
+      <?php admin_frontend(); ?> 
       
-      <li class="nav-item">
-        <a class="nav-link disabled" href="../frontend/administracion.php" tabindex="-1" aria-disabled="true">Admin</a>
-      </li>
     </ul>
 
-    <div>
-      <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
-      <div class="btn-group dropleft ml-3">
-          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-            Cuenta
-          </button>
-          <div class="dropdown-menu">
-              <a class="dropdown-item" href="../frontend/CreateAcount.php">Crear cuenta</a>
-              <a class="dropdown-item" href="../frontend/logIn.php">Iniciar sesión</a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Cerrar sesión</a>
-              <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Mi cuenta</a>
-          </div>
-        </div>
+    <div style="height: 30px;">
+      <?php login_frontend($lang); ?>
   </div>
 </nav>
 <!-- -----------------------------------------BODY----------------------------------------------------------------------- -->   
@@ -86,12 +75,10 @@
       </div>
       <div class="col-md-7 col-sm-9">
         <div class="card-body">
-          <h3 class="card-title" style="color: #e43b3e;">Bar Lobo</h3>
-          <p class="card-text" style="font-size: large;"> El Bar Lobo es un local de tapas y platos rápidos del Grupo Tragaluz, muy próximo a Las Ramblas. 
-            En él se sirve una cocina sencilla con toques de modernidad y sabores de las mejores influencias internacionales. 
-            Todo en un ambiente distendido, pero con clase y con una carta con una buena relación calidad-precio.
+          <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['titulo_barLobo'] ?></h3>
+          <p class="card-text" style="font-size: large;"> <?php echo $lang['info_barLobo'] ?>
             </p>
-            <a href="https://grupotragaluz.com/restaurante/bar-lobo/" class="btn" style="background-color: #F3B63E; color: black;">Visita su página web</a>
+            <a href="https://grupotragaluz.com/restaurante/bar-lobo/" class="btn" style="background-color: #F3B63E; color: black;"><?php echo $lang['visitar'] ?></a>
         </div>
       </div>
     </div>
@@ -107,12 +94,11 @@
     </div>
     <div class="col-md-7 col-sm-9">
       <div class="card-body">
-        <h3 class="card-title" style="color: #e43b3e;">Menú y Carta</h3>
+        <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['menu'] ?></h3>
         <p class="card-text" style="font-size: large;">
-            Desde los desayunos variados hasta las comidas y cenas divertidas, cuando quieras descansar de tu paseo, pasa por el Bar Lobo. Comida de Mercado, tapas y gran variedad de segundos. .<br>
-           Si quieres ver más accede a la carta con este codigo QR o pulsa el botón.
+              <?php echo $lang['tipos_comida_lobo'] ?>
           </p>
-          <a href="https://grupotragaluz.com/wp-content/uploads/cartas/bar-lobo-es-web.pdf" class="btn" style="background-color: #F3B63E; color: black;">Mirar la carta</a>
+          <a href="https://grupotragaluz.com/wp-content/uploads/cartas/bar-lobo-es-web.pdf" class="btn" style="background-color: #F3B63E; color: black;"><?php echo $lang['mirar'] ?></a>
       </div>
     </div>
   </div>
@@ -126,11 +112,11 @@
     </div>
     <div class="col-md-7 col-sm-9">
       <div class="card-body">
-        <h3 class="card-title" style="color: #e43b3e;">Ubicación</h3>
+        <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['ubicacion'] ?></h3>
         <p class="card-text" style="font-size: large;">
             Pintor Fortuny 3
             08001 Barcelona <br>
-          Clica en el siguiente botón para abrir google maps.
+            <?php echo $lang['clicar'] ?>
           </p>
           <a href="https://www.google.es/maps/place/Bar+Lobo/@41.3834022,2.1684099,16.75z/data=!4m5!3m4!1s0x12a4a2f68991e5a5:0xa248a773ea1adb86!8m2!3d41.383245!4d2.170511" class="btn" style="background-color: #F3B63E; color: black;">Ubicaciones</a>
       </div>
@@ -142,13 +128,13 @@
   <div class="row g-0">
     <div class="container">
       <div class="card-body">
-        <h3 class="card-title text-center " style="color: #e43b3e;">Ofertas disponibles</h3>
+        <h3 class="card-title text-center " style="color: #e43b3e;"><?php echo $lang['ofertas_disponibles'] ?></h3>
         
         <div class="container">
             <table class="table">
               <tr>
-                <th style="color: #F3B63E;">Oferta</th>
-                <th style="color: #F3B63E;">Puntos necesarios</th>
+                <th style="color: #F3B63E;"><?php echo $lang['oferta'] ?></th>
+                <th style="color: #F3B63E;"><?php echo $lang['puntos_necesarios'] ?></th>
               </tr>
 
                 <?php foreach ($ofertas as $oferta) {?>
@@ -178,7 +164,7 @@
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-      
+        <p><a href="barlobo.php?lang=es">Espa~ol</a> || <a href="barlobo.php?lang=en">Ingles</a> || <a href="barlobo.php?lang=ru">Ruso</a></p>
     </div>
 </footer>
 
