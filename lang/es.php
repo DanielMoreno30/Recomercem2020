@@ -13,6 +13,7 @@ $lang = array(
     "es" => "Español",
     "en" => "Ingles",
     "ru" => "Ruso",
+    "cat" => "Catalan",
     "puntos_necesarios" => "Puntos necesarios",
     "oferta" => "Oferta",
     "ofertas_disponibles" => "Ofertas disponibles",
@@ -92,11 +93,33 @@ $lang = array(
     "cancelar" => "Cancelar",
     "id_user" => "Identificador Usuario",
     "name_user" => "Nombre Usuario",
-    "contrtaseña" => "Contraseña",
+    "contraseña" => "Contraseña",
+    "conf_contra" => "Confirmar Contraseña",
     "admin" => "Administrador",
     "puntos" => "Puntos",
     "correo" => "Correo Electronico",
-    "entrar" => "Entrar"
+    "entrar" => "Entrar",
+
+    "txapela_info" => "Txapela es una euskal taberna auténtica en Barcelona (Plaza Cataluña). 
+        Aibá! Nuestras barras son las de una taberna vasca en plena Plaza Cataluña.
+        Los templos barceloneses de los PINTXOS, el TXACOLÍ, los TXIQUITOS y la SIDRA de Euskadi, ¡y además con terraza!
+        Como a los vascos, nos gustan las cosas buenas y bien hechas, con productos auténticos, con DO y elaboraciones típicamente vascas. Ven a probar la rica cultura gastronómica del País Vasco y ¡te cantaremos el Alirón! 
+        ¿Que vienes en kuadrilla? ¡Mejor! ¡La barra de los pintxos de Txapela no hay quien se la termine!",
+    "txapela_menu" => "Txapela ofrece a sus clientes una gran variedad de desayunos, menús para grupos, comida para llevar y sus famosas cartas de pintxos.
+        Si quieres ver más accede a la carta pulsando el botón.",
+    "txapela_ubi" => "Txapela cuenta con 3 franquicias repartidas por Barcelona y Madrid, las más centricas e importantes son las de Passeig de Gràcia, 58, 08007 Barcelona // 
+        Plaça Catalunya, 8, 08002 Barcelona //
+        y Gran Via 64, 28 Madrid //",
+
+    "ramen_info" => "La cocina de Ramen-Ya Hiro es como un tren de vapor, 
+        con su triple ebullición perpetua. El otro lado de la barra hierve con los clientes sorbiendo caldos
+        que han pasado diez horas a fuego lento durante la noche. El dueño especifica que solo hacen tres variedades de ramen porque quieren
+        especializarse en calidad y rapidez. El menú presenta las recetas clásicas de ramen: soja (con un caldo de pollo y cerdo, con salsa de soja), 
+        miso (lo mismo pero con miso en lugar de soja) y mariscos. Los fideos caseros (mira la máquina al final de la barra) son una maravilla: 
+        puedes ponerlos en tu plato y girarlos alrededor de tus palillos con fuerza hasta que el caldo se escape y todavía estén perfectamente elásticos."
+    
+
+
     )
 
 ?>

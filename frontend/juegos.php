@@ -118,7 +118,7 @@
       </div>
       <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
     <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    <p><a href="juegos.php?lang=es">Espa~ol</a> || <a href="juegos.php?lang=en">Ingles</a> || <a href="juegos.php?lang=ru">Ruso</a></p>
+    <p><a href="juegos.php?lang=es"><?php echo $lang['es'] ?></a> || <a href="juegos.php?lang=en"><?php echo $lang['en'] ?></a> || <a href="juegos.php?lang=ru"><?php echo $lang['ru'] ?></a> || <a href="juegos.php?lang=cat"><?php echo $lang['cat'] ?></a></p>
   </div>
 </footer>
 </body>

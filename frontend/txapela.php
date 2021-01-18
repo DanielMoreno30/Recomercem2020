@@ -76,13 +76,9 @@
       <div class="col-md-7 col-sm-9">
         <div class="card-body">
           <h3 class="card-title" style="color: #e43b3e;">Txapela</h3>
-          <p class="card-text" style="font-size: large;">Txapela es una euskal taberna auténtica en Barcelona (Plaza Cataluña). 
-			Aibá! Nuestras barras son las de una taberna vasca en plena Plaza Cataluña.
-			Los templos barceloneses de los PINTXOS, el TXACOLÍ, los TXIQUITOS y la SIDRA de Euskadi, ¡y además con terraza!
-			Como a los vascos, nos gustan las cosas buenas y bien hechas, con productos auténticos, con DO y elaboraciones típicamente vascas. Ven a probar la rica cultura gastronómica del País Vasco y ¡te cantaremos el Alirón! 
-			¿Que vienes en kuadrilla? ¡Mejor! ¡La barra de los pintxos de Txapela no hay quien se la termine!
+          <p class="card-text" style="font-size: large;"><?php echo $lang['txapela_info'] ?>
             </p>
-            <a href="http://www.txapelarestaurant.es/" class="btn" style="background-color: #F3B63E; color: black;">Visita su página web</a>
+            <a href="http://www.txapelarestaurant.es/" class="btn" style="background-color: #F3B63E; color: black;"><?php echo $lang['visitar'] ?></a>
         </div>
       </div>
     </div>
@@ -100,8 +96,7 @@
       <div class="card-body">
         <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['menu'] ?></h3>
         <p class="card-text" style="font-size: large;">
-          Txapela ofrece a sus clientes una gran variedad de desayunos, menús para grupos, comida para llevar y sus famosas cartas de pintxos.<br>
-          Si quieres ver más accede a la carta pulsando el botón.
+        <?php echo $lang['txapela_menu'] ?>
           </p>
           <a href="http://www.txapelarestaurant.es/cocina/carta" class="btn" style="background-color: #F3B63E; color: black;">Mirar la carta</a>
       </div>
@@ -119,12 +114,10 @@
       <div class="card-body">
         <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['ubicacion'] ?></h3>
         <p class="card-text" style="font-size: large;">
-          Txapela cuenta con 3 franquicias repartidas por Barcelona y Madrid, las más centricas e importantes son las de Passeig de Gràcia, 58, 08007 Barcelona // 
-		  Plaça Catalunya, 8, 08002 Barcelona //
-          i Gran Via 64, 28 Madrid //<br>
-          Clica en el siguiente botón para ver todas las franquicias en google maps.
+        <?php echo $lang['txapela_ubi'] ?> <br>
+        <?php echo $lang['clicar'] ?>
           </p>
-          <a href="https://www.google.com/maps/search/txapela/@41.3899003,2.1628364,16z/data=!3m1!4b1?hl=es" class="btn" style="background-color: #F3B63E; color: black;">Ubicaciones</a>
+          <a href="https://www.google.com/maps/search/txapela/@41.3899003,2.1628364,16z/data=!3m1!4b1?hl=es" class="btn" style="background-color: #F3B63E; color: black;"><?php echo $lang['ubicacion'] ?></a>
       </div>
     </div>
   </div>
@@ -170,7 +163,7 @@
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-        <p><a href="txapela.php?lang=es">Espa~ol</a> || <a href="txapela.php?lang=en">Ingles</a> || <a href="txapela.php?lang=ru">Ruso</a></p>
+        <p><a href="txapela.php?lang=es"><?php echo $lang['es'] ?></a> || <a href="txapela.php?lang=en"><?php echo $lang['en'] ?></a> || <a href="txapela.php?lang=ru"><?php echo $lang['ru'] ?></a> || <a href="txapela.php?lang=ru"><?php echo $lang['cat'] ?></a></a></p>
       
     </div>
 </footer>

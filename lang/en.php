@@ -13,6 +13,7 @@ $lang = array(
     "es" => "Spanish",
     "en" => "English",
     "ru" => "Russian",
+    "cat" => "Catalan",
 
     "puntos_necesarios" => "Needed Points",
     "oferta" => "offer",
@@ -94,10 +95,23 @@ $lang = array(
     "cancelar" => "Cancel",
     "id_user" => "User Identifier",
     "name_user" => "User Name",
-    "contrtaseña" => "Password",
+    "contraseña" => "Password",
+    "conf_contra" => "Confirm Password",
     "admin" => "Admin",
     "correo" => "Email Adress",
-    "entrar" => "Entry"
+    "entrar" => "Entry",
+
+    
+    "txapela_info" => "Txapela is an authentic Basque tavern in Barcelona (Plaza Cataluña).
+            Our bars are those of a Basque tavern in the heart of Plaza Cataluña.
+            The Barcelona temples of the PINTXOS, the TXACOLÍ, the TXIQUITOS and the CIDER of Euskadi, and also with a terrace!
+            Like the Basques, we like good things and well done, with authentic products, with DO and typically Basque elaborations. Come and taste the rich gastronomic culture of the Basque Country and we will sing you the Alirón!
+            What do you come in kuadrilla? Best! There is no one to finish the pintxos bar in Txapela!",
+    "txapela_menu" => "Txapela offers its clients a wide variety of breakfasts, group menus, take-away food and its famous pintxo menus.
+            If you want to see more, access the menu by pressing the button.",
+    "txapela_ubi" => "Txapela has 3 franchises spread over Barcelona and Madrid, the most central and important are those of Passeig de Gràcia, 58, 08007 Barcelona //
+            Plaça Catalunya, 8, 08002 Barcelona //
+            and Gran Via 64, 28 Madrid //",
 )
 
 ?>

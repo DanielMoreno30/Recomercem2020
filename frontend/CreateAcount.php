@@ -90,26 +90,26 @@ include "../php_partials/login_true.php";
     <div class="col ggeasy">
 <form action="../php_controllers/recomercemController.php" method="POST">
     <div class="form-group">
-      <label for="exampleInputEmail1">Correo Electronico</label>
-      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" value=" <?php echo $user['mail'] ?> ">
+      <label for="exampleInputEmail1"><?php echo $lang['correo'] ?></label>
+      <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="<?php echo $lang['correo'] ?>" value=" <?php echo $user['mail'] ?> ">
     </div>
     <div class="form-group">
-      <label for="exampleInputPassword1">Nombre</label>
-      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" value="<?php echo $user['nombre'] ?>">
+      <label for="exampleInputPassword1"><?php echo $lang['Nombre'] ?></label>
+      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="<?php echo $lang['Nombre'] ?>" value="<?php echo $user['nombre'] ?>">
     </div>
     <div class="form-group">
-        <label for="exampleInputPassword1">Contraseña</label>
-        <input type="password" class="form-control" id="contr" name="contr" placeholder="Contraseña">
+        <label for="exampleInputPassword1"><?php echo $lang['contraseña'] ?></label>
+        <input type="password" class="form-control" id="contr" name="contr" placeholder="<?php echo $lang['contraseña'] ?>">
       </div>
       <div class="form-group">
-        <label for="exampleInputPassword1"> Confirmar Contraseña</label>
-        <input type="password" class="form-control" id="confirm_contr" name="confirm_contr" placeholder="Confirmar contraseña">
+        <label for="exampleInputPassword1"><?php echo $lang['conf_contra'] ?></label>
+        <input type="password" class="form-control" id="confirm_contr" name="confirm_contr" placeholder="<?php echo $lang['conf_contra'] ?>">
       </div>
     <!-- <div class="form-check">
       <input type="checkbox" class="form-check-input" id="exampleCheck1">
       <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div> -->
-    <button type="submit" class="btn btn-secondary" name="crearCuenta">Crear</button>
+    <button type="submit" class="btn btn-secondary" name="crearCuenta"><?php echo $lang['create_account'] ?></button>
 
     
 
@@ -125,6 +125,7 @@ include "../php_partials/login_true.php";
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
+        <p><a href="CreateAcount.php?lang=es"><?php echo $lang['es'] ?></a> || <a href="CreateAcount.php?lang=en"><?php echo $lang['en'] ?></a> || <a href="CreateAcount.php?lang=ru"><?php echo $lang['ru'] ?></a> || <a href="CreateAcount.php?lang=cat"><?php echo $lang['cat'] ?></a></p>
       
     </div>
 </footer>

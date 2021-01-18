@@ -117,7 +117,7 @@
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-        <p><a href="baresRes.php?lang=es">Espa~ol</a> || <a href="baresRes.php?lang=en">Ingles</a> || <a href="baresRes.php?lang=ru">Ruso</a></p>
+        <p><a href="baresRes.php?lang=es"><?php echo $lang['es'] ?></a> || <a href="baresRes.php?lang=en"><?php echo $lang['en'] ?></a> || <a href="baresRes.php?lang=ru"><?php echo $lang['ru'] ?></a> || <a href="baresRes.php?lang=cat"><?php echo $lang['cat'] ?></a></p>
     </div>
 </footer>
 
