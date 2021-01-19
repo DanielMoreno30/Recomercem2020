@@ -77,6 +77,7 @@ require_once('../php_libraries/bd.php');
         if ($login == true) {
             $_SESSION['login'] = true;
             $_SESSION['user_loged'] = $usuario;
+            $_SESSION['juego'] = 0;
             $_SESSION['mensaje'] = "Bienvenido " . $usuario['nom_usuario'] . ".";
 
             if ($usuario['admin'] == 1) {
@@ -93,6 +94,58 @@ require_once('../php_libraries/bd.php');
 
     }
 
+
+
+    if(isset($_POST['volverajugarsuper']))
+    {
+        $_SESSION['juego'] = 1;
+        header('Location: ../frontend/juegosuper.php');
+        exit();
+    }
+
+    if(isset($_POST['salirsuper']))
+    {
+        $_SESSION['juego'] = 1;
+        header('Location: ../frontend/juegos.php');
+        exit();
+    }
+
+
+
+
+    if(isset($_POST['volverajugarckm']))
+    {
+        $_SESSION['juego'] = 2;
+        header('Location: ../frontend/JuegoCKMama.php');
+        exit();
+    }
+
+    if(isset($_POST['salirckm']))
+    {
+        $_SESSION['juego'] = 2;
+        header('Location: ../frontend/juegos.php');
+        exit();
+    }
+
+    
+
+
+
+    if(isset($_POST['volverajugarmoto']))
+    {
+        $_SESSION['juego'] = 3;
+        header('Location: ../frontend/juegomoto.php');
+        exit();
+    }
+
+    if(isset($_POST['salirmoto']))
+    {
+        $_SESSION['juego'] = 3;
+        header('Location: ../frontend/juegos.php');
+        exit();
+    }
+
+    
 
 	
 	function encryption($string){

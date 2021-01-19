@@ -109,7 +109,11 @@ include "../php_partials/login_true.php";
               </div>
               
           </div>
-          <button id="volverajugar" type="button" class="btn btn-primary" onclick="volverAjugar()">VOLVER A JUGAR</button>
+          <form action="../php_controllers/recomercemController.php" method="POST">
+          <button id="volverajugarmoto" name="volverajugarmoto" type="submit" class="btn btn-primary" >VOLVER A JUGAR</button>
+          <button id="salirmoto" name="salirmoto" type="submit" class="btn btn-primary" >SALIR DEL JUEGO</button>
+          </form>
+          
           
           <div id="carretera">
               <div id="linea1"></div>

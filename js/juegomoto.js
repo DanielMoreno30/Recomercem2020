@@ -22,7 +22,8 @@ var cocheMedio1 = document.getElementById("cocheMedio1");
 var cocheMedio2 = document.getElementById("cocheMedio2");
 var textPuntos = document.getElementById("textPuntos");
 var textPuntosWin = document.getElementById("textPuntosWin");
-var volverajugar = document.getElementById("volverajugar");
+var volverajugar = document.getElementById("volverajugarmoto");
+var salirdeljuego = document.getElementById("salirmoto");
 
 
             
@@ -35,6 +36,7 @@ function comenzar(){
             botonStart.style.visibility = "hidden";
             botonStart.style.animationPlayState = "paused";
             volverajugar.style.visibility = "hidden";
+            salirdeljuego.style.visibility = "hidden";
 
             linea1.style.animationName = "linea1-0";
             linea1.style.animationDuration = "3s";
@@ -329,6 +331,8 @@ function iniciarContador(fondo){
                         puntos = 2500;
                         textPuntosWin.innerHTML = "Has conseguido " + puntos + " puntos";   
                         volverajugar.style.visibility = "visible";
+                        salirdeljuego.style.visibility = "visible";
+                        
                            
  
                         }
@@ -357,6 +361,7 @@ function iniciarContador(fondo){
                         calcularPuntos(tiempo);
                         textPuntos.innerHTML = "Has conseguido " + puntos.toFixed(0) + " puntos"; 
                         volverajugar.style.visibility = "visible";
+                        salirdeljuego.style.visibility = "visible";
                       }
 
                     
@@ -637,6 +642,3 @@ function calcularPuntos(tiempo){
    
 }
 
-function volverAjugar(){
-    location.reload();
-}

@@ -551,13 +551,24 @@ color: aliceblue;
     background-color: #adb5bd; 
     
 }
-#volverajugar{
+#volverajugarmoto{
     padding: 10px;
     position: absolute;
     width: 290px;
-    height: 90px;
+    height: 50px;
     visibility: hidden;
-    top: 780px;
+    top: 760px;
+    left: 610px;
+    background-color: black;
+}
+
+#salirmoto{
+    padding: 10px;
+    position: absolute;
+    width: 290px;
+    height: 50px;
+    visibility: hidden;
+    top: 830px;
     left: 610px;
     background-color: black;
 }
