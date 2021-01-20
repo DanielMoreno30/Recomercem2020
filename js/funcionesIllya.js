@@ -133,7 +133,8 @@ function pushear(ob1, ob2, ob3, ob4, ob5, ob6){
             if(puntos == 4){
                 puntosDB = puntosDB - negativePointDB
                 console.log(puntosDB);
-               document.getElementById('ganar').style.display = "";
+               document.getElementById('ganar').style.display = ""
+               document.getElementById('ganar').innerHTML = (puntosDB)
                clearInterval(intervalId)
             }else{
                 console.log("porqueentras qui")

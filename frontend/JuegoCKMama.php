@@ -138,6 +138,10 @@ include "../php_partials/login_true.php";
     </div>
     <div  style="display: none; position: absolute; left: 50px;" id="ganar">
       <img src="../img/winner.png">
+      <div class="col">
+          Estos son los puntos que has ganado: <br>
+          <div id="puntuacion"></div>
+      </div>
       <div class="container">
         <form action="../php_controllers/recomercemController.php" method="POST">
               <button id="volverajugarckm" name="volverajugarckm" type="submit" class="btn btn-primary" >VOLVER A JUGAR</button>
