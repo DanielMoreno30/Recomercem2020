@@ -12,6 +12,8 @@ var tiempo
 var intervalo
 var conjunto_recetas 
 var intervalId = null
+var puntosDB = 0
+var negativePointDB = 0
 ///////////////////////////////////////////////////////////////////
 function pushear(ob1, ob2, ob3, ob4, ob5, ob6){
     ob1.urlimg = "hamburguesa.png"
@@ -87,13 +89,15 @@ function pushear(ob1, ob2, ob3, ob4, ob5, ob6){
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////
     function sumarPuntos(){
-      
+        puntosDB = puntosDB + 500
+        console.log(puntosDB);
         puntos = puntos + 1
         document.getElementById("puntuacion").innerHTML =(puntos)
         
     }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
     function sumarFallos(){
+        negativePointDB =  negativePointDB + 300
         fallos= fallos + 1
         document.getElementById("fallos").innerHTML = (fallos)
     }
@@ -127,6 +131,8 @@ function pushear(ob1, ob2, ob3, ob4, ob5, ob6){
             sumarPuntos()
             mostrarRes()
             if(puntos == 4){
+                puntosDB = puntosDB - negativePointDB
+                console.log(puntosDB);
                document.getElementById('ganar').style.display = "";
                clearInterval(intervalId)
             }else{
@@ -150,3 +156,4 @@ var chekPoint = create_Checkpoint(conjunto_recetas[numRamdom].ingredientes[numRa
 
 mostrarReceta(conjunto_recetas[numRamdom])
 iniciarContador()
+
