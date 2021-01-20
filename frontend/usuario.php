@@ -94,7 +94,23 @@ else
 
 <div class="container" style="margin-top: 10px; margin-bottom: 35px;" >
 
-    <?php require_once('../php_partials/mensajes.php'); ?>
+    <?php require_once('../php_partials/mensajes.php'); 
+    
+    if(isset($_SESSION['usuario'])){
+      $usuarios = $_SESSION['usuario'];
+      unset($_SESSION['usuario']);
+  }
+  else{
+    $usuario = [
+      'nom_usuario' => "",
+      'contr' => "",
+      'admin' => "",
+      'puntos' => "",
+      'mail' => ""
+    ];
+  }
+    
+    ?>
 
     <div class="card mt-2">
         <div class="card-header bg-secondary text-white"> <?php echo $lang['Usuario'] ?>
@@ -140,7 +156,7 @@ else
                 <div class="float-right">
                     <div class="btn-group" role="group" aria-label="Basic example" style="margin-bottom: 50px;">
                         <button type="submit" class="btn btn-warning" name=<?php if($form==true){echo "update";}else{echo "insert";} ?>><?php echo $lang['aceptar'] ?></button>
-                        <a href="./administracion.php" class="btn btn-secondary"><?php echo $lang['cancelar'] ?></a>
+                        <a href="./adminUser.php" class="btn btn-secondary"><?php echo $lang['cancelar'] ?></a>
                     </div>
                 </div>
             </form>

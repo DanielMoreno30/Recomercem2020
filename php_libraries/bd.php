@@ -209,7 +209,19 @@ function insertUsuario($nombre, $mail, $contr)
 
 function insertUsuarioAdmin($id_usuario, $nombre, $contr, $admin, $puntos, $mail)
 {
-
+    $duplicado = null;
+    $usuarios = selectUsuarios();
+    foreach ($usuarios as $usuario) {
+        if($usuario['nom_usuario'] == $nombre){
+            $_SESSION['error']="El nombre de usuario ya existe.";
+            $duplicado = true;
+        }
+        if($usuario['mail'] == $mail){
+            $_SESSION['error']="El mail ya está en uso.";
+            $duplicado = true;
+        }
+    }
+    if($duplicado == null){
     try{
     $conexion = openBd();
 
@@ -230,11 +242,18 @@ function insertUsuarioAdmin($id_usuario, $nombre, $contr, $admin, $puntos, $mail
     catch(PDOException $e)
     {
         $_SESSION['error']= errorMessage($e);
+        $usuarios['nom_usuario'] = $nombre;
+        $usuarios['contr'] = $contr;
+        $usuarios['admin'] = $admin;
+        $usuarios['puntos'] = $puntos;
+        $usuarios['mail'] = $mail;
+
+        $_SESSION['usuario']=$usuarios;
     }
 
     $conexion = closeBd();
 
-
+    }
 }
 function insertOferta($id_restaurante,$id_oferta,$nombre,$puntos,$codigo)
 {
@@ -339,6 +358,11 @@ function updateOferta($id_oferta,$nombre,$puntos,$codigo)
     catch(PDOException $e)
     {
         $_SESSION['error']= errorMessage($e);
+        $oferta['nombre'] = $nombre;
+        $oferta['puntos'] = $puntos;
+        $oferta['codigo'] = $codigo;
+
+        $_SESSION['oferta']= $oferta;
     }
     $conexion = closeBd();
 }
@@ -360,11 +384,21 @@ function updateUsuarios($id_usuario,$nombre,$contr,$admin,$puntos,$mail)
 
         $_SESSION['mensaje']= 'Registro actualizado correctamente';
 
+     
         
     }
     catch(PDOException $e)
     {
         $_SESSION['error']= errorMessage($e);
+        $usuarios['nom_usuario'] = $nombre;
+        $usuarios['contr'] = $contr;
+        $usuarios['admin'] = $admin;
+        $usuarios['puntos'] = $puntos;
+        $usuarios['mail'] = $mail;
+
+        $_SESSION['usuario']=$usuarios;
+
+
     }
     $conexion = closeBd();
 }
