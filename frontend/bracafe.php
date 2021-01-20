@@ -117,7 +117,7 @@
       <div class="card-body">
         <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['ubicacion'] ?></h3>
         <p class="card-text" style="font-size: large;">
-              <?php echo $lang['ubi:bracafe'] ?>
+              <?php echo $lang['ubi_bracafe'] ?>
           </p>
           <a href="https://www.google.com/maps/search/bracafe/@41.2738717,1.8470385,11z/data=!3m1!4b1?hl=es" class="btn" style="background-color: #F3B63E; color: black;">Ubicaciones</a>
       </div>

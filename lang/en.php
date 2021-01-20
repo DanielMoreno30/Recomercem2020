@@ -88,6 +88,7 @@ $lang = array(
     "Cambiar_contra" => "Change password:",
     "añadir_oferta" => "Add Offer",
     "id_res" => "Restaurant Identifier",
+    "id_oferta" => "Offer Identifier",
     "Nombre" => "Name",
     "puntos" => "Points",
     "Codigo" => "Code",

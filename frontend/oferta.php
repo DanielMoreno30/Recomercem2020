@@ -2,6 +2,30 @@
 <?php 
 include "../confLang.php";
 include "../php_partials/login_true.php";
+require_once("../php_libraries/bd.php");
+
+if (isset($_POST['update'])) 
+{
+    $form = true;
+
+    $oferta = selectUnaOferta($_POST['id_oferta'],$_POST['id_restaurante']);
+    $id_oferta = $oferta[0]['id_oferta'];
+    $nombre = $oferta[0]['nombre'];
+    $puntos = $oferta[0]['puntos'];
+    $codigo = $oferta[0]['codigo'];
+    $id_restaurante = $oferta[0]['id_restaurante'];
+    
+
+}
+else
+{
+    $form = false;
+    $Max = selectOfertaMax();
+  
+    $idMax =  $Max[0]['idmax'];
+  
+  
+}
 
 ?>
 
@@ -77,32 +101,38 @@ include "../php_partials/login_true.php";
             <div class="form-group row">
                     <label for="id_restaurante" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['id_res'] ?></label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="id_restaurante" name="id_restaurante" placeholder="Identificador del restaurante" required="required"autofocus>
+                        <input type="text" class="form-control" id="id_restaurante" name="id_restaurante" placeholder="Identificador del restaurante" required="required" value=<?php if($form==true){echo $id_restaurante;} ?>>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="id_oferta" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['id_oferta'] ?></label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="id_oferta" name="id_oferta" placeholder="Identificador de la oferta" required="required" readonly value=<?php if($form==true){echo $id_oferta;}else{echo $idMax;} ?>>
                     </div>
                 </div>
                
                 <div class="form-group row">
                     <label for="nombre" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['Nombre'] ?></label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la oferta" required="required" >
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre de la oferta" required="required" value=<?php if($form==true){echo $nombre;} ?> >
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="puntos" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['puntos'] ?></label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="puntos" name="puntos" placeholder="Puntos de la oferta" required="required">
+                        <input type="text" class="form-control" id="puntos" name="puntos" placeholder="Puntos de la oferta" required="required" value=<?php if($form==true){echo $puntos;} ?>>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="codigo" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['Codigo'] ?></label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Codigo de la oferta" required="required">
+                        <input type="text" class="form-control" id="codigo" name="codigo" placeholder="Codigo de la oferta" required="required"value=<?php if($form==true){echo $codigo;} ?>>
                     </div>
                 </div>
 
                 <div class="float-right">
                     <div class="btn-group" role="group" aria-label="Basic example" style="margin-bottom: 50px;">
-                        <button type="submit" class="btn btn-warning" name="insert"><?php echo $lang['aceptar'] ?></button>
+                        <button type="submit" class="btn btn-warning" name=<?php if($form==true){echo "update";}else{echo "insert";} ?>><?php echo $lang['aceptar'] ?></button>
                         <a href="./administracion.php" class="btn btn-secondary"><?php echo $lang['cancelar'] ?></a>
                     </div>
                 </div>

@@ -62,14 +62,29 @@ function openBd(){
     return $conexion;
 }
 
-function closeBd(){
+function closeBd()
+{
     return null;
 }
 
-function selectAllOfertas(){
+function selectAllOfertas()
+{
 
     $conexion = openBd();
     $sentenciaText = "select * from ofertas";
+    $sentencia = $conexion->prepare($sentenciaText);
+    $sentencia->execute();
+    $resultado = $sentencia->fetchAll();
+    $conexion = closeBd();
+    return $resultado;
+}
+function selectUnaOferta($id_oferta,$id_restaurante)
+{
+
+    $conexion = openBd();
+    $sentenciaText = " select ofertas_restaurante.id_restaurante, ofertas.id_oferta,ofertas.nombre,ofertas.puntos,ofertas.codigo 
+    from ofertas, ofertas_restaurante
+    where ofertas.id_oferta = ofertas_restaurante.id_oferta AND ofertas_restaurante.id_oferta= $id_oferta AND ofertas_restaurante.id_restaurante = $id_restaurante ";
     $sentencia = $conexion->prepare($sentenciaText);
     $sentencia->execute();
     $resultado = $sentencia->fetchAll();
@@ -103,6 +118,17 @@ function selectOfertaByRestaurante($id)
     return $ofertas;
 }
 
+function selectOfertaMax()
+{
+    $conexion = openBd();
+    $sentenciaText = "select max(id_oferta)+1 as idmax from ofertas";
+    $sentencia = $conexion->prepare($sentenciaText);
+    $sentencia->execute();
+    $resultado = $sentencia->fetchAll();
+    $conexion = closeBd();
+    return $resultado;
+}
+
 function selectUsuarios()
 {
     $conexion = openBd();
@@ -114,6 +140,28 @@ function selectUsuarios()
     return $resultado;
 
 }
+function selectUsuarioMax()
+{
+    $conexion = openBd();
+    $sentenciaText = "select max(id_usuario)+1 as idmax from usuarios";
+    $sentencia = $conexion->prepare($sentenciaText);
+    $sentencia->execute();
+    $resultado = $sentencia->fetchAll();
+    $conexion = closeBd();
+    return $resultado;
+}
+
+function selectUnUsuario($id_usuario)
+{
+    $conexion = openBd();
+    $sentenciaText = "select * from usuarios where id_usuario = $id_usuario";
+    $sentencia = $conexion->prepare($sentenciaText);
+    $sentencia->execute();
+    $resultado = $sentencia->fetchAll();
+    $conexion = closeBd();
+    return $resultado;
+}
+
 function insertUsuario($nombre, $mail, $contr)
 {
     $duplicado = null;
@@ -188,25 +236,26 @@ function insertUsuarioAdmin($id_usuario, $nombre, $contr, $admin, $puntos, $mail
 
 
 }
-function insertOferta($id_restaurante,$nombre,$puntos,$codigo)
+function insertOferta($id_restaurante,$id_oferta,$nombre,$puntos,$codigo)
 {
     try
     {
 
         $conexion = openBd();
 
-        $sentenciaText = "insert into ofertas_restaurante(id_restaurante) values(:id_restaurante)";
+        $sentenciaText = "insert into ofertas_restaurante(id_restaurante,id_oferta) values(:id_restaurante,:id_oferta)";
         $sentencia = $conexion->prepare($sentenciaText);
         $sentencia->bindParam(':id_restaurante', $id_restaurante);
-       
+        $sentencia->bindParam(':id_oferta', $id_oferta);
         $sentencia->execute();
 
         $conexion = closeBd();
 
         $conexion = openBd();
 
-        $sentenciaText = "insert into ofertas(nombre,puntos,codigo) values(:nombre,:puntos,:codigo)";
+        $sentenciaText = "insert into ofertas(id_oferta,nombre,puntos,codigo) values(:id_oferta,:nombre,:puntos,:codigo)";
         $sentencia = $conexion->prepare($sentenciaText);
+        $sentencia->bindParam(':id_oferta', $id_oferta);
         $sentencia->bindParam(':nombre', $nombre);
         $sentencia->bindParam(':puntos', $puntos);
         $sentencia->bindParam(':codigo', $codigo);
@@ -268,5 +317,55 @@ function deleteUsuario($id_usuario)
     $conexion = closeBd();
    
 
+}
+function updateOferta($id_oferta,$nombre,$puntos,$codigo)
+{
+    try
+    {
+        $conexion = openBd();
+
+        $sentenciaText = "update ofertas SET nombre =:nombre, puntos =:puntos, codigo = :codigo where id_oferta = $id_oferta;";
+        $sentencia = $conexion->prepare($sentenciaText);
+        $sentencia->bindParam(':nombre', $nombre);
+        $sentencia->bindParam(':puntos', $puntos);
+        $sentencia->bindParam(':codigo', $codigo);
+        
+        $sentencia->execute();
+
+        $_SESSION['mensaje']= 'Registro actualizado correctamente';
+
+        
+    }
+    catch(PDOException $e)
+    {
+        $_SESSION['error']= errorMessage($e);
+    }
+    $conexion = closeBd();
+}
+function updateUsuarios($id_usuario,$nombre,$contr,$admin,$puntos,$mail)
+{
+    try
+    {
+        $conexion = openBd();
+
+        $sentenciaText = "update usuarios SET nom_usuario =:nombre,contr=:contr, admin = :admin, puntos = :puntos, mail = :mail where id_usuario = $id_usuario;";
+        $sentencia = $conexion->prepare($sentenciaText);
+        $sentencia->bindParam(':nombre', $nombre);
+        $sentencia->bindParam(':contr', $contr);
+        $sentencia->bindParam(':admin', $admin);
+        $sentencia->bindParam(':puntos', $puntos);
+        $sentencia->bindParam(':mail', $mail);
+        
+        $sentencia->execute();
+
+        $_SESSION['mensaje']= 'Registro actualizado correctamente';
+
+        
+    }
+    catch(PDOException $e)
+    {
+        $_SESSION['error']= errorMessage($e);
+    }
+    $conexion = closeBd();
 }
 ?>

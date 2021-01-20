@@ -96,6 +96,7 @@
                       <th style="color: #F3B63E;">Puntos</th>
                       <th style="color: #F3B63E;">Codigo</th>
                       <th style="color: #F3B63E;">Borrar</th>
+                      <th style="color: #F3B63E;">Editar</th>
                   </tr>
 
                   <?php foreach ($ofertas as $oferta) { ?>
@@ -110,6 +111,13 @@
                           <button type="submit" class="btn btn-danger" name="delete">Borrar</button>
                           <input type="hidden" id="id_restaurante" name="id_restaurante" value=<?php echo $oferta['id_restaurante'];?>>
                           <input type="hidden" id="id_oferta" name="id_oferta" value=<?php echo $oferta['id_oferta'];?>>
+                        </form>
+                      </td>
+                      <td>
+                        <form action="./oferta.php" method="POST" >
+                          <button type="submit" class="btn btn-warning" onclick="location.href='./oferta.php'" name="update">Editar</button>
+                          <input type="hidden" id="id_oferta" name="id_oferta" value=<?php echo $oferta['id_oferta'];?>>
+                          <input type="hidden" id="id_restaurante" name="id_restaurante" value=<?php echo $oferta['id_restaurante'];?>>
                         </form>
                       </td>
                     </tr>

@@ -3,6 +3,32 @@
 session_start(); 
 include "../confLang.php";
 include "../php_partials/login_true.php";
+
+require_once("../php_libraries/bd.php");
+
+if (isset($_POST['update'])) 
+{
+    $form = true;
+
+    $usuario = selectUnUsuario($_POST['id_usuario']);
+    $id_usuario = $usuario[0]['id_usuario'];
+    $nom_usuario = $usuario[0]['nom_usuario'];
+    $contr = $usuario[0]['contr'];
+    $admin = $usuario[0]['admin'];
+    $puntos = $usuario[0]['puntos'];
+    $mail = $usuario[0]['mail'];
+    
+
+}
+else
+{
+    $form = false;
+    $Max = selectUsuarioMax();
+  
+    $idMax =  $Max[0]['idmax'];
+  
+  
+}
 ?>
 
 <!DOCTYPE html>
@@ -71,49 +97,49 @@ include "../php_partials/login_true.php";
     <?php require_once('../php_partials/mensajes.php'); ?>
 
     <div class="card mt-2">
-        <div class="card-header bg-secondary text-white"> <?php echo $lang['añadir_oferta'] ?>
+        <div class="card-header bg-secondary text-white"> <?php echo $lang['Usuario'] ?>
         </div>
             <form action="../php_controllers/userController.php" method="POST">
             <div class="form-group row">
                     <label for="id_usuario" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['id_user'] ?></label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="id_usuario" name="id_usuario" placeholder="Identificador Usuario" required="required"autofocus>
+                        <input type="text" class="form-control" id="id_usuario" name="id_usuario" placeholder="Identificador Usuario" required="required" readonly value=<?php if($form==true){echo $id_usuario;}else{echo $idMax;} ?>>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="nom_usuario" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['name_user'] ?></label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="nom_usuario" name="nom_usuario" placeholder="Nombre de Usuario" required="required" autofocus>
+                        <input type="text" class="form-control" id="nom_usuario" name="nom_usuario" placeholder="Nombre de Usuario" required="required" autofocus value=<?php if($form==true){echo $nom_usuario;} ?>>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="contr" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['contraseña'] ?></label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="contr" name="contr" placeholder="Password" required="required" >
+                        <input type="text" class="form-control" id="contr" name="contr" placeholder="Password" required="required" value=<?php if($form==true){echo $contr;} ?> >
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="admin" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['admin'] ?></label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="admin" name="admin" placeholder="Administrador" required="required" >
+                        <input type="text" class="form-control" id="admin" name="admin" placeholder="Administrador" required="required" value=<?php if($form==true){echo $admin;} ?> >
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="puntos" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['puntos'] ?></label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="puntos" name="puntos" placeholder="Puntos de la oferta" required="required">
+                        <input type="text" class="form-control" id="puntos" name="puntos" placeholder="Puntos de la oferta" required="required" value=<?php if($form==true){echo $puntos;} ?>>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="mail" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['Email'] ?></label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="mail" name="mail" placeholder="Mail del usuario" required="required">
+                        <input type="text" class="form-control" id="mail" name="mail" placeholder="Mail del usuario" required="required" value=<?php if($form==true){echo $mail;} ?>>
                     </div>
                 </div>
 
                 <div class="float-right">
                     <div class="btn-group" role="group" aria-label="Basic example" style="margin-bottom: 50px;">
-                        <button type="submit" class="btn btn-warning" name="insert"><?php echo $lang['aceptar'] ?></button>
+                        <button type="submit" class="btn btn-warning" name=<?php if($form==true){echo "update";}else{echo "insert";} ?>><?php echo $lang['aceptar'] ?></button>
                         <a href="./administracion.php" class="btn btn-secondary"><?php echo $lang['cancelar'] ?></a>
                     </div>
                 </div>

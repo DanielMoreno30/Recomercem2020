@@ -96,6 +96,8 @@
                       <th style="color: #F3B63E;">Puntos</th>
                       <th style="color: #F3B63E;">Mail</th>
                       <th style="color: #F3B63E;">Borrar</th>
+                      <th style="color: #F3B63E;">Editar</th>
+
                   </tr>
 
                   <?php foreach ($Usuarios as $usuario) { ?>
@@ -110,7 +112,12 @@
                         <form action="../php_controllers/userController.php" method="POST">
                           <button type="submit" class="btn btn-danger" name="delete">Borrar</button>
                           <input type="hidden" id="id_usuario" name="id_usuario" value=<?php echo $usuario['id_usuario'];?>>
-                          
+                        </form>
+                      </td>
+                      <td>
+                        <form action="./usuario.php" method="POST" >
+                          <button type="submit" class="btn btn-warning" onclick="location.href='./usuario.php'" name="update">Editar</button>
+                          <input type="hidden" id="id_usuario" name="id_usuario" value=<?php echo $usuario['id_usuario'];?>>
                         </form>
                       </td>
                     </tr>
