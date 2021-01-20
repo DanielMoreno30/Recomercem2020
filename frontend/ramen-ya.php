@@ -72,15 +72,12 @@ include "../php_partials/login_true.php";
   </div>
 </nav>
 <!-- -----------------------------------------BODY----------------------------------------------------------------------- -->   
-<div class="text-center">
-<img src="../img/bracafelogo.png" class="img-fluid">
-</div>
-
+<div class="container">
 
   <div class="card m-3" style="height: 440px;">
     <div class="row g-0">
       <div class="col-md-5 col-sm-3" >
-        <img src="../img/ramen.png" class="imgCardsBracafe" alt="...">
+        <img src="../img/ramen.png" style="width: 80%; height:80%;" alt="...">
       </div>
       <div class="col-md-7 col-sm-9">
         <div class="card-body">
@@ -96,8 +93,7 @@ include "../php_partials/login_true.php";
 
 
 <div class="card m-3" style="height: 440px;" >
-  <div class="row g-0">
-    <div class="col col">
+  <div class="col">
       <div class="card-body">
       <table class="table">
 				<thead>
@@ -246,7 +242,6 @@ include "../php_partials/login_true.php";
 				</tbody>
 			</table>
       </div>
-    </div>
   </div>
 </div>
 
@@ -296,7 +291,7 @@ include "../php_partials/login_true.php";
     </div>
   </div>
 </div>
-
+</div>
 <!-- -----------------------------------------FOOTER----------------------------------------------------------------------- -->
   <footer class="bg-dark text-center text-lg-start">
     <div class="text-center p-3" >
