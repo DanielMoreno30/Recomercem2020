@@ -22,7 +22,9 @@ if (isset($_POST['insert']))
         }
         else
         {
-            insertUsuarioAdmin($_POST['id_usuario'],$_POST['nom_usuario'],$_POST['contr'],$_POST['admin'],$_POST['puntos'],$_POST['mail']);
+            $contr = $_POST['contr'];
+            $contrEncriptada = encryption($contr);
+            insertUsuarioAdmin($_POST['id_usuario'],$_POST['nom_usuario'],$contrEncriptada,$_POST['admin'],$_POST['puntos'],$_POST['mail']);
 
             if (isset($_SESSION['error'])) 
             {
@@ -49,10 +51,29 @@ elseif (isset($_POST['delete']))
     }
 elseif(isset($_POST['update']))
     {
-        updateUsuarios($_POST['id_usuario'],$_POST['nom_usuario'],$_POST['contr'],$_POST['admin'],$_POST['puntos'],$_POST['mail']);
+        $contr = $_POST['contr'];
+        $contrEncriptada = encryption($contr);
+        updateUsuarios($_POST['id_usuario'],$_POST['nom_usuario'],$contrEncriptada,$_POST['admin'],$_POST['puntos'],$_POST['mail']);
         header('Location: ../frontend/adminUser.php');
         exit();
     }
+
+
+
+    function encryption($string){
+        $METHOD = 'AES-256-CBC';
+        $SECRET_KEY = '$RECOMERCEM@2021';
+        $SECRET_IV = 526341;
+
+			$output=FALSE;
+			$key=hash('sha256', $SECRET_KEY);
+			$iv=substr(hash('sha256', $SECRET_IV), 0, 16);
+			$output=openssl_encrypt($string, $METHOD, $key, 0, $iv);
+			$output=base64_encode($output);
+			return $output;
+    }
+        
+	
 
 
 ?>

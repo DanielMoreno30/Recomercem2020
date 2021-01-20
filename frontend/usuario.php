@@ -18,6 +18,8 @@ if (isset($_POST['update']))
     $puntos = $usuario[0]['puntos'];
     $mail = $usuario[0]['mail'];
     
+    
+    $contrDesencriptada = decryption($contr);
 
 }
 else
@@ -131,7 +133,7 @@ else
                 <div class="form-group row">
                     <label for="contr" class="col-sm-3 col-form-label" style="margin-left: 20px;"><?php echo $lang['contraseña'] ?></label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" id="contr" name="contr" placeholder="Password" required="required" value=<?php if($form==true){echo $contr;} ?> >
+                        <input type="text" class="form-control" id="contr" name="contr" placeholder="Password" required="required" value=<?php if($form==true){echo $contrDesencriptada;} ?> >
                     </div>
                 </div>
                 <div class="form-group row">
