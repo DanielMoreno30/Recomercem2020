@@ -72,33 +72,34 @@ include "../php_partials/login_true.php";
   </div>
 </nav>
 <!-- -----------------------------------------BODY----------------------------------------------------------------------- -->   
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-6">
-			<img src="../img/ramen.png" width="80%" height="90%" class="imagenTienda"/>
-		</div>
-		<div class="col-md-6">
-            <div class="card cartaPocha">
-                <div class="card-header">
-                  Ramen-ya Hiro
-                </div>
-                <div class="card-body">
-                  <blockquote class="blockquote mb-0">
-                    <p> La cocina de Ramen-Ya Hiro es como un tren de vapor, 
-                        con su triple ebullición perpetua. El otro lado de la barra hierve con los clientes sorbiendo caldos
-                        que han pasado diez horas a fuego lento durante la noche. El dueño especifica que solo hacen tres variedades de ramen porque quieren
-                        especializarse en calidad y rapidez. El menú presenta las recetas clásicas de ramen: soja (con un caldo de pollo y cerdo, con salsa de soja), 
-                        miso (lo mismo pero con miso en lugar de soja) y mariscos. Los fideos caseros (mira la máquina al final de la barra) son una maravilla: 
-                        puedes ponerlos en tu plato y girarlos alrededor de tus palillos con fuerza hasta que el caldo se escape y todavía estén perfectamente elásticos. </p>
-                    <footer class="blockquote-footer">/////////Time Out/////////// <a href="#" class="card-link">https://www.timeout.com/barcelona/restaurants/ramen-ya-hiro</a></footer>
-                  </blockquote>
-                </div>
-              </div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-			<table class="table">
+<div class="text-center">
+<img src="../img/bracafelogo.png" class="img-fluid">
+</div>
+
+
+  <div class="card m-3" style="height: 440px;">
+    <div class="row g-0">
+      <div class="col-md-5 col-sm-3" >
+        <img src="../img/ramen.png" class="imgCardsBracafe" alt="...">
+      </div>
+      <div class="col-md-7 col-sm-9">
+        <div class="card-body">
+          <h3 class="card-title" style="color: #e43b3e;">Ramen-ya Hiro</h3>
+          <p class="card-text" style="font-size: large;"><?php echo $lang['ramen_info'] ?>
+            </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<div class="card m-3" style="height: 440px;" >
+  <div class="row g-0">
+    <div class="col col">
+      <div class="card-body">
+      <table class="table">
 				<thead>
 					<tr>
 						<th>
@@ -244,27 +245,37 @@ include "../php_partials/login_true.php";
 					</tr>
 				</tbody>
 			</table>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-12">
-            <img src="../img/ramenSitio.PNG" width="80%" height="90%" class="imagenMapa img-thumbnail">
-            <a href="https://www.google.com/maps/place/Ramen-ya+Hiro/@41.399648,2.164968,15z/data=!4m5!3m4!1s0x0:0x2fbae62d2688d29d!8m2!3d41.399648!4d2.164968" class="btn" style="background-color: #F3B63E; color: black;">Ubicaciones</a>
-		</div>
-	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card m-3" style="height: 440px;" >
+  <div class="row g-0">
+    <div class="col-md-5 col-sm-3" >
+      <img src="../img/ramenSitio.PNG" id="imgMaps" alt="...">
+    </div>
+    <div class="col-md-7 col-sm-9">
+      <div class="card-body">
+        <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['ubicacion'] ?></h3>
+          <a href="https://www.google.com/maps/place/Ramen-ya+Hiro/@41.399648,2.164968,15z/data=!4m5!3m4!1s0x0:0x2fbae62d2688d29d!8m2!3d41.399648!4d2.164968" class="btn" style="background-color: #F3B63E; color: black;"><?php echo $lang['ubicacion'] ?></a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="card m-3" style="height: 440px;" >
   <div class="row g-0">
     <div class="container">
       <div class="card-body">
-        <h3 class="card-title text-center " style="color: #e43b3e;">Ofertas disponibles</h3>
+        <h3 class="card-title text-center " style="color: #e43b3e;"><?php echo $lang['ofertas_disponibles'] ?></h3>
         
         <div class="container">
             <table class="table">
               <tr>
-                <th style="color: #F3B63E;">Oferta</th>
-                <th style="color: #F3B63E;">Puntos necesarios</th>
+                <th style="color: #F3B63E;"><?php echo $lang['oferta'] ?></th>
+                <th style="color: #F3B63E;"><?php echo $lang['puntos_necesarios'] ?></th>
               </tr>
 
                 <?php foreach ($ofertas as $oferta) {?>
@@ -294,7 +305,7 @@ include "../php_partials/login_true.php";
             <a href="#" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
-      
+        <p><a href="ramen-ya.php?lang=es"><?php echo $lang['es'] ?></a> || <a href="ramen-ya.php?lang=en"><?php echo $lang['en'] ?></a> || <a href="ramen-ya.php?lang=ru"><?php echo $lang['ru'] ?></a> || <a href="ramen-ya.php?lang=cat"><?php echo $lang['cat'] ?></a></p>
     </div>
 </footer>
 
