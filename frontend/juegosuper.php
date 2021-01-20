@@ -83,14 +83,29 @@
                 <span type="button" class="boton" id="btnIniciar" onclick="iniciar()" >Iniciar</span>
                 <div id="instrucciones"><p>Intenta conseguir el maximo de ingredientes possibles para poder preparar el pedido. Pero cuidado con las bombas!</p></div>
             </div>
+
+
+
              <div id="gameover"><p id="perder">Has perdido todas las vidas!<br><a>Tu puntuacion: <a id= puntos>0</a></a></p>
-                <span type="button" class="boton" id="btnreiniciar" onclick="iniciar()" >Volver a jugar</span>
-                <span type="button" class="boton" id="btnsalir" onclick="" >Salir del juego</span>
+                
+
+              <form action="../php_controllers/recomercemController.php" method="POST">
+                  <button class="boton" id="btnreiniciar" name="volverajugarsuper" type="Submit">Volver a jugar</button>
+                  <button class="boton" id="btnsalir" name="salirsuper" type="Submit">Salir del juego</button>
+              </form>
+
             </div>
+
             <div id="win"><p id="perder">Felicidades! Has conseguido el maximo de puntos possibles</p>
-                <span type="button" class="boton" id="btnreiniciar" onclick="iniciar()" >Volver a jugar</span>
-                <span type="button" class="boton" id="btnsalir" onclick="" >Salir del juego</span>
+              <form action="../php_controllers/recomercemController.php" method="POST">
+                  <button class="boton" id="btnreiniciar" name="volverajugarsuper" type="Submit">Volver a jugar</button>
+                  <button class="boton" id="btnsalir" name="salirsuper" type="Submit">Salir del juego</button>
+              </form>
             </div>
+
+
+
+
         </div>
         <div id="items">
             <div class="item" id="vidas"><h3>Vidas:</h3>

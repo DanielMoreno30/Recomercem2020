@@ -136,7 +136,15 @@ include "../php_partials/login_true.php";
 
         </div> 
     </div>
-    <div  style="display: none; position: absolute; left: 50px;" id="ganar"><img src="../img/winner.png"></div>
+    <div  style="display: none; position: absolute; left: 50px;" id="ganar">
+      <img src="../img/winner.png">
+      <div class="container">
+        <form action="../php_controllers/recomercemController.php" method="POST">
+              <button id="volverajugarckm" name="volverajugarckm" type="submit" class="btn btn-primary" >VOLVER A JUGAR</button>
+              <button id="salirckm" name="salirckm" type="submit" class="btn btn-primary" >SALIR DEL JUEGO</button>
+        </form>
+      </div>
+    </div>
 
 
 <!-- -----------------------------------------FOOTER----------------------------------------------------------------------- -->

@@ -64,48 +64,7 @@
 <!---------------------------------------------BODY---------------------------------------------------------------------------->
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-6">
-        <div id="juego1" class="card" style="width: 35rem;">
-            <img class="card-img-top" src="../img/juego1.PNG" alt="Card image cap" >
-            <div class="card-body">
-              <p class="card-text"><?php echo $lang['parafo1_juegos'] ?></p>
-              <a href="./juegosuper.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
-            </div>
-          </div>
-    </div>
-    <div class="col-md-6">
-        <div id="juego2" class="card" style="width: 35rem;">
-            <img class="card-img-top" src="../img/juego3.PNG" alt="Card image cap" >
-            <div class="card-body">
-              <p class="card-text"><?php echo $lang['parafo2_juegos'] ?></p>
-              <a href="./JuegoCKMama.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-        <div id="juego3" class="card" style="width: 35rem">
-            <img class="card-img-top" src="../img/juego2.PNG" alt="Card image cap" >
-            <div class="card-body">
-              <p class="card-text"><?php echo $lang['parafo3_juegos'] ?></p>
-              <a href="./juegomoto.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">  
-        <div id="juego4" class="card" style="width: 35rem;">
-            <img class="card-img-top" src="../img/juego4.PNG" alt="Card image cap">
-            <div class="card-body">
-              <p class="card-text"><?php echo $lang['parafo4_juegos'] ?></p>
-              <a href="./menujuegoventanas.html" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
-            </div>
-        </div>
-    </div>    
-  </div>
-</div>
+<?php juegos($lang); ?>
 
     
 
