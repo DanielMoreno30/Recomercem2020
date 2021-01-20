@@ -402,4 +402,15 @@ function updateUsuarios($id_usuario,$nombre,$contr,$admin,$puntos,$mail)
     }
     $conexion = closeBd();
 }
+
+function decryption($string){
+    $METHOD = 'AES-256-CBC';
+    $SECRET_KEY = '$RECOMERCEM@2021';
+    $SECRET_IV = 526341;
+
+        $key=hash('sha256', $SECRET_KEY);
+        $iv=substr(hash('sha256', $SECRET_IV), 0, 16);
+        $output=openssl_decrypt(base64_decode($string), $METHOD, $key, 0, $iv);
+        return $output;
+}
 ?>
