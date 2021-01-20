@@ -94,7 +94,6 @@ include "../php_partials/login_true.php";
 
 <div class="card m-3" style="height: 440px;" >
   <div class="col">
-      <div class="card-body">
       <table class="table">
 				<thead>
 					<tr>
@@ -241,17 +240,16 @@ include "../php_partials/login_true.php";
 					</tr>
 				</tbody>
 			</table>
-      </div>
   </div>
 </div>
 
 
 <div class="card m-3" style="height: 440px;" >
-  <div class="row g-0">
-    <div class="col-md-5 col-sm-3" >
+  <div class="row">
+    <div class="col" >
       <img src="../img/ramenSitio.PNG" id="imgMaps" alt="...">
     </div>
-    <div class="col-md-7 col-sm-9">
+    <div class="col">
       <div class="card-body">
         <h3 class="card-title" style="color: #e43b3e;"><?php echo $lang['ubicacion'] ?></h3>
           <a href="https://www.google.com/maps/place/Ramen-ya+Hiro/@41.399648,2.164968,15z/data=!4m5!3m4!1s0x0:0x2fbae62d2688d29d!8m2!3d41.399648!4d2.164968" class="btn" style="background-color: #F3B63E; color: black;"><?php echo $lang['ubicacion'] ?></a>
