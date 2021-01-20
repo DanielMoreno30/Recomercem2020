@@ -83,6 +83,16 @@ require_once('../php_libraries/bd.php');
             if ($usuario['admin'] == 1) {
                 $_SESSION['admin'] = true;
             }
+            
+            if ($_SESSION['user_loged']['puntosj1'] != null) {
+                $_SESSION['juego'] = 1;
+            }
+            if ($_SESSION['user_loged']['puntosj2'] != null) {
+                $_SESSION['juego'] = 2;
+            }
+            if ($_SESSION['user_loged']['puntosj3'] != null) {
+                $_SESSION['juego'] = 3;
+            }
 
             header('Location: ../index.php');
             exit();
@@ -106,6 +116,29 @@ require_once('../php_libraries/bd.php');
     if(isset($_POST['salirsuper']))
     {
         $_SESSION['juego'] = 1;
+
+        if (isset($_COOKIE["puntosJuegoSuper"])) {
+            if ($_COOKIE["puntosJuegoSuper"] > $_SESSION['user_loged']['puntosj1']) {
+                
+                
+                $_SESSION['user_loged']['puntosj1'] = $_COOKIE["puntosJuegoSuper"];
+
+                $_SESSION['user_loged']['puntos'] = $_SESSION['user_loged']['puntosj1'] + $_SESSION['user_loged']['puntosj2'] + $_SESSION['user_loged']['puntosj3'] + $_SESSION['user_loged']['puntosj4'];
+
+                updateUsuariosPuntos($_SESSION['user_loged']['id_usuario'], $_SESSION['user_loged']['nom_usuario'], $_SESSION['user_loged']['contr'], 
+                $_SESSION['user_loged']['admin'], $_SESSION['user_loged']['puntos'], $_SESSION['user_loged']['mail'], $_SESSION['user_loged']['puntosj1'], $_SESSION['user_loged']['puntosj2'], $_SESSION['user_loged']['puntosj3'], $_SESSION['user_loged']['puntosj4']);
+
+
+
+            }
+            
+        }
+
+        
+
+        
+
+        
         header('Location: ../frontend/juegos.php');
         exit();
     }
@@ -123,6 +156,26 @@ require_once('../php_libraries/bd.php');
     if(isset($_POST['salirckm']))
     {
         $_SESSION['juego'] = 2;
+
+        if (isset($_COOKIE["puntosJuegoCKM"])) {
+            if ($_COOKIE["puntosJuegoCKM"] > $_SESSION['user_loged']['puntosj2']) {
+                
+                
+                $_SESSION['user_loged']['puntosj2'] = $_COOKIE["puntosJuegoCKM"];
+
+                $_SESSION['user_loged']['puntos'] = $_SESSION['user_loged']['puntosj1'] + $_SESSION['user_loged']['puntosj2'] + $_SESSION['user_loged']['puntosj3'] + $_SESSION['user_loged']['puntosj4'];
+
+                updateUsuariosPuntos($_SESSION['user_loged']['id_usuario'], $_SESSION['user_loged']['nom_usuario'], $_SESSION['user_loged']['contr'], 
+                $_SESSION['user_loged']['admin'], $_SESSION['user_loged']['puntos'], $_SESSION['user_loged']['mail'], $_SESSION['user_loged']['puntosj1'], $_SESSION['user_loged']['puntosj2'], $_SESSION['user_loged']['puntosj3'], $_SESSION['user_loged']['puntosj4']);
+
+
+
+            }
+            
+        }
+
+
+
         header('Location: ../frontend/juegos.php');
         exit();
     }
@@ -141,6 +194,25 @@ require_once('../php_libraries/bd.php');
     if(isset($_POST['salirmoto']))
     {
         $_SESSION['juego'] = 3;
+
+        if (isset($_COOKIE["puntosJuegoMoto"])) {
+            if ($_COOKIE["puntosJuegoMoto"] > $_SESSION['user_loged']['puntosj3']) {
+                
+                
+                $_SESSION['user_loged']['puntosj3'] = $_COOKIE["puntosJuegoMoto"];
+
+                $_SESSION['user_loged']['puntos'] = $_SESSION['user_loged']['puntosj1'] + $_SESSION['user_loged']['puntosj2'] + $_SESSION['user_loged']['puntosj3'] + $_SESSION['user_loged']['puntosj4'];
+
+                updateUsuariosPuntos($_SESSION['user_loged']['id_usuario'], $_SESSION['user_loged']['nom_usuario'], $_SESSION['user_loged']['contr'], 
+                $_SESSION['user_loged']['admin'], $_SESSION['user_loged']['puntos'], $_SESSION['user_loged']['mail'], $_SESSION['user_loged']['puntosj1'], $_SESSION['user_loged']['puntosj2'], $_SESSION['user_loged']['puntosj3'], $_SESSION['user_loged']['puntosj4']);
+
+
+
+            }
+            
+        }
+
+
         header('Location: ../frontend/juegos.php');
         exit();
     }

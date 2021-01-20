@@ -329,7 +329,8 @@ function iniciarContador(fondo){
                         win.style.animationPlayState = "running";
                         //calculamos puntos
                         puntos = 2500;
-                        textPuntosWin.innerHTML = "Has conseguido " + puntos + " puntos";   
+                        textPuntosWin.innerHTML = "Has conseguido " + puntos + " puntos"; 
+                        document.cookie = "puntosJuegoMoto=" + puntos + "; path=/;"; 
                         volverajugar.style.visibility = "visible";
                         salirdeljuego.style.visibility = "visible";
                         
@@ -359,7 +360,8 @@ function iniciarContador(fondo){
                         gameover.style.animationPlayState = "running";
                         //calculamos puntos
                         calcularPuntos(tiempo);
-                        textPuntos.innerHTML = "Has conseguido " + puntos.toFixed(0) + " puntos"; 
+                        textPuntos.innerHTML = "Has conseguido " + puntos.toFixed(0) + " puntos";
+                        document.cookie = "puntosJuegoMoto=" + puntos.toFixed(0) + "; path=/;"; 
                         volverajugar.style.visibility = "visible";
                         salirdeljuego.style.visibility = "visible";
                       }

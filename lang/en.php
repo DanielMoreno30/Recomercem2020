@@ -50,10 +50,10 @@ $lang = array(
     "calle3_seleccion" => "- Carrer del Pintor Fortuny, 3, 08001 Barcelona",
     "calle4_seleccion" =>"- Passeig de Gràcia, 6",
 
-    "parafo1_juegos" => "To be able to prepare the orders, you will first have to go through the supermarket to collect the ingredients.",
-    "parafo2_juegos" => "Now that you have collected the ingredients, you will have to prepare the dishes according to each order.",
-    "parafo3_juegos" => "The orders are ready and now you will have to distribute them, but watch out for the cars!",
-    "parafo4_juegos" => "Now that you have arrived at the destination, distribute the orders to the corresponding address.",
+    "parafo1_juegos" => "Game 1: To be able to prepare the orders, you will first have to go through the supermarket to collect the ingredients.",
+    "parafo2_juegos" => "Game 2: Now that you have collected the ingredients, you will have to prepare the dishes according to each order.",
+    "parafo3_juegos" => "Game 3: The orders are ready and now you will have to distribute them, but watch out for the cars!",
+    "parafo4_juegos" => "Game 4: Now that you have arrived at the destination, distribute the orders to the corresponding address.",
     "jugar" => "Play",
 
     "info_about" => "We are a group of four members of the Institut Politecnics de Barcelona, ​​with a project in hand in order to help small businesses,

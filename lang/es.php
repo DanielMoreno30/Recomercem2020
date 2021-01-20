@@ -48,10 +48,10 @@ $lang = array(
     "calle3_seleccion" => "- Carrer del Pintor Fortuny, 3, 08001 Barcelona",
     "calle4_seleccion" =>"- Passeig de Gràcia, 6",
 
-    "parafo1_juegos" => "Para poder preparar los pedidos primero tendras que pasar por el super para recoger los ingredientes.",
-    "parafo2_juegos" => "Ahora que ya has recogido los ingredientes, tendras que preparar los platos en funcion de cada pedido.",
-    "parafo3_juegos" => "Los pedidos ya estan listos y ahora tendras que repartirlos, pero cuidado con los coches!",
-    "parafo4_juegos" => "Ahora que has llegado al destino reparte los pedidos al domicilio correspondiente.",
+    "parafo1_juegos" => "Juego 1: Para poder preparar los pedidos primero tendras que pasar por el super para recoger los ingredientes.",
+    "parafo2_juegos" => "Juego 2: Ahora que ya has recogido los ingredientes, tendras que preparar los platos en funcion de cada pedido.",
+    "parafo3_juegos" => "Juego 3: Los pedidos ya estan listos y ahora tendras que repartirlos, pero cuidado con los coches!",
+    "parafo4_juegos" => "Juego 4: Ahora que has llegado al destino reparte los pedidos al domicilio correspondiente.",
     "jugar" => "Jugar",
 
     "info_about" => "Somos un grupo de cuatro integrantes de el Institut Politecnics de Barcelona, con un proyecto entre manos con el fin de ayudar a los pequeños comercios,

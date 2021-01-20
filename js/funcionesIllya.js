@@ -135,6 +135,7 @@ function pushear(ob1, ob2, ob3, ob4, ob5, ob6){
                 console.log(puntosDB);
                document.getElementById('ganar').style.display = ""
                document.getElementById('puntu').innerHTML = (puntosDB)
+               document.cookie = "puntosJuegoCKM=" + puntosDB + "; path=/;";
                clearInterval(intervalId)
             }else{
                 console.log("porqueentras qui")

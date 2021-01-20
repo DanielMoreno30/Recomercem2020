@@ -87,8 +87,6 @@
 
 
              <div id="gameover"><p id="perder">Has perdido todas las vidas!<br><a>Tu puntuacion: <a id= puntos>0</a></a></p>
-                
-
               <form action="../php_controllers/recomercemController.php" method="POST">
                   <button class="boton" id="btnreiniciar" name="volverajugarsuper" type="Submit">Volver a jugar</button>
                   <button class="boton" id="btnsalir" name="salirsuper" type="Submit">Salir del juego</button>

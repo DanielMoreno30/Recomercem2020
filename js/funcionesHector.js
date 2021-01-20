@@ -426,6 +426,11 @@
     carro.style.visibility="hidden";
     document.getElementById("pantalla").style.cursor= "pointer";
     document.getElementById("puntos").innerHTML= punto;
+
+    
+    document.cookie = "puntosJuegoSuper=" + punto + "; path=/;";
+
+
     punto=0;
     puntuacion.innerHTML=punto;   
     if(perder)

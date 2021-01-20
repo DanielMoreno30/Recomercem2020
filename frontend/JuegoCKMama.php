@@ -138,9 +138,8 @@ include "../php_partials/login_true.php";
     </div>
     <div  style="display: none; position: absolute; left: 50px;" id="ganar">
       <img src="../img/winner.png">
-      <div class="col">
-          Estos son los puntos que has ganado: 
-          <div id="puntu"></div>
+      <div class="col" style="color: black; font-weight: bold; background-color: #a50000;">
+          Estos son los puntos que has ganado: <div id="puntu"></div>
       </div>
       <div class="container">
         <form action="../php_controllers/recomercemController.php" method="POST">

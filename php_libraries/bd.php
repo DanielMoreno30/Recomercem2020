@@ -403,14 +403,48 @@ function updateUsuarios($id_usuario,$nombre,$contr,$admin,$puntos,$mail)
     $conexion = closeBd();
 }
 
-function decryption($string){
-    $METHOD = 'AES-256-CBC';
-    $SECRET_KEY = '$RECOMERCEM@2021';
-    $SECRET_IV = 526341;
 
-        $key=hash('sha256', $SECRET_KEY);
-        $iv=substr(hash('sha256', $SECRET_IV), 0, 16);
-        $output=openssl_decrypt(base64_decode($string), $METHOD, $key, 0, $iv);
-        return $output;
+
+function updateUsuariosPuntos($id_usuario,$nombre,$contr,$admin,$puntos,$mail,$puntosj1,$puntosj2,$puntosj3,$puntosj4)
+{
+    try
+    {
+        $conexion = openBd();
+
+        $sentenciaText = "update usuarios SET nom_usuario =:nombre,contr=:contr, admin = :admin, puntos = :puntos, mail = :mail, puntosj1 = :puntosj1, puntosj2 = :puntosj2, puntosj3 = :puntosj3, puntosj4 = :puntosj4 where id_usuario = $id_usuario;";
+        $sentencia = $conexion->prepare($sentenciaText);
+        $sentencia->bindParam(':nombre', $nombre);
+        $sentencia->bindParam(':contr', $contr);
+        $sentencia->bindParam(':admin', $admin);
+        $sentencia->bindParam(':puntos', $puntos);
+        $sentencia->bindParam(':mail', $mail);
+        $sentencia->bindParam(':puntosj1', $puntosj1);
+        $sentencia->bindParam(':puntosj2', $puntosj2);
+        $sentencia->bindParam(':puntosj3', $puntosj3);
+        $sentencia->bindParam(':puntosj4', $puntosj4);
+        
+        $sentencia->execute();
+
+        
+
+     
+        
+    }
+    catch(PDOException $e)
+    {
+        $_SESSION['error']= errorMessage($e);
+        $usuarios['nom_usuario'] = $nombre;
+        $usuarios['contr'] = $contr;
+        $usuarios['admin'] = $admin;
+        $usuarios['puntos'] = $puntos;
+        $usuarios['mail'] = $mail;
+
+        $_SESSION['usuario']=$usuarios;
+
+
+    }
+    $conexion = closeBd();
 }
+
+
 ?>
