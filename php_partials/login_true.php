@@ -162,10 +162,6 @@ function login_juegos($lang){
   if(isset($_SESSION['login'])) { ?>
 
    <div class="container">
-   <p class="text-secondary" style="margin-right: 20px;">Puntos juego 1:  <?php echo $_SESSION['user_loged']['puntosj1'];  ?></p>
-   <p class="text-secondary" style="margin-right: 20px;">Puntos juego 2:  <?php echo $_SESSION['user_loged']['puntosj2'];  ?></p>
-   <p class="text-secondary" style="margin-right: 20px;">Puntos juego 3:  <?php echo $_SESSION['user_loged']['puntosj3'];  ?></p>
-   <p class="text-secondary" style="margin-right: 20px;">Puntos juego 4:  <?php echo $_SESSION['user_loged']['puntosj4'];  ?></p>
    <p class="text-secondary" style="margin-right: 20px;">Puntos totales:  <?php echo $_SESSION['user_loged']['puntos']; ?></p>
    <img src="../img/user.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy">
    <a class="text-secondary" style="margin-left: 20px;" href="../frontend/micuenta.php"><?php echo $_SESSION['user_loged']['nom_usuario']; ?></a>
@@ -241,6 +237,11 @@ function juegos($lang){
                   <div class="card-body">
                     <p class="card-text"><?php echo $lang['parafo1_juegos'] ?></p>
                     <a href="./juegosuper.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+                      <div style="float: right; color: #F3B63E;">
+
+                          <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj1'];  ?></p>
+                          
+                      </div>
                   </div>
                 </div>
           </div>
@@ -250,6 +251,13 @@ function juegos($lang){
                   <div class="card-body">
                     <p class="card-text"><?php echo $lang['parafo2_juegos'] ?></p>
                     <a href="./JuegoCKMama.php" class="btn btnjugar disabled"><?php echo $lang['jugar'] ?></a>
+
+                    <div style="float: right; color: #F3B63E;">
+
+                          <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj2'];  ?></p>
+                          
+                    </div>
+
                   </div>
               </div>
           </div>
@@ -261,6 +269,12 @@ function juegos($lang){
                   <div class="card-body">
                     <p class="card-text"><?php echo $lang['parafo3_juegos'] ?></p>
                     <a href="./juegomoto.php" class="btn btnjugar disabled"><?php echo $lang['jugar'] ?></a>
+
+                    <div style="float: right; color: #F3B63E;">
+
+                          <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj3'];  ?></p>
+                          
+                    </div>
                   </div>
               </div>
           </div>
@@ -270,6 +284,12 @@ function juegos($lang){
                   <div class="card-body">
                     <p class="card-text"><?php echo $lang['parafo4_juegos'] ?></p>
                     <a href="./menujuegoventanas.html" class="btn btnjugar disabled"><?php echo $lang['jugar'] ?></a>
+
+                    <div style="float: right; color: #F3B63E;">
+
+                          <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj4'];  ?></p>
+                          
+                    </div>
                   </div>
               </div>
           </div>    
@@ -292,6 +312,12 @@ function juegos($lang){
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo1_juegos'] ?></p>
               <a href="./juegosuper.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+
+              <div style="float: right; color: #F3B63E;">
+
+                <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj1'];  ?></p>
+                          
+              </div>
             </div>
           </div>
     </div>
@@ -301,6 +327,12 @@ function juegos($lang){
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo2_juegos'] ?></p>
               <a href="./JuegoCKMama.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+
+              <div style="float: right; color: #F3B63E;">
+
+                <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj2'];  ?></p>
+                          
+              </div>
             </div>
         </div>
     </div>
@@ -312,6 +344,12 @@ function juegos($lang){
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo3_juegos'] ?></p>
               <a href="./juegomoto.php" class="btn btnjugar disabled"><?php echo $lang['jugar'] ?></a>
+
+              <div style="float: right; color: #F3B63E;">
+
+                <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj3'];  ?></p>
+                          
+              </div>
             </div>
         </div>
     </div>
@@ -321,6 +359,11 @@ function juegos($lang){
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo4_juegos'] ?></p>
               <a href="./menujuegoventanas.html" class="btn btnjugar disabled"><?php echo $lang['jugar'] ?></a>
+              <div style="float: right; color: #F3B63E;">
+
+                <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj4'];  ?></p>
+                          
+              </div>
             </div>
         </div>
     </div>    
@@ -343,6 +386,11 @@ function juegos($lang){
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo1_juegos'] ?></p>
               <a href="./juegosuper.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+              <div style="float: right; color: #F3B63E;">
+
+                <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj1'];  ?></p>
+                          
+              </div>
             </div>
           </div>
     </div>
@@ -352,6 +400,12 @@ function juegos($lang){
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo2_juegos'] ?></p>
               <a href="./JuegoCKMama.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+
+              <div style="float: right; color: #F3B63E;">
+
+                <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj2'];  ?></p>
+                          
+              </div>
             </div>
         </div>
     </div>
@@ -363,6 +417,12 @@ function juegos($lang){
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo3_juegos'] ?></p>
               <a href="./juegomoto.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+
+              <div style="float: right; color: #F3B63E;">
+
+                <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj3'];  ?></p>
+                          
+              </div>
             </div>
         </div>
     </div>
@@ -372,6 +432,12 @@ function juegos($lang){
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo4_juegos'] ?></p>
               <a href="./menujuegoventanas.html" class="btn btnjugar disabled"><?php echo $lang['jugar'] ?></a>
+
+              <div style="float: right; color: #F3B63E;">
+
+                <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj4'];  ?></p>
+                          
+              </div>
             </div>
         </div>
     </div>    
@@ -394,6 +460,12 @@ function juegos($lang){
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo1_juegos'] ?></p>
               <a href="./juegosuper.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+
+              <div style="float: right; color: #F3B63E;">
+
+                <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj1'];  ?></p>
+                          
+              </div>
             </div>
           </div>
     </div>
@@ -403,6 +475,12 @@ function juegos($lang){
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo2_juegos'] ?></p>
               <a href="./JuegoCKMama.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+
+              <div style="float: right; color: #F3B63E;">
+
+                <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj2'];  ?></p>
+                          
+              </div>
             </div>
         </div>
     </div>
@@ -414,6 +492,11 @@ function juegos($lang){
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo3_juegos'] ?></p>
               <a href="./juegomoto.php" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+              <div style="float: right; color: #F3B63E;">
+
+                <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj3'];  ?></p>
+                          
+              </div>
             </div>
         </div>
     </div>
@@ -423,6 +506,11 @@ function juegos($lang){
             <div class="card-body">
               <p class="card-text"><?php echo $lang['parafo4_juegos'] ?></p>
               <a href="./menujuegoventanas.html" class="btn btnjugar"><?php echo $lang['jugar'] ?></a>
+              <div style="float: right; color: #F3B63E;">
+
+                <p class="card-text" style="margin-right: 20px;">Puntos conseguidos:  <?php echo $_SESSION['user_loged']['puntosj4'];  ?></p>
+                          
+              </div>
             </div>
         </div>
     </div>    
