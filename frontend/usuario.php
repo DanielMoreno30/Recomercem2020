@@ -47,7 +47,7 @@ else
 <body>
 <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#" id = "textTituloNav">
+  <a class="navbar-brand" href="../index.php" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
       <?php echo $lang['Recomencem'] ?>
     </a>
