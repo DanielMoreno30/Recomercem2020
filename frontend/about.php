@@ -91,7 +91,7 @@
           <img class="card-img" src="../img/avatarfran.png" width="800" height="325" />
           <div class="card-body">
             <h4 class="card-title">Fran Soriano Román</h4>
-            <p class="card-text">Programador junior expandiendo a diario mi conocimiento y experiencia en este mundo tan interesante de la programación. Me considero una persona muy ordenada y trabajadora si me motiva lo que hago.</p>
+            <p class="card-text"><?php echo $lang['fran'] ?></p>
           </div>
           <div class="card-footer">
             <a href="https://www.linkedin.com/in/fran-soriano-rom%C3%A1n-ba08871a9/" target="_blank" class="btn btn-primary">Linkedin</a>
@@ -104,7 +104,7 @@
           <img class="card-img" src="../img/avatardani.png" alt="" width="800" height="325" />
           <div class="card-body">
             <h4 class="card-title">Daniel Moreno Fernandez</h4>
-            <p class="card-text">Programador junior especializado en el desarrollo de páginas web. Aprendiendo conocimientos técnicos día tras día, trabajador y responsable de las tareas asignadas.</p>
+            <p class="card-text"><?php echo $lang['dani'] ?></p>
           </div>
           <div class="card-footer">
             <a href="https://www.linkedin.com/in/daniel-moreno-b7603b1b5/" target="_blank" class="btn btn-primary">Linkedin</a>
@@ -117,7 +117,7 @@
           <img class="card-img" src="../img/avatarillya.png" width="800" height="325" />
           <div class="card-body">
             <h4 class="card-title">Illya Samoylenko Barabus</h4>
-            <p class="card-text">Programador junior con experiencia en ámbito de creación de páginas web. Trabajador, de aprendizaje rápido y adaptativo en diferentes situaciones.</p>
+            <p class="card-text"><?php echo $lang['illya'] ?></p>
           </div>
           <div class="card-footer">
             <a href="#" class="btn btn-primary">Linkedin</a>
@@ -130,7 +130,7 @@
           <img class="card-img" src="../img/avatarhector.png" width="800" height="325" />
           <div class="card-body">
             <h4 class="card-title">Hector Garcia Lopez</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+            <p class="card-text"><?php echo $lang['hector'] ?></p>
           </div>
           <div class="card-footer">
             <a href="https://www.linkedin.com/in/hector-garc%C3%ADa-l%C3%B3pez-56652a197/" target="_blank" class="btn btn-primary">Linkedin</a>
