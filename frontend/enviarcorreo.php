@@ -5,27 +5,33 @@ require_once('../php_libraries/bd.php');
 	    $usuarios = selectUsuarios();
         $ofertas = selectAllofertas();
 
-// Valores enviados desde el formulario
-if ( !isset($_POST["nombre"]) || !isset($_POST["id_usuario"]) || !isset($_POST["id_oferta"]) || !isset($_POST["email"]) || !isset($_POST["nombreoferta"]) || !isset($_POST["asunto"]) ) {
-    die ("Es necesario completar todos los datos del formulario");
-}
+if($_SESSION['user_loged']['puntos'] >=$_POST['puntos']){
+    $_SESSION['user_loged']['puntos'] = $_SESSION['user_loged']['puntos'] - $_POST['puntos'];
+    updateUsuariosmiCuenta($_SESSION['user_loged']['id_usuario'],$_SESSION['user_loged']['nom_usuario'],$_SESSION['user_loged']['contr'],$_SESSION['user_loged']['admin'],$_SESSION['user_loged']['puntos'],$_SESSION['user_loged']['mail']);
+    $strNombre = $_SESSION['user_loged']['nom_usuario'];
+    $strEmail = $_SESSION['user_loged']['mail'];
+    $strNombreOferta = $_POST['nombre'];
+    $strMensaje = $_POST["codigo"];
+    $strid = $_POST["id_oferta"];
+
+$txtid = '<p value="@strid"></p>';
+$txtNombre = '<p value="@strNombre"></p>';
+$txtEmail = '<p value="@strEmail"></p>';
+$txtNombreOferta = '<p>'.$strNombreOferta.'</p>';
+$txtConsulta = '<p>'.$strMensaje.'</p>';
+
+
+$txtNombre = str_replace("@strNombre",$strNombre,$txtNombre);
+$txtNombreOferta = str_replace("@strNombreOferta",$strNombreOferta,$txtNombreOferta);
+$txtEmail = str_replace("@strEmail",$strEmail,$txtEmail);
+$txtConsulta = str_replace("@strMensaje",$strMensaje,$txtConsulta);
+?>  
 
 
 
+        
 
-
-$nombre = $_POST["nombre"];
-
-$email = $_POST["email"];
-
-$nombreoferta = $_POST["nombreoferta"];
-
-$asunto = $_POST["asunto"];
-
-$id_usuario = $_POST['id_usuario'];
-
-$id_oferta = $_POST['id_oferta'];
-
+<?php
 
     $destino = "danimoreno80@gmail.com";
 
@@ -66,14 +72,13 @@ $mail->Body = "
 
 <p>Informacion enviada por el usuario de la web:</p>
 
-<p>Hola {$nombre}, aquí tienes tu código {$id_oferta} canjeado de nuestra página web.
+<p>Hola {$_SESSION['user_loged']['nom_usuario']}, aquí tienes tu código {$id_oferta} canjeado de nuestra página web.
 ¡Esperamos que lo disfrutes!</p>
 
-<p>Oferta: {$nombreoferta}</p>
-<p>Código: {$asunto}</p>
+<p>Oferta: {$txtNombreOferta}</p>
+<p>Código: {$txtConsulta}</p>
 
 </body> 
-
 </html>
 
 <br />"; // Texto del email en formato HTML
@@ -95,5 +100,15 @@ if($estadoEnvio){
 } else {
     echo "Ocurrio un error inesperado.";
 }
-?>
 
+
+    
+}else{
+    echo'<script type="text/javascript">
+    alert("¡No tienes puntos suficientes para canjear esta oferta!");
+    window.location.href="../frontend/micuenta.php";
+    </script>';
+}
+
+
+?>

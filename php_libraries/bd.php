@@ -446,5 +446,42 @@ function updateUsuariosPuntos($id_usuario,$nombre,$contr,$admin,$puntos,$mail,$p
     $conexion = closeBd();
 }
 
+function updateUsuariosmiCuenta($id_usuario,$nombre,$contr,$admin,$puntos,$mail)
+{
+    try
+    {
+        $conexion = openBd();
+
+        $sentenciaText = "update usuarios SET nom_usuario =:nombre,contr=:contr, admin = :admin, puntos = :puntos, mail = :mail where id_usuario = $id_usuario;";
+        $sentencia = $conexion->prepare($sentenciaText);
+        $sentencia->bindParam(':nombre', $nombre);
+        $sentencia->bindParam(':contr', $contr);
+        $sentencia->bindParam(':admin', $admin);
+        $sentencia->bindParam(':puntos', $puntos);
+        $sentencia->bindParam(':mail', $mail);
+        
+        $sentencia->execute();
+
+        $_SESSION['mensaje']= 'Oferta canjeada correctamente';
+
+     
+        
+    }
+    catch(PDOException $e)
+    {
+        $_SESSION['error']= errorMessage($e);
+        $usuarios['nom_usuario'] = $nombre;
+        $usuarios['contr'] = $contr;
+        $usuarios['admin'] = $admin;
+        $usuarios['puntos'] = $puntos;
+        $usuarios['mail'] = $mail;
+
+        $_SESSION['usuario']=$usuarios;
+
+
+    }
+    $conexion = closeBd();
+}
+
 
 ?>

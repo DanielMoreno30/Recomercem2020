@@ -5,7 +5,7 @@
 	require("../php_mailer/class.phpmailer.php");
 	require("../php_mailer/class.smtp.php");
 	include "../confLang.php";
-    include "../php_partials/login_true.php";
+  include "../php_partials/login_true.php";
 ?>
 
 <html lang="es">
@@ -15,9 +15,9 @@
 </head>
 <link href="../css/perfilcss.css" rel="stylesheet">
 <body>
-<!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
+  <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#" id = "textTituloNav">
+  <a class="navbar-brand" href="../index.php" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
       <?php echo $lang['Recomencem'] ?>
     </a>
@@ -91,19 +91,23 @@
 				<th>Codigo</th>
 				<th></th>
 			</tr>
-		<?php foreach ($ofertas as $oferta) { ?>
-			<tr>
-				<td><?php echo $oferta['id_oferta']?>
-				<td><?php echo $oferta['nombre']?>
-				<td><?php echo $oferta['puntos']?>
-				<td><?php echo $oferta['codigo']?>
-
-				<form action="enviarcorreo.php" method="post" class="form-consulta"> 
-				<td><button class="btn btn-primary" type="submit">Canjear</button></td>
-            	<input type="hidden" id="id_oferta" name="id_oferta" value=<?php echo $oferta['id_oferta'];?>>
-				</form>
-			</tr>
-		<?php } ?>
+				<?php foreach ($ofertas as $oferta) { ?>
+                    <tr>
+                      <td><?php echo $oferta['id_oferta']; ?></td>
+                      <td><?php echo $oferta['nombre']; ?></td>
+                      <td><?php echo $oferta['puntos']; ?></td>
+                      <td><?php echo $oferta['codigo']; ?></td>
+                      <td>
+                        <form action="../frontend/enviarcorreo.php" method="POST">
+                          <button type="submit" class="btn btn-danger" name="submit">Canjear</button>
+                          <input type="hidden" id="codigo" name="codigo" value=<?php echo $oferta['codigo'];?>>
+                          <input type="hidden" id="id_oferta" name="id_oferta" value=<?php echo $oferta['id_oferta'];?>>
+						  <input type="hidden" id="puntos" name="puntos" value=<?php echo $oferta['puntos'];?>>
+						  <input type="hidden" id="nombre" name="nombre" value=<?php echo $oferta['nombre'];?>>
+                        </form>
+                      </td>
+                    </tr>
+                <?php  } ?>
 
 		<?php
 			$idoferta = $oferta['id_oferta'];
@@ -111,42 +115,6 @@
 		</table>
 	</div>
 </center>
-
-	<?php 
-			$strNombre = $_SESSION['user_loged']['nom_usuario'];
-			$strEmail = $_SESSION['user_loged']['mail'];
-			$strNombreOferta = $oferta['nombre'];
-			$strMensaje = $oferta["codigo"];
-
-			$txtNombre = '<input type="text" name="nombre" id="nombre" placeholder="Nombre y apellido" class="campo-form" value="@strNombre" required>';
-			$txtEmail = '<input type="email" name="email" id="email" placeholder="Email" class="campo-form" value="@strEmail" required>';
-			$txtNombreOferta = '<input type="text" name="nombreoferta" id="nombreoferta" placeholder="Oferta" class="campo-form" value="@strNombreOferta" required>';
-			$txtConsulta = '<input type="text" name="asunto" id="asunto" placeholder="Codigo" class="campo-form" value="@strMensaje" required>';
-
-			$txtNombre = str_replace("@strNombre",$strNombre,$txtNombre);
-			$txtNombreOferta = str_replace("@strNombreOferta",$strNombreOferta,$txtNombreOferta);
-			$txtEmail = str_replace("@strEmail",$strEmail,$txtEmail);
-			$txtConsulta = str_replace("@strMensaje",$strMensaje,$txtConsulta);
-	?>
-
-
-   <label for="nombre">Nombre <span>*</span>
-      <?php echo $txtNombre; ?>
-   </label>
-
-   <label for="email">Email: <span>*</span>
-      <?php echo $txtEmail; ?>
-   </label>
-
-   <label for="nombreoferta">Nombre de la oferta: <span>*</span>
-      <?php echo $txtNombreOferta; ?>
-   </label>
-
-   <label for="asunto">Código:
-      <?php echo $txtConsulta; ?>
-   </label>
-
-	<input type="hidden" id="id_oferta" name="id_oferta" value=<?php echo $oferta['id_oferta'];?>/>
 
 <!-- -----------------------------------------FOOTER----------------------------------------------------------------------- -->
 <footer class="bg-dark text-center text-lg-start">
@@ -160,6 +128,7 @@
     </div>
 </footer>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
 </html>
