@@ -3,7 +3,7 @@ $lang = array(
 
     "create_account" => "Crear cuenta",
     "Principal" => "Inicio",
-    "Selection" => "Nuestra Seleccion",
+    "Selection" => "Nuestra Selección",
     "Juegos" => "Juegos",
     "About" => "Sobre nosotros",
     "Cuenta" => "Cuenta",
@@ -13,12 +13,12 @@ $lang = array(
     "es" => "Español",
     "en" => "Ingles",
     "ru" => "Ruso",
-    "cat" => "Catalan",
+    "cat" => "Catalán",
     "puntos_necesarios" => "Puntos necesarios",
     "oferta" => "Oferta",
     "ofertas_disponibles" => "Ofertas disponibles",
     "clicar" => "Clica en el siguiente botón para abrir google maps.",
-    "click_aqui" => "Click aqui",
+    "click_aqui" => "Click aquí",
     "mirar" => "Mirar la carta",
     "ubicacion" => "Ubicación",
     "visitar" => "Visita su página web",
@@ -40,19 +40,19 @@ $lang = array(
     y juega a nuestros cuatro juegos, con los puntos que consigas en total podrás desbloquear unas promociones u otras.",
     "parafo9_indice" => "¡Cuantos más puntos tengas mejores serán las promociones que puedas desbloquear!",
 
-    "parafo1_seleccion" =>"Un pequeño local con tematica japonesa con barra de madera. Entra a conocer una amplia seleccion de recetas japonesas para llenarte de emociones asiaticas.",
-    "parafo2_seleccion" =>"¿Nunca has pensado en la version perfecta de tu taza de cafe? En Bracafe tines una eleccion de cafes casi infinita y exportada desde Brasil. No te pierdas los aromas mas autenticos del café.",
-    "parafo3_seleccion" => "¿Buscas una reservar mesa para una cena espectacular? Este es tu sitio perfecto. Un restaurante cristalizado con una estetica modernista, comida Mediterranea y terraza para ver las vistas de Barcelona desde el centro.",
-    "parafo4_seleccion" =>"Disfruta de las tapas y los pintxos en uno de los restaurantes de pinchos vascos en Barcelona.",
+    "parafo1_seleccion" =>"Un pequeño local con temática japonesa con barra de madera. Entra a conocer una amplia selección de recetas japonesas para llenarte de emociones asiáticas.",
+    "parafo2_seleccion" =>"¿Nunca has pensado en la versión perfecta de tu taza de cafe? En Bracafe tienes una selección de cafes casi infinita y exportada desde Brasil. No te pierdas los aromas mas auténticos del café.",
+    "parafo3_seleccion" => "¿Buscas una reservar mesa para una cena espectacular? Este es tu sitio perfecto. Un restaurante cristalizado con una estética modernista, comida Mediterránea y terraza para ver las vistas de Barcelona desde el centro.",
+    "parafo4_seleccion" =>"Disfruta de las tapas y los pinchos en uno de los restaurantes de pinchos vascos en Barcelona.",
     "visitar" => "Visitar",
     "calle1_seleccion" => "- Carrer Girona 164, 08037 Barcelona",
     "calle2_seleccion" => "- Ronda de la Universitat, 35, 08007 Barcelona",
     "calle3_seleccion" => "- Carrer del Pintor Fortuny, 3, 08001 Barcelona",
     "calle4_seleccion" =>"- Passeig de Gràcia, 6",
 
-    "parafo1_juegos" => "Juego 1: Para poder preparar los pedidos primero tendras que pasar por el super para recoger los ingredientes.",
-    "parafo2_juegos" => "Juego 2: Ahora que ya has recogido los ingredientes, tendras que preparar los platos en funcion de cada pedido.",
-    "parafo3_juegos" => "Juego 3: Los pedidos ya estan listos y ahora tendras que repartirlos, pero cuidado con los coches!",
+    "parafo1_juegos" => "Juego 1: Para poder preparar los pedidos primero tendrás que pasar por el super para recoger los ingredientes.",
+    "parafo2_juegos" => "Juego 2: Ahora que ya has recogido los ingredientes, tendrás que preparar los platos en función de cada pedido.",
+    "parafo3_juegos" => "Juego 3: Los pedidos ya están listos y ahora tendrás que repartirlos, pero cuidado con los coches!",
     "parafo4_juegos" => "Juego 4: Ahora que has llegado al destino reparte los pedidos al domicilio correspondiente.",
     "jugar" => "Jugar",
 
@@ -60,27 +60,27 @@ $lang = array(
     aquellos que lo necesitan más que nadie.
     Hemos utilizado una serie de herramientas como PHP, Bootstrap y CSS, con un diseño sencillo e intuitivo que nos ha permitido aprender y descubrir muchas
     funciones que no conocíamos.
-    Estamos muy contentos con nuestro proyecto, y creemos que es el momento de que vosotros también lo veais y lo disfrutéis.",
+    Estamos muy contentos con nuestro proyecto, y creemos que es el momento de que vosotros también lo veáis y lo disfrutéis.",
 
     "titulo_barLobo" => "Bar Lobo",
     "info_barLobo" =>"El Bar Lobo es un local de tapas y platos rápidos del Grupo Tragaluz, muy próximo a Las Ramblas. 
         En él se sirve una cocina sencilla con toques de modernidad y sabores de las mejores influencias internacionales. 
         Todo en un ambiente distendido, pero con clase y con una carta con una buena relación calidad-precio.",
     "tipos_comida_lobo" => "Desde los desayunos variados hasta las comidas y cenas divertidas, cuando quieras descansar de tu paseo, pasa por el Bar Lobo. Comida de Mercado, tapas y gran variedad de segundos. .<br>
-        Si quieres ver más accede a la carta con este codigo QR o pulsa el botón.",
+        Si quieres ver más accede a la carta con este código QR o pulsa el botón.",
     "calle_lobo" => "Pintor Fortuny 3 08001 Barcelona",
 
     "info_bracafe" => "Abierto desde 1929, llevan seleccionando el mejor café importado de Brasil para sus tiendas.
         Tras 6 generaciones de cafeteros su producto y su servicio sigue estando a la máxima altura en calidad-precio y
         ofreciendo las mejores experiencias a las siguientes generaciones. Manteniendo el producto más natural que nunca. 
-        A parte de una eleccion de cafes casi infinita, también ofrecen una amplia variedad de bocadillos, bollería
+        A parte de una selección de cafés casi infinita, también ofrecen una amplia variedad de bocadillos, bollería
         bebidas, chocolates y tapas.",
-    "comida_bracafe" => " Bracafé ofrece a sus clientes una gran variedad de cafés, combinados de cafés, bocadillos, bollería, bebidas, cervezas, cervazas de importación,
+    "comida_bracafe" => " Bracafé ofrece a sus clientes una gran variedad de cafés, combinados de cafés, bocadillos, bollería, bebidas, cervezas, cervezas de importación,
         tapas, tisanas, chocolates de sabores, zumos, tés de sabores y sangrías.",
-    "acceder_qr" => "Si quieres ver más accede a la carta con este codigo QR o pulsa el botón.",
+    "acceder_qr" => "Si quieres ver más accede a la carta con este código QR o pulsa el botón.",
     "ubi_bracafe" => "Bracafé cuenta con 29 franquicias repartidas por toda Barcelona, las más centricas e importantes son las del Carrer del Comte d’Urgell, 35, 08011 Barcelona // ADD OPENING TIMES!, Thanks, Carrer de Calàbria, 97, 08015 Barcelona//
         Gran Via de les Corts Catalanes, 555, 08011 Barcelona // Ronda de la Universitat, 35, 08007 Barcelona // Plaça de Tetuan, 17, 18, 08010 Barcelona <br>
-         Clica en el siguiente botón para ver todas las frnquicias en google maps.",
+         Clica en el siguiente botón para ver todas las franquicias en google maps.",
 
     "Usuario" => "Usuario:",
     "Email" => "Email:",
