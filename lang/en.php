@@ -115,6 +115,11 @@ $lang = array(
     "txapela_ubi" => "Txapela has 3 franchises spread over Barcelona and Madrid, the most central and important are those of Passeig de Gràcia, 58, 08007 Barcelona //
             Plaça Catalunya, 8, 08002 Barcelona //
             and Gran Via 64, 28 Madrid //",
+
+    "illya" => "Junior programmer with experience in the field of web page creation. Hard-working, fast and adaptive learning in different situations.",
+    "fran" => "Junior programmer daily expanding my knowledge and experience in this very interesting world of programming. I consider myself a very orderly and hard-working person if what I do motivates me.",
+    "hector" => "Junior programmer currently studying a degree in web development at the poltecnics center d’estudis and I have previously studied multiplatform development. Responsible and worker with work experience in the sector.",
+    "dani" => "Junior programmer specialized in web page development. Learning technical knowledge day after day, hard-working and responsible for the assigned tasks."
 )
 
 ?>

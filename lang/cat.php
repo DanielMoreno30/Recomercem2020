@@ -114,6 +114,11 @@ $lang = array(
     "txapela_ubi" => "Txapela compta amb 3 franquícies repartides per Barcelona i Madrid, les més cèntrics i importants són les de Passeig de Gràcia, 58, 08007 Barcelona //
         Plaça Catalunya, 8, 08002 Barcelona //
         i Gran Via 64, 28 Madrid //",
+        
+    "illya" => "Programador junior amb experiència en àmbit de creació de pàgines web. Treballador, d'aprenentatge ràpid i adaptatiu en diferents situacions.",
+    "fran" => "Programador junior expandint cada dia el meu coneixement i experiència en aquest món tan interessant de la programació. Em considero una persona molt ordenada i treballadora si em motiva el que faig.",
+    "hector" => "Programador junior actualment cursant un grau de desenvolupament web al centre d'estudis poltecnics i anteriorment he cursat en desenvolupament multiplataforma. Responsable i treballador amb experiència laboral en el sector.",
+    "dani" => "Programador júnior especialitzat en el desenvolupament de pàgines web. Aprenent coneixements tècnics dia rere dia, treballador i responsable de les tasques assignades."
 
     )
 

@@ -77,12 +77,7 @@
 		¿Jugamos? Tienes tres juegos para disfrutar (o sufrir) hasta conseguir los puntos necesarios para obtener tus descuentos. ¿Serás capaz? Veremos...
 	  </p> -->
 		<br>
-	  <p class="lead">
-		Somos un grupo de cuatro integrantes de el Institut Politecnics de Barcelona, con un proyecto entre manos con el fin de ayudar a los pequeños comercios,
-		aquellos que lo necesitan más que nadie.
-		Hemos utilizado una serie de herramientas como PHP, Bootstrap y CSS, con un diseño sencillo e intuitivo que nos ha permitido aprender y descubrir muchas
-		funciones que no conocíamos.
-		Estamos muy contentos con nuestro proyecto, y creemos que es el momento de que vosotros también lo veais y lo disfrutéis.
+	  <p class="lead"><?php echo $lang['info_about'] ?>
 	  </p>
 		<br>
 	</center>
@@ -150,11 +145,16 @@
   <!-- /.container -->
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics
-Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez</p>
+  <footer class="bg-dark text-center text-lg-start">
+    <div class="text-center p-3" >
+        <div id="footerLinks">
+            <a href="https://github.com/MrFron/Recomercem" class="badge badge-primary">GitHub</a>
+            <a href="../frontend/about.php" class="badge badge-primary">About</a>
+        </div>
+        <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
+        <p><a href="about.php?lang=es"><?php echo $lang['es'] ?></a> || <a href="about.php?lang=en"><?php echo $lang['en'] ?></a> || <a href="about.php?lang=ru"><?php echo $lang['ru'] ?></a> || <a href="about.php?lang=cat"><?php echo $lang['cat'] ?></a></p>
     </div>
+</footer>
     <!-- /.container -->
   </footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

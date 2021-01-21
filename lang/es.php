@@ -119,7 +119,12 @@ $lang = array(
         que han pasado diez horas a fuego lento durante la noche. El dueño especifica que solo hacen tres variedades de ramen porque quieren
         especializarse en calidad y rapidez. El menú presenta las recetas clásicas de ramen: soja (con un caldo de pollo y cerdo, con salsa de soja), 
         miso (lo mismo pero con miso en lugar de soja) y mariscos. Los fideos caseros (mira la máquina al final de la barra) son una maravilla: 
-        puedes ponerlos en tu plato y girarlos alrededor de tus palillos con fuerza hasta que el caldo se escape y todavía estén perfectamente elásticos."
+        puedes ponerlos en tu plato y girarlos alrededor de tus palillos con fuerza hasta que el caldo se escape y todavía estén perfectamente elásticos.",
+    
+    "illya" => "Programador junior con experiencia en ámbito de creación de páginas web. Trabajador, de aprendizaje rápido y adaptativo en diferentes situaciones.",
+    "fran" => "Programador junior expandiendo a diario mi conocimiento y experiencia en este mundo tan interesante de la programación. Me considero una persona muy ordenada y trabajadora si me motiva lo que hago.",
+    "hector" => "Programador junior actualmente cursando un grado de desarrollo web en el centre d’estudis poltecnics  i anteriormente he cursado en desarrollo multiplataforma. Responsable i trabajador con experiencia laboral en el sector.",
+    "dani" => "Programador junior especializado en el desarrollo de páginas web. Aprendiendo conocimientos técnicos día tras día, trabajador y responsable de las tareas asignadas."
     
 
 
