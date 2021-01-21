@@ -387,7 +387,7 @@
     {
         carro.style.display = "none";
         setTimeout(function(){carro.style.display = "block";
-        choque=false;},400);
+        choque=false;},500);
     }
     function objeto1hidden()
     {
