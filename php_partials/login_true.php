@@ -441,7 +441,7 @@ function juegos($lang){
    <?php }else{ ?>
    
 
-    <h1 style="margin: auto; text-align: center; margin-top: 20px; color: #f8df7d;">PARA JUGAR A LOS JUEGOS INICIE SESIÓN</h1>
+    <h1 style="margin: auto; text-align: center; margin-top: 20px; color: #F3B63E;">PARA JUGAR A LOS JUEGOS INICIE SESIÓN</h1>
 
     <div class="container">
         <div class="row">
