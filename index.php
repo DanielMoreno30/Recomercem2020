@@ -115,6 +115,7 @@
       <h3 id="titulo3" style="color: #F3B63E;"><?php echo $lang['parafo6_indice'] ?></h3>
       <p> <?php echo $lang['parafo7_indice'] ?></p>
       <p><?php echo $lang['parafo8_indice'] ?></p>
+      <p><?php echo $lang['parafo9_indice'] ?></p>
     </div>
   </div>
 </div>

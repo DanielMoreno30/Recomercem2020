@@ -30,13 +30,15 @@ $lang = array(
     "parafo2_indice" => "Por esta razón, tanto la asociación Las Cortes Comercio 08028 como el Instituto Municipal de Mercados de Barcelona nos han pedido una aplicación web para divulgar y potenciar tanto el pequeño comercio como los mercados.",
     "parafo3_indice" => "¿Cual es la función de nuestra aplicación web?",
     "parafo4_indice" => "Esta página tiene como función la divulgación y potenciación del pequeño comercio y de los mercados municipales. 
-    Nuesro grupo formado por Fran, Hector, Dani e Illya hemos elegido como modelo de comercio municipal una selección 
-    de bares y restaurantes de barcelona.",
+    Nuestro grupo formado por Fran, Hector, Dani e Illya hemos elegido como modelo de comercio municipal una selección 
+    de bares y restaurantes de Barcelona.",
     "parafo5_indice" => "En la sección de 'Nuestra selección' podrás ver información sobre los bares y/o restaurantes que hemos elegido, 
-    además podrás ver que promociones/descuentos tienen diponibles y como conseguirlas.",
+    además podrás ver que promociones/descuentos tienen disponibles y como conseguirlas.",
     "parafo6_indice" => "¿Te gustaría conseguir descuentos y promociones?",
-    "parafo7_indice" => "Debido a la pandemia del Covid-19, muchos pequeños comercios y los mercados municipales de ciudades y pueblos han perdido numerosos clientes y ganancias, provocando incluso el cierre definitivos de algunos de ellos.",
-    "parafo8_indice" => " Por esta razón, tanto la asociación Las Cortes Comercio 08028 como el Instituto Municipal de Mercados de Barcelona nos han pedido una aplicación web para divulgar y potenciar tanto el pequeño comercio como los mercados.",
+    "parafo7_indice" => "Hemos creado una serie de minijuegos con la que queremos mostrar el proceso de delivery que tanto nos ha ayudado en esta época del covid.",
+    "parafo8_indice" => "Jugando a nuestros juegos puedes conseguir descuentos y promociones exclusivas. Entra en el apartado de Juegos
+    y juega a nuestros cuatro juegos, con los puntos que consigas en total podrás desbloquear unas promociones u otras.",
+    "parafo9_indice" => "¡Cuantos más puntos tengas mejores serán las promociones que puedas desbloquear!",
 
     "parafo1_seleccion" =>"Un pequeño local con tematica japonesa con barra de madera. Entra a conocer una amplia seleccion de recetas japonesas para llenarte de emociones asiaticas.",
     "parafo2_seleccion" =>"¿Nunca has pensado en la version perfecta de tu taza de cafe? En Bracafe tines una eleccion de cafes casi infinita y exportada desde Brasil. No te pierdas los aromas mas autenticos del café.",

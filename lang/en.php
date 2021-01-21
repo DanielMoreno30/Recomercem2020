@@ -37,8 +37,10 @@ $lang = array(
     In the 'Our selection' section you can see information about the bars and / or restaurants that we have chosen,
         You will also be able to see what promotions / discounts are available and how to get them.",
     "parafo6_indice" => "Would you like to get discounts and promotions?",
-    "parafo7_indice" => "Due to the Covid-19 pandemic, many small businesses and municipal markets in cities and towns have lost numerous customers and profits, even causing the definitive closure of some of them.",
-    "parafo8_indice" => "For this reason, both the association Las Cortes Comercio 08028 and the Barcelona Municipal Institute of Markets have asked us for a web application to disseminate and promote both small businesses and markets.",
+    "parafo7_indice" => "We have created a series of mini-games with which we want to explain the delivery process that has helped us so much in this time of the covid.",
+    "parafo8_indice" => "By playing our games you can get discounts and exclusive promotions. Enter the Games section
+    and play our four games, with the points you get in total you can unlock some promotions or others",
+    "parafo9_indice" => "How more points you have, better promotions you can unlock!",
 
     "parafo1_seleccion" =>"A small place with a Japanese theme with a wooden bar. Enter to know a wide selection of Japanese recipes to fill you with Asian emotions.",
     "parafo2_seleccion" =>"Have you never thought about the perfect version of your cup of coffee? At Bracafe you have an almost infinite choice of coffees exported from Brazil. Don't miss the most authentic aromas of coffee.",

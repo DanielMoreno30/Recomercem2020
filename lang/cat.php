@@ -35,8 +35,10 @@ $lang = array(
     "parafo5_indice" => "A la secció de 'La nostra selecció' pots accedir a informació sobre els bars i / o restaurants que hem triat,
         a més podràs veure que promocions / descomptes tenen diponibles i com aconseguir-les.",
     "parafo6_indice" => "T'agradaria aconseguir descomptes i promocions?",
-    "parafo7_indice" => "A causa de la pandèmia de l'Covid-19, molts petits comerços i els mercats municipals de ciutats i pobles han perdut nombrosos clients i guanys, provocant fins i tot el tancament definitius d'alguns d'ells.",
-    "parafo8_indice" => "Per aquesta raó, tant l'associació Les Corts Comerç 08028 com l'Institut Municipal de Mercats de Barcelona ens han demanat una aplicació web per divulgar i potenciar tant el petit comerç com els mercats.",
+    "parafo7_indice" => "Hem creat una sèrie de minijocs amb la qual volem mostrar el procés de delivery que tant ens ha ajudat en aquesta època de l'covid.",
+    "parafo8_indice" => "Jugant als nostres jocs pots aconseguir descomptes i promocions exclusives. Entra a l'apartat de Jocs
+        i juga als nostres quatre jocs, amb els punts que aconsegueixis en total podràs desbloquejar unes promocions o unes altres.",
+        "parafo9_indice" => "Quants més punts tinguis millors seran les promocions que puguis desbloquejar!",
 
     "parafo1_seleccion" =>"Un petit local amb temàtica japonesa amb barra de fusta. Entra a conèixer un ampli recull de receptes japoneses per omplir-te de emocions asiàtiques.",
     "parafo2_seleccion" =>"Mai has pensat en la versió perfecta de la teva tassa de cafe? En Bracafé tines 01:00 eleccion de cafès gairebé infinita i exportada des de Brasil. No et perdis les aromes més autèntics de el cafè.",
