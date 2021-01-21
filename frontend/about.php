@@ -16,7 +16,7 @@
 <body>
  <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="../index.php" id = "textTituloNav">
+  <a class="navbar-brand" href="#" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
       <?php echo $lang['Recomencem'] ?>
     </a>
@@ -69,7 +69,7 @@
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
 	<center>
-      <h1 class="display-3"><?php echo $lang["Recomencem"] ?></h1>
+      <h1 class="display-3">¡Recomerçem!</h1>
       <!-- <p class="lead">
 		Más de tres meses trabajando para este momento. El momento de presentar nuestro proyecto. Somos un grupo de 4 compañeros con el destino de ayudar
 		a los pequeños comercios, aquellos que necesitan más que nadie.
@@ -78,10 +78,13 @@
 	  </p> -->
 		<br>
 	  <p class="lead">
-		  <?php echo $lang["info_about"] ?>
+		Somos un grupo de cuatro integrantes de el Institut Politecnics de Barcelona, con un proyecto entre manos con el fin de ayudar a los pequeños comercios,
+		aquellos que lo necesitan más que nadie.
+		Hemos utilizado una serie de herramientas como PHP, Bootstrap y CSS, con un diseño sencillo e intuitivo que nos ha permitido aprender y descubrir muchas
+		funciones que no conocíamos.
+		Estamos muy contentos con nuestro proyecto, y creemos que es el momento de que vosotros también lo veais y lo disfrutéis.
 	  </p>
 		<br>
-      <a href="#" class="btn btn-primary btn-lg">Call to action!</a>
 	</center>
     </header>
 
@@ -90,10 +93,10 @@
 
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="../img/avatarfran.png" width="800" height="325" />
+          <img class="card-img" src="../img/avatarfran.png" width="800" height="325" />
           <div class="card-body">
             <h4 class="card-title">Fran Soriano Román</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            <p class="card-text">Programador junior expandiendo a diario mi conocimiento y experiencia en este mundo tan interesante de la programación. Me considero una persona muy ordenada y trabajadora si me motiva lo que hago.</p>
           </div>
           <div class="card-footer">
             <a href="https://www.linkedin.com/in/fran-soriano-rom%C3%A1n-ba08871a9/" target="_blank" class="btn btn-primary">Linkedin</a>
@@ -103,10 +106,10 @@
 
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="../img/avatardani.png" width="800" height="325" />
+          <img class="card-img" src="../img/avatardani.png" alt="" width="800" height="325" />
           <div class="card-body">
             <h4 class="card-title">Daniel Moreno Fernandez</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+            <p class="card-text">Programador junior especializado en el desarrollo de páginas web. Aprendiendo conocimientos técnicos día tras día, trabajador y responsable de las tareas asignadas.</p>
           </div>
           <div class="card-footer">
             <a href="https://www.linkedin.com/in/daniel-moreno-b7603b1b5/" target="_blank" class="btn btn-primary">Linkedin</a>
@@ -116,10 +119,10 @@
 
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="http://placehold.it/500x325" alt="">
+          <img class="card-img" src="../img/avatarillya.png" width="800" height="325" />
           <div class="card-body">
             <h4 class="card-title">Illya Samoylenko Barabus</h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            <p class="card-text">Programador junior con experiencia en ámbito de creación de páginas web. Trabajador, de aprendizaje rápido y adaptativo en diferentes situaciones.</p>
           </div>
           <div class="card-footer">
             <a href="#" class="btn btn-primary">Linkedin</a>
@@ -129,7 +132,7 @@
 
       <div class="col-lg-3 col-md-6 mb-4">
         <div class="card h-100">
-          <img class="card-img-top" src="../img/avatarhector.png" width="500" height="325" />
+          <img class="card-img" src="../img/avatarhector.png" width="800" height="325" />
           <div class="card-body">
             <h4 class="card-title">Hector Garcia Lopez</h4>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
@@ -149,8 +152,8 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
-      <p><a href="about.php?lang=es">Espa~ol</a> || <a href="about.php?lang=en">Ingles</a> || <a href="about.php?lang=ru">Ruso</a></p>
+      <p class="m-0 text-center text-white">Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics
+Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez</p>
     </div>
     <!-- /.container -->
   </footer>
