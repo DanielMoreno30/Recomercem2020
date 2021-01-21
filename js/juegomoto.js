@@ -125,7 +125,7 @@ function iniciarContador(fondo){
  
                         }
 
-                        if(tiempo < 60 && tiempo > 35){
+                        if(tiempo < 60 && tiempo > 33){
                             
                             linea1.style.animationName = "linea1-30";
                             linea1.style.animationDuration = "2.5s";
@@ -184,7 +184,7 @@ function iniciarContador(fondo){
                            
  
                         }
-                        if(tiempo < 90 && tiempo > 63){
+                        if(tiempo < 86 && tiempo > 63){
                             
                             linea1.style.animationName = "linea1-60";
                             linea1.style.animationDuration = "2s";
@@ -246,7 +246,7 @@ function iniciarContador(fondo){
  
                         }
 
-                        if(tiempo < 120 && tiempo > 90){
+                        if(tiempo < 120 && tiempo > 85){
                             
                             linea1.style.animationName = "linea1-90";
                             linea1.style.animationDuration = "1s";
@@ -382,7 +382,7 @@ function colisiones(){
             if (moto.offsetTop + moto.offsetWidth - 20  > coche1.offsetTop && //arriba
                 moto.offsetTop < coche1.offsetTop + coche1.offsetWidth + 80 && //abajo
                 moto.offsetLeft < coche1.offsetLeft + coche1.offsetHeight - 180 && //derecha
-                moto.offsetLeft + moto.offsetHeight - 90 > coche1.offsetLeft) { //izq
+                moto.offsetLeft + moto.offsetHeight - 85 > coche1.offsetLeft) { //izq
 
                 
                 choque = true;   
@@ -494,7 +494,7 @@ function colisiones(){
             if (moto.offsetTop + moto.offsetWidth - 25  > coche4.offsetTop && //arriba
                 moto.offsetTop < coche4.offsetTop + coche4.offsetWidth + 55 && //abajo
                 moto.offsetLeft < coche4.offsetLeft + coche4.offsetHeight - 200 && //derecha
-                moto.offsetLeft + moto.offsetHeight - 95 > coche4.offsetLeft) { //izq
+                moto.offsetLeft + moto.offsetHeight - 90 > coche4.offsetLeft) { //izq
 
                 
                 choque = true;  
@@ -567,7 +567,7 @@ function colisiones(){
             //colision coche medio 2
             if (moto.offsetTop + moto.offsetWidth - 25  > cocheMedio2.offsetTop && //arriba
                 moto.offsetTop < cocheMedio2.offsetTop + cocheMedio2.offsetWidth + 55 && //abajo
-                moto.offsetLeft < cocheMedio2.offsetLeft + cocheMedio2.offsetHeight - 200 && //derecha
+                moto.offsetLeft < cocheMedio2.offsetLeft + cocheMedio2.offsetHeight - 190 && //derecha
                 moto.offsetLeft + moto.offsetHeight - 95 > cocheMedio2.offsetLeft) { //izq
 
                 

@@ -170,8 +170,8 @@ else
   <footer class="bg-dark text-center text-lg-start">
     <div class="text-center p-3" >
         <div id="footerLinks">
-            <a href="https://github.com/MrFron/Recomercem.git" class="badge badge-primary">GitHub</a>
-            <a href="#" class="badge badge-primary">About</a>
+            <a href="https://github.com/MrFron/Recomercem" class="badge badge-primary">GitHub</a>
+            <a href="../frontend/about.php" class="badge badge-primary">About</a>
         </div>
         <p class="card-text"></p> Copyright © 2020-2021 - Proyecto 1 ABP - Centre d’Estudis Politècnics<br> Fran Soriano Román · Hector Garcia Lopez · Illya Samoylenko Barabus · Daniel Moreno Fernandez </p>
         <p><a href="usuario.php?lang=es">Espa~ol</a> || <a href="usuario.php?lang=en">Ingles</a> || <a href="usuario.php?lang=ru">Ruso</a></p>

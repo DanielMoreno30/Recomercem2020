@@ -1,20 +1,24 @@
 #textPuntos{
-position: absolute;
-top: 100%;
-left: 25%;
-font-size: 30px;
-font-style: bold;
-color: aliceblue;
+    position: absolute;
+    top: 100%;
+    left: 15%;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin: auto; 
+    text-align: center;
 
 }
 
 #textPuntosWin{
     position: absolute;
     top: 100%;
-    left: 25%;
+    left: 15%;
     font-size: 30px;
-    font-style: bold;
-    color: aliceblue;
+    font-weight: bold;
+    color: black;
+    margin: auto; 
+    text-align: center;
     
     }
 
