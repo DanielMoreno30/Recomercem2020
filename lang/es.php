@@ -91,7 +91,7 @@ $lang = array(
     "id_oferta" => "Identificador Oferta",
     "Nombre" => "Nombre",
     "puntos" => "Puntos",
-    "Codigo" => "Codigo",
+    "Codigo" => "Código",
     "aceptar" => "Aceptar",
     "cancelar" => "Cancelar",
     "id_user" => "Identificador Usuario",
@@ -100,7 +100,7 @@ $lang = array(
     "conf_contra" => "Confirmar Contraseña",
     "admin" => "Administrador",
     "puntos" => "Puntos",
-    "correo" => "Correo Electronico",
+    "correo" => "Correo Electrónico",
     "entrar" => "Entrar",
 
     "txapela_info" => "Txapela es una euskal taberna auténtica en Barcelona (Plaza Cataluña). 
