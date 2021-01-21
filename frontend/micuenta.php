@@ -17,7 +17,7 @@
 <body>
 <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="index.php" id = "textTituloNav">
+  <a class="navbar-brand" href="#" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
       <?php echo $lang['Recomencem'] ?>
     </a>
@@ -55,12 +55,12 @@
         <a class="nav-link" href="../frontend/about.php"><?php echo $lang['About'] ?></a>
       </li>
   
-      <?php admin_index(); ?> 
+      <?php admin_frontend(); ?> 
       
     </ul>
 
     <div style="height: 30px;">
-      <?php login_index($lang); ?>
+      <?php login_frontend($lang); ?>
   </div>
 </nav>
 <center>
