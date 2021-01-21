@@ -1,10 +1,11 @@
 
 <?php 
-session_start(); 
+
 include "../confLang.php";
 include "../php_partials/login_true.php";
 
 require_once("../php_libraries/bd.php");
+include_once("../php_controllers/recomercemController.php");
 
 if (isset($_POST['update'])) 
 {
