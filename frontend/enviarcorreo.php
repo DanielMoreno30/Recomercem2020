@@ -1,5 +1,6 @@
 <?php
 require("../php_mailer/class.phpmailer.php");
+require("../php_mailer/src/phpmailer.php");
 require("../php_mailer/class.smtp.php");
 require_once('../php_libraries/bd.php');
 	    $usuarios = selectUsuarios();
@@ -33,13 +34,13 @@ $txtConsulta = str_replace("@strMensaje",$strMensaje,$txtConsulta);
 
 <?php
 
-    $destino = "danimoreno80@gmail.com";
+    $destino = $_SESSION['user_loged']['mail'];
 
 
-    // Datos de la cuenta de correo utilizada para enviar v�a SMTP
+    // Datos de la cuenta de correo utilizada para enviar via SMTP
     $smtpHost = "smtp.gmail.com";  // Dominio alternativo brindado en el email de alta 
-    $smtpUsuario = "danimoreno80@gmail.com";  // Mi cuenta de correo
-    $smtpClave = "danidani30";  // Mi contrase�a
+    $smtpUsuario = "recomercem2021@gmail.com";  // Mi cuenta de correo
+    $smtpClave = "Peluca1234";  // Mi contraseña
 
 
 
@@ -57,12 +58,10 @@ $mail->Username = $smtpUsuario;
 $mail->Password = $smtpClave;
 
 
-$mail->From = $email; // Email desde donde env�o el correo.
-$mail->FromName = $nombre;
+$mail->From = $smtpUsuario;
 $mail->AddAddress($destino); // Esta es la direcci�n a donde enviamos los datos del formulario
 
 $mail->Subject = "Oferta canjeada de la página Recomercem."; // Este es el titulo del email.
-$mensajeHtml = nl2br($mensaje);
 $mail->Body = "
 <html> 
 
@@ -72,7 +71,7 @@ $mail->Body = "
 
 <p>Informacion enviada por el usuario de la web:</p>
 
-<p>Hola {$_SESSION['user_loged']['nom_usuario']}, aquí tienes tu código {$id_oferta} canjeado de nuestra página web.
+<p>Hola {$_SESSION['user_loged']['nom_usuario']}, aquí tienes tu código canjeado de nuestra página web.
 ¡Esperamos que lo disfrutes!</p>
 
 <p>Oferta: {$txtNombreOferta}</p>
@@ -81,8 +80,7 @@ $mail->Body = "
 </body> 
 </html>
 
-<br />"; // Texto del email en formato HTML
-$mail->AltBody = "{$mensaje} \n\n "; // Texto sin formato HTML
+<br />";
 // FIN - VALORES A MODIFICAR //
 
 $mail->SMTPOptions = array(
@@ -93,8 +91,7 @@ $mail->SMTPOptions = array(
     )
 );
 
-$estadoEnvio = $mail->Send(); 
-if($estadoEnvio){
+if(!$mail->send()) {
     header("Location:../index.php");
     exit();
 } else {
@@ -102,13 +99,10 @@ if($estadoEnvio){
 }
 
 
-    
 }else{
     echo'<script type="text/javascript">
     alert("¡No tienes puntos suficientes para canjear esta oferta!");
     window.location.href="../frontend/micuenta.php";
     </script>';
 }
-
-
 ?>
