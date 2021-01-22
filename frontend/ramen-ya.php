@@ -92,7 +92,7 @@ include "../php_partials/login_true.php";
 
 
 
-<div class="card m-3" style="height: 440px;" >
+<div class="card m-3" style="height: 670px;" >
   <div class="col">
       <table class="table">
 				<thead>
@@ -244,9 +244,10 @@ include "../php_partials/login_true.php";
 </div>
 
 
-<div class="card m-3" style="height: 440px;" >
+<div class="card m-3" style="height: 270px;" >
   <div class="row">
     <div class="col" >
+	<br>
       <img src="../img/ramenSitio.PNG" id="imgMaps" alt="...">
     </div>
     <div class="col">
