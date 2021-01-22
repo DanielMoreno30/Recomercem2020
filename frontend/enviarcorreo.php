@@ -58,9 +58,8 @@ try {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
 }else{
-    echo'<script type="text/javascript">
-    alert("¡No tienes puntos suficientes para canjear esta oferta!");
-    window.location.href="../frontend/micuenta.php";
-    </script>';
+    $_SESSION['errorCanjeo'] = "No tienes puntos suficientes para canjear esta oferta.";
+    header('Location: ../frontend/micuenta.php');
+    exit();
 }
 ?>

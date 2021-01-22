@@ -62,6 +62,8 @@
       <?php login_juegos($lang); ?>
   </div>
 </nav>
+
+<?php require_once('../php_partials/mensajecanjeo.php'); ?>
 <center>
 	<div class="container">
 	<img src="../img/logousuarios.png"></img>
