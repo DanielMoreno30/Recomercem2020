@@ -1,104 +1,62 @@
 <?php
-require("../php_mailer/class.phpmailer.php");
-require("../php_mailer/src/phpmailer.php");
-require("../php_mailer/class.smtp.php");
+
+mb_internal_encoding('UTF-8');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'phpmailer/Exception.php';
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
+
+
 require_once('../php_libraries/bd.php');
-	    $usuarios = selectUsuarios();
-        $ofertas = selectAllofertas();
+
 
 if($_SESSION['user_loged']['puntos'] >=$_POST['puntos']){
-    $_SESSION['user_loged']['puntos'] = $_SESSION['user_loged']['puntos'] - $_POST['puntos'];
-    updateUsuariosmiCuenta($_SESSION['user_loged']['id_usuario'],$_SESSION['user_loged']['nom_usuario'],$_SESSION['user_loged']['contr'],$_SESSION['user_loged']['admin'],$_SESSION['user_loged']['puntos'],$_SESSION['user_loged']['mail'], $_POST["codigo"]);
+
     $strNombre = $_SESSION['user_loged']['nom_usuario'];
     $strEmail = $_SESSION['user_loged']['mail'];
     $strNombreOferta = $_POST['nombre'];
     $strMensaje = $_POST["codigo"];
     $strid = $_POST["id_oferta"];
+    $nomRestaurante = selectRestauranteByOferta($strid);
 
-$txtid = '<p value="@strid"></p>';
-$txtNombre = '<p value="@strNombre"></p>';
-$txtEmail = '<p value="@strEmail"></p>';
-$txtNombreOferta = '<p>'.$strNombreOferta.'</p>';
-$txtConsulta = '<p>'.$strMensaje.'</p>';
+    $mensaje = "El código de tu oferta " . $strNombreOferta . " del restaurante " . $nomRestaurante[0]['nombre'] . " es: " . $strMensaje . "; ya puedes canjearla.";
+    
 
+    $mail = new PHPMailer(true);
 
-$txtNombre = str_replace("@strNombre",$strNombre,$txtNombre);
-$txtNombreOferta = str_replace("@strNombreOferta",$strNombreOferta,$txtNombreOferta);
-$txtEmail = str_replace("@strEmail",$strEmail,$txtEmail);
-$txtConsulta = str_replace("@strMensaje",$strMensaje,$txtConsulta);
-?>  
+try {
+    //Server settings
+    $mail->SMTPDebug = 0;                      // Enable verbose debug output
+    $mail->isSMTP();                                            // Send using SMTP
+    $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username   = 'recomercem2021@gmail.com';                     // SMTP username
+    $mail->Password   = 'Peluca1234';                               // SMTP password
+    $mail->SMTPSecure = 'tls';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+    $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
+    //Recipients
+    $mail->setFrom('recomercem2021@gmail.com', 'Recomercem');
+    $mail->addAddress($strEmail);     // Add a recipient
+    
 
+    
+    // Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Esta es la oferta que has canjeado.';
+    $mail->Body    = $mensaje;
+    
 
-        
-
-<?php
-
-    $destino = $_SESSION['user_loged']['mail'];
-
-
-    // Datos de la cuenta de correo utilizada para enviar via SMTP
-    $smtpHost = "smtp.gmail.com";  // Dominio alternativo brindado en el email de alta 
-    $smtpUsuario = "recomercem2021@gmail.com";  // Mi cuenta de correo
-    $smtpClave = "Peluca1234";  // Mi contraseña
-
-
-
-
-$mail = new PHPMailer();
-$mail->IsSMTP();
-$mail->SMTPAuth = true;
-$mail->Port = 587; 
-$mail->IsHTML(true); 
-$mail->CharSet = "utf-8";
-
-// VALORES A MODIFICAR //
-$mail->Host = $smtpHost; 
-$mail->Username = $smtpUsuario; 
-$mail->Password = $smtpClave;
-
-
-$mail->From = $smtpUsuario;
-$mail->AddAddress($destino); // Esta es la direcci�n a donde enviamos los datos del formulario
-
-$mail->Subject = "Oferta canjeada de la página Recomercem."; // Este es el titulo del email.
-$mail->Body = "
-<html> 
-
-<body> 
-
-<h1>CANJEASTE LA OFERTA, ¡AQUÍ TENEMOS TU CUPÓN!</h1>
-
-<p>Informacion enviada por el usuario de la web:</p>
-
-<p>Hola {$_SESSION['user_loged']['nom_usuario']}, aquí tienes tu código canjeado de nuestra página web.
-¡Esperamos que lo disfrutes!</p>
-
-<p>Oferta: {$txtNombreOferta}</p>
-<p>Código: {$txtConsulta}</p>
-
-</body> 
-</html>
-
-<br />";
-// FIN - VALORES A MODIFICAR //
-
-$mail->SMTPOptions = array(
-    'ssl' => array(
-        'verify_peer' => false,
-        'verify_peer_name' => false,
-        'allow_self_signed' => true
-    )
-);
-
-if(!$mail->send()) {
-    header("Location:../index.php");
-    exit();
-} else {
-    echo "Ocurrio un error inesperado.";
+    $mail->send();
+    header('Location:../index.php');
+    $_SESSION['user_loged']['puntos'] = $_SESSION['user_loged']['puntos'] - $_POST['puntos'];
+    updateUsuariosmiCuenta($_SESSION['user_loged']['id_usuario'],$_SESSION['user_loged']['nom_usuario'],$_SESSION['user_loged']['contr'],$_SESSION['user_loged']['admin'],$_SESSION['user_loged']['puntos'],$_SESSION['user_loged']['mail'], $_POST["codigo"]);
+    
+} catch (Exception $e) {
+    echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-
-
 }else{
     echo'<script type="text/javascript">
     alert("¡No tienes puntos suficientes para canjear esta oferta!");

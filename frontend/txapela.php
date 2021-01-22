@@ -90,7 +90,7 @@
 <div class="card m-3" style="height: 440px;" >
   <div class="row g-0">
     <div class="col-md-5 col-sm-3" >
-      <img src="../img/plantillamenu.png" id="imgQR" alt="...">
+      <img src="../img/menu-2.jpg" id="imgMaps" alt="...">
     </div>
     <div class="col-md-7 col-sm-9">
       <div class="card-body">
@@ -108,7 +108,7 @@
 <div class="card m-3" style="height: 440px;" >
   <div class="row g-0">
     <div class="col-md-5 col-sm-3" >
-      <img src="../img/bracafeMaps.PNG" id="imgMaps" alt="...">
+      <img src="../img/mapsTxapela.png" id="imgMaps" alt="...">
     </div>
     <div class="col-md-7 col-sm-9">
       <div class="card-body">

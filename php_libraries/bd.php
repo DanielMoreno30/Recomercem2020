@@ -118,6 +118,20 @@ function selectOfertaByRestaurante($id)
     return $ofertas;
 }
 
+function selectRestauranteByOferta($id)
+{
+
+    $conexion = openBd();
+    $sentenciaText = "select nombre from restaurantes 
+    where id_restaurante IN (SELECT id_restaurante FROM ofertas_restaurante where id_oferta = $id)";
+    $sentencia = $conexion->prepare($sentenciaText);
+    $sentencia->execute();
+    $ofertas = $sentencia->fetchAll();
+    $conexion = closeBd();
+
+    return $ofertas;
+}
+
 function selectOfertaMax()
 {
     $conexion = openBd();
@@ -446,7 +460,7 @@ function updateUsuariosPuntos($id_usuario,$nombre,$contr,$admin,$puntos,$mail,$p
     $conexion = closeBd();
 }
 
-function updateUsuariosmiCuenta($id_usuario,$nombre,$contr,$admin,$puntos,$mail,$mensaje)
+function updateUsuariosmiCuenta($id_usuario,$nombre,$contr,$admin,$puntos,$mail)
 {
     try
     {
@@ -462,7 +476,7 @@ function updateUsuariosmiCuenta($id_usuario,$nombre,$contr,$admin,$puntos,$mail,
         
         $sentencia->execute();
 
-        $_SESSION['mensaje']= 'Oferta canjeada correctamente, su código es : ' . $mensaje . ", se lo hemos enviado a su correo.";
+        $_SESSION['mensaje']= 'Oferta canjeada correctamente';
 
      
         
@@ -482,6 +496,8 @@ function updateUsuariosmiCuenta($id_usuario,$nombre,$contr,$admin,$puntos,$mail,
     }
     $conexion = closeBd();
 }
+
+
 
 
 ?>
