@@ -70,7 +70,7 @@
 </nav>
 
 <div class="d-flex" id="wrapper">
-<div id="sidebar-wrapper">
+<div id="sidebar-wrapper" style="margin-right: 20px;">
     
       <div class="list-group list-group-flush">
         <a href="./administracion.php" class="list-group-item list-group-item-action">Ofertas</a>
