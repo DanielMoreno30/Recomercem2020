@@ -446,7 +446,7 @@ function updateUsuariosPuntos($id_usuario,$nombre,$contr,$admin,$puntos,$mail,$p
     $conexion = closeBd();
 }
 
-function updateUsuariosmiCuenta($id_usuario,$nombre,$contr,$admin,$puntos,$mail)
+function updateUsuariosmiCuenta($id_usuario,$nombre,$contr,$admin,$puntos,$mail,$mensaje)
 {
     try
     {
@@ -462,7 +462,7 @@ function updateUsuariosmiCuenta($id_usuario,$nombre,$contr,$admin,$puntos,$mail)
         
         $sentencia->execute();
 
-        $_SESSION['mensaje']= 'Oferta canjeada correctamente';
+        $_SESSION['mensaje']= 'Oferta canjeada correctamente, su código es : ' . $mensaje . ", se lo hemos enviado a su correo.";
 
      
         

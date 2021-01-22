@@ -16,7 +16,7 @@
 <link href="../css/perfilcss.css" rel="stylesheet">
 <body>
   <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="../index.php" id = "textTituloNav">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
       <?php echo $lang['Recomencem'] ?>
@@ -60,7 +60,7 @@
     </ul>
 
     <div style="height: 30px;">
-      <?php login_frontend($lang); ?>
+      <?php login_juegos($lang); ?>
   </div>
 </nav>
 <center>

@@ -8,7 +8,7 @@ require_once('../php_libraries/bd.php');
 
 if($_SESSION['user_loged']['puntos'] >=$_POST['puntos']){
     $_SESSION['user_loged']['puntos'] = $_SESSION['user_loged']['puntos'] - $_POST['puntos'];
-    updateUsuariosmiCuenta($_SESSION['user_loged']['id_usuario'],$_SESSION['user_loged']['nom_usuario'],$_SESSION['user_loged']['contr'],$_SESSION['user_loged']['admin'],$_SESSION['user_loged']['puntos'],$_SESSION['user_loged']['mail']);
+    updateUsuariosmiCuenta($_SESSION['user_loged']['id_usuario'],$_SESSION['user_loged']['nom_usuario'],$_SESSION['user_loged']['contr'],$_SESSION['user_loged']['admin'],$_SESSION['user_loged']['puntos'],$_SESSION['user_loged']['mail'], $_POST["codigo"]);
     $strNombre = $_SESSION['user_loged']['nom_usuario'];
     $strEmail = $_SESSION['user_loged']['mail'];
     $strNombreOferta = $_POST['nombre'];
