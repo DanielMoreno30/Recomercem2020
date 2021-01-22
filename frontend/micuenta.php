@@ -87,7 +87,7 @@
 				<th>Restaurante</th>
 				<th>Oferta</th>
 				<th>Puntos</th>
-				<th>Codigo</th>
+				
 				<th></th>
 			</tr>
 				<?php foreach ($ofertas as $oferta) { ?>
@@ -95,7 +95,7 @@
                       <td><?php echo $oferta['nomres']; ?></td>
                       <td><?php echo $oferta['nombre']; ?></td>
                       <td><?php echo $oferta['puntos']; ?></td>
-                      <td><?php echo $oferta['codigo']; ?></td>
+                      
                       <td>
                         <form action="../frontend/enviarcorreo.php" method="POST">
                           <button type="submit" class="btn btn-danger" name="submit">Canjear</button>
