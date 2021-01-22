@@ -69,7 +69,7 @@
     <!-- Jumbotron Header -->
     <header class="jumbotron my-4">
 	<center>
-      <h1 class="display-3">¡Recomerçem!</h1>
+      <h1 style="color: #F3B63E;" class="display-3">¡Recomerçem!</h1>
       <!-- <p class="lead">
 		Más de tres meses trabajando para este momento. El momento de presentar nuestro proyecto. Somos un grupo de 4 compañeros con el destino de ayudar
 		a los pequeños comercios, aquellos que necesitan más que nadie.
@@ -90,11 +90,11 @@
         <div class="card h-100">
           <img class="card-img" src="../img/avatarfran.png" width="800" height="325" />
           <div class="card-body">
-            <h4 class="card-title">Fran Soriano Román</h4>
+            <h4 style="color: #F3B63E;" class="card-title">Fran Soriano Román</h4>
             <p class="card-text"><?php echo $lang['fran'] ?></p>
           </div>
           <div class="card-footer">
-            <a href="https://www.linkedin.com/in/fran-soriano-rom%C3%A1n-ba08871a9/" target="_blank" class="btn btn-primary">Linkedin</a>
+            <a href="https://www.linkedin.com/in/fran-soriano-rom%C3%A1n-ba08871a9/" target="_blank" class="btn btn-danger">Linkedin</a>
           </div>
         </div>
       </div>
@@ -103,11 +103,11 @@
         <div class="card h-100">
           <img class="card-img" src="../img/avatardani.png" alt="" width="800" height="325" />
           <div class="card-body">
-            <h4 class="card-title">Daniel Moreno Fernandez</h4>
+            <h4 style="color: #F3B63E;" class="card-title">Daniel Moreno Fernandez</h4>
             <p class="card-text"><?php echo $lang['dani'] ?></p>
           </div>
           <div class="card-footer">
-            <a href="https://www.linkedin.com/in/daniel-moreno-b7603b1b5/" target="_blank" class="btn btn-primary">Linkedin</a>
+            <a href="https://www.linkedin.com/in/daniel-moreno-b7603b1b5/" target="_blank" class="btn btn-danger">Linkedin</a>
           </div>
         </div>
       </div>
@@ -116,11 +116,11 @@
         <div class="card h-100">
           <img class="card-img" src="../img/avatarillya.png" width="800" height="325" />
           <div class="card-body">
-            <h4 class="card-title">Illya Samoylenko Barabus</h4>
+            <h4 style="color: #F3B63E;" class="card-title">Illya Samoylenko Barabus</h4>
             <p class="card-text"><?php echo $lang['illya'] ?></p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Linkedin</a>
+            <a href="#" class="btn btn-danger">Linkedin</a>
           </div>
         </div>
       </div>
@@ -129,11 +129,11 @@
         <div class="card h-100">
           <img class="card-img" src="../img/avatarhector.png" width="800" height="325" />
           <div class="card-body">
-            <h4 class="card-title">Hector Garcia Lopez</h4>
+            <h4 style="color: #F3B63E;" class="card-title">Hector Garcia Lopez</h4>
             <p class="card-text"><?php echo $lang['hector'] ?></p>
           </div>
           <div class="card-footer">
-            <a href="https://www.linkedin.com/in/hector-garc%C3%ADa-l%C3%B3pez-56652a197/" target="_blank" class="btn btn-primary">Linkedin</a>
+            <a href="https://www.linkedin.com/in/hector-garc%C3%ADa-l%C3%B3pez-56652a197/" target="_blank" class="btn btn-danger">Linkedin</a>
           </div>
         </div>
       </div>

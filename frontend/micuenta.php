@@ -1,9 +1,8 @@
 <?php
 	require_once('../php_libraries/bd.php');
 	$usuarios = selectUsuarios();
-	$ofertas = selectAllofertas();
-	require("../php_mailer/class.phpmailer.php");
-	require("../php_mailer/class.smtp.php");
+	$ofertas = selectOfertasRestaurante();
+	
 	include "../confLang.php";
   include "../php_partials/login_true.php";
 ?>
@@ -17,7 +16,7 @@
 <body>
   <!-- -----------------------------------------NAVBAR----------------------------------------------------------------------- -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="../index.php" id = "textTituloNav">
+  <a class="navbar-brand" href="../index.php" id = "textTituloNav" style="color: #E43B3E;">
       <img src="../img/iconobirra.png" width="40" height="40" class="d-inline-block align-middle" alt="" loading="lazy" >
       <?php echo $lang['Recomencem'] ?>
     </a>
@@ -85,7 +84,7 @@
 		<br>
 		<table class="table table-striped">
 			<tr>
-				<th>Id</th>
+				<th>Restaurante</th>
 				<th>Oferta</th>
 				<th>Puntos</th>
 				<th>Codigo</th>
@@ -93,7 +92,7 @@
 			</tr>
 				<?php foreach ($ofertas as $oferta) { ?>
                     <tr>
-                      <td><?php echo $oferta['id_oferta']; ?></td>
+                      <td><?php echo $oferta['nomres']; ?></td>
                       <td><?php echo $oferta['nombre']; ?></td>
                       <td><?php echo $oferta['puntos']; ?></td>
                       <td><?php echo $oferta['codigo']; ?></td>
@@ -102,8 +101,8 @@
                           <button type="submit" class="btn btn-danger" name="submit">Canjear</button>
                           <input type="hidden" id="codigo" name="codigo" value=<?php echo $oferta['codigo'];?>>
                           <input type="hidden" id="id_oferta" name="id_oferta" value=<?php echo $oferta['id_oferta'];?>>
-						  <input type="hidden" id="puntos" name="puntos" value=<?php echo $oferta['puntos'];?>>
-						  <input type="hidden" id="nombre" name="nombre" value=<?php echo $oferta['nombre'];?>>
+                          <input type="hidden" id="puntos" name="puntos" value=<?php echo $oferta['puntos'];?>>
+                          <input type="hidden" id="nombre" name="nombre" value=<?php echo $oferta['nombre'];?>>
                         </form>
                       </td>
                     </tr>
