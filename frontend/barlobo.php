@@ -71,7 +71,7 @@
   <div class="card m-3" style="height: 440px;">
     <div class="row g-0">
       <div class="col-md-5 col-sm-3" >
-        <img src="../img/barlobo.jpg" class="rounded float-start" style="margin-left: 100px;">
+        <img src="../img/barlobo.jpg" id="imgMaps"class="rounded float-start" style="margin-left: 100px;">
       </div>
       <div class="col-md-7 col-sm-9">
         <div class="card-body">
@@ -90,7 +90,7 @@
 <div class="card m-3" style="height: 440px;" >
   <div class="row g-0">
     <div class="col-md-5 col-sm-3" >
-      <img src="../img/qrBracafe.PNG" id="imgQR" alt="...">
+      <img src="../img/menu-2.jpg" id="imgMaps"  alt="...">
     </div>
     <div class="col-md-7 col-sm-9">
       <div class="card-body">
