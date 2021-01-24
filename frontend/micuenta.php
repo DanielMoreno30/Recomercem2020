@@ -73,12 +73,11 @@
 				<th style="display:none;">Id</th>
 				<th>Nombre</th>
 				<th>Email</th>
-				<th style="display:none;">Contraseña</th>
 			<tr>
-				<td style="display:none;"><?php echo $_SESSION['user_loged']['id_usuario'];?>
+				
 				<td><?php echo $_SESSION['user_loged']['nom_usuario'];?>
 				<td><?php echo $_SESSION['user_loged']['mail'];?>
-				<td style="display:none;"><?php echo $_SESSION['user_loged']['contr'];?>
+		
 			</tr>
 		</table>
 		<br>

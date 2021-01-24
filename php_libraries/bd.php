@@ -476,7 +476,7 @@ function updateUsuariosmiCuenta($id_usuario,$nombre,$contr,$admin,$puntos,$mail)
         
         $sentencia->execute();
 
-        $_SESSION['mensaje']= 'Oferta canjeada correctamente';
+        $_SESSION['mensaje']= 'Oferta canjeada correctamente, le hemos enviado un mail con el código referente a su oferta.';
 
      
         
